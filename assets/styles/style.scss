@@ -10,12 +10,34 @@ $colors: (
 body {
     background: rgb(31, 30, 30);
 }
-.card-header{
+
+.search {
+    
+    background: #01111b;
+    border: 1px solid #7CC844;
+    color: #7CC844;
+    font-family: 'Space Mono',
+    monospace;
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    width: 50%;
+    border-radius: 0.4rem;
+    margin-bottom: 1rem;
+    outline: none;
+    ::placeholder {
+        color: #A6AFB8;
+    }
+}
+
+.card-header {
     color: #7CC844;
 }
-.card{
+
+.card {
+    border-radius: .5rem;
     background: #01111b;
     width: 48%;
+    box-shadow: 0 3px 10px #7bc8443b;
 }
 
 .badge {
@@ -25,18 +47,20 @@ body {
     top: -15px;
     left: 8px;
 }
-.error{
+
+.error {
     color: #A6AFB8;
     font-family: 'Space Mono', monospace;
 }
-.card-title
-{
+
+.card-title {
     color: #A6AFB8;
     font-weight: 600;
-    
+
 }
+
 @media(max-width: 768px) {
-    .card{
+    .card {
         width: auto;
     }
 }
