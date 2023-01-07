@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+$colors: (
+    "indigo-600": #3D0A91,
+    "indigo-500": #6610F2,
+    "blue-600": #0A58CA,
+    "blue-500": #0D6EFD,
+    "blue": #3D0A91,
+);
+
+body {
+    background: rgb(31, 30, 30);
+}
+.card-header{
+    color: #7CC844;
+}
+.card{
+    background: #01111b;
+    width: 48%;
+}
+
+.badge {
+    background: map-get($colors, "blue");
+    font-size: .6rem;
+    position: relative;
+    top: -15px;
+    left: 8px;
+}
+.error{
+    color: #A6AFB8;
+    font-family: 'Space Mono', monospace;
+}
+.card-title
+{
+    color: #A6AFB8;
+    font-weight: 600;
+    
+}
+@media(max-width: 768px) {
+    .card{
+        width: auto;
+    }
+}
