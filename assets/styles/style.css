@@ -39,7 +39,7 @@ body {
   box-shadow: 0 3px 10px rgba(123, 200, 68, 0.231372549);
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 1rem;
+  margin-bottom: 30px;
 }
 
 .badge {
