@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 body {
   background: rgb(31, 30, 30);
