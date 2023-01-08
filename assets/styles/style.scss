@@ -12,33 +12,41 @@ body {
 }
 
 .search {
-    
+
     background: #01111b;
     border: 1px solid #7CC844;
     color: #7CC844;
     font-family: 'Space Mono',
-    monospace;
+        monospace;
     font-size: 1rem;
     padding: 0.5rem 2rem;
-    width: 50%;
+    width: 48%;
     border-radius: 0.4rem;
     margin-bottom: 1rem;
     outline: none;
+
     ::placeholder {
         color: #A6AFB8;
     }
 }
-
 .card-header {
     color: #7CC844;
+
+    h4 {
+        font-size: 20px;
+    }
 }
 
 .card {
     border-radius: .5rem;
     background: #01111b;
-    width: 48%;
+    width: 40%;
     box-shadow: 0 3px 10px #7bc8443b;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
 }
+
 
 .badge {
     background: map-get($colors, "blue");
@@ -51,12 +59,13 @@ body {
 .error {
     color: #A6AFB8;
     font-family: 'Space Mono', monospace;
+    font-size: 14px;
 }
 
 .card-title {
-    color: #A6AFB8;
+    color: #acb2b8;
     font-weight: 600;
-
+    font-size: 16px;
 }
 
 @media(max-width: 768px) {
