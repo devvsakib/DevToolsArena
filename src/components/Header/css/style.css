@@ -1,0 +1,24 @@
+header {
+  background: #4a0eaa;
+  text-align: center;
+  padding: 0.8vw 0;
+  text-transform: uppercase;
+}
+
+span {
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-family: Arial, sans-serif;
+}
+span:nth-child(1) {
+  color: rgb(218, 221, 214);
+}
+span:nth-child(2) {
+  color: rgb(255, 0, 64);
+  text-decoration: line-through;
+  text-transform: none;
+  margin: 0 1rem;
+}
+span:nth-child(3) {
+  color: #76df2b;
+}/*# sourceMappingURL=style.css.map */
