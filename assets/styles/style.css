@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 body {
   background: rgb(31, 30, 30);
@@ -14,7 +10,7 @@ body {
   font-family: "Space Mono", monospace;
   font-size: 1rem;
   padding: 0.5rem 2rem;
-  width: 50%;
+  width: 48%;
   border-radius: 0.4rem;
   margin-bottom: 1rem;
   outline: none;
@@ -32,12 +28,18 @@ body {
 .card-header {
   color: #7CC844;
 }
+.card-header h4 {
+  font-size: 20px;
+}
 
 .card {
   border-radius: 0.5rem;
-  background: #01111b;  
+  background: #01111b;
+  width: 40%;
   box-shadow: 0 3px 10px rgba(123, 200, 68, 0.231372549);
-  max-width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
 .badge {
@@ -51,11 +53,13 @@ body {
 .error {
   color: #A6AFB8;
   font-family: "Space Mono", monospace;
+  font-size: 14px;
 }
 
 .card-title {
-  color: #A6AFB8;
+  color: #acb2b8;
   font-weight: 600;
+  font-size: 16px;
 }
 
 @media (min-width: 768px) {  
@@ -85,3 +89,4 @@ body {
   display: block; 
 }
 
+}/*# sourceMappingURL=style.css.map */
