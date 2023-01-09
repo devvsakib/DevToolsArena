@@ -35,16 +35,16 @@ body {
 
 .card {
   border-radius: 0.5rem;
-  background: #01111b;
-  width: 48%;
+  background: #01111b;  
   box-shadow: 0 3px 10px rgba(123, 200, 68, 0.231372549);
+  max-width: 300px;
 }
 
 .badge {
   background: #3D0A91;
   font-size: 0.6rem;
   position: relative;
-  top: -15px;
+  top: -10px;
   left: 8px;
 }
 
@@ -58,8 +58,30 @@ body {
   font-weight: 600;
 }
 
-@media (max-width: 768px) {
-  .card {
-    width: auto;
+@media (min-width: 768px) {  
+  #myUL{
+    display: flex;
+    justify-content: space-between;    
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
+
+#myInput {  
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  margin-bottom: 12px;
+  width: auto;
+}
+
+#myUL {  
+  list-style-type: none; 
+}
+
+#myUL li a {  
+  margin-top: -1px;
+  text-decoration: none;  
+  color: #7CC844;
+  display: block; 
+}
+
