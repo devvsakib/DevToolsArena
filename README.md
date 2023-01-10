@@ -1,4 +1,4 @@
-<div align='center'>
+<div align='left'>
   
 ## GitHub Error Solve
 
@@ -14,6 +14,18 @@
 ![React](https://img.shields.io/badge/react-blue?style=for-the-badge&logo=react&logoColor=navyblue)
 ![Vite](https://img.shields.io/badge/vite-5BB4FF?style=for-the-badge&logo=vite&logoColor=FFC018)
 
+
+### How to start App
+
+<br>
+
+```console
+    npm i
+```
+
+```console
+    npm run dev
+```
 
 <br>
 
