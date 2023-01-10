@@ -25,10 +25,10 @@
       "solutions": "git add .<git commit -m \"ges\""
     },
     {
-      "type": "commit",
-      "title": "Changes not staged for commit: <file name>",
-      "description": "no changes added to commit (use \"git add\" and/or \"git commit -a\")",
-      "solutions": "git add .<git commit -m \"ges\""
+      "type": "push",
+      "title": "Everything up-to-date",
+      "description": "File changed and git add . done but git push say: Everything is up-to-date",
+      "solutions": "git commit -m \"ges\""
     }
   ]
 }
