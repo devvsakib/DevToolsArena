@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function ErrorCard({ title, error, type }) {
+    // i want to show the solution when the user click on the button
+    const [show, setShow] = useState(true)
+    const showSolution = () => {
+        setShow(!show)
+    }
     return (
         <div className="card text-dark mx-auto p-[2rem] mb-3">
             <div className="card-body">
@@ -17,9 +22,25 @@ function ErrorCard({ title, error, type }) {
 
                 }</code>
                 <code className="error hidden sm:block">{error}</code>
+                <div className={`${show ? "hidden" : 'visible'} mt-4`}>
+                    <p className="text-orange-300">git init</p>
+                    <p className="text-orange-300">git add .</p>
+                    <p className="text-orange-300">git commit -m "first commit"</p>
+                    <p className="text-orange-300">git branch -M main</p>
+                    <p className="text-orange-300">git remote add origin</p>
+                    <p>
+                        <span className="text-purple-400">
+                            <p className="text-orange-300">git push origin main -u</p>
+                        </span>
+                    </p>
+
+
+                </div>
             </div>
-            <button className="px-4 mt-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Solution</button>
-        </div>
+            <button
+                onClick={showSolution}
+                className="px-4 mt-4 py-1 text-sm text-purple-400 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none">Solution</button>
+        </div >
     )
 }
 
