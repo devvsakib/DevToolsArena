@@ -1,8 +1,5 @@
 import React, { useState } from 'react'
-function SearchInput() {
-    const [data, setData] = useState([])
-    const [searchValue, setSearchValue] = useState('')
-    const e = e => setSearchValue(e.target.value)
+function SearchInput({ search, setSearch}) {
 
 
     return (
@@ -15,9 +12,8 @@ function SearchInput() {
                         id="searchbox"
                         className="search p-4 text-center outline-none rounded-full w-[80%] bg-slate-800"
                         placeholder="Search Error"
-                        value={searchValue}
-                        onChange={e}
-
+                        value={search}
+                        onChange={e=> setSearch(e.target.value)}
                     />
                 </form>
             </div>

@@ -1,4 +1,4 @@
-<div align='center'>
+<div align='left'>
   
 ## GitHub Error Solve
 
@@ -15,7 +15,18 @@
 ![Vite](https://img.shields.io/badge/vite-5BB4FF?style=for-the-badge&logo=vite&logoColor=FFC018)
 
 
-> Later may convert to CRA
+### How to start App
+
+<br>
+
+```console
+    npm i
+```
+
+```console
+    npm run dev
+```
+
 <br>
 
 ### Feel free to contribute. 
