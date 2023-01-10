@@ -30,5 +30,5 @@
 <br>
 
 ### Feel free to contribute. 
-Live Link![GES](https://github-error-solve.vercel.app)
+Live Link <a href="https://github-error-solve.vercel.app" target="_blank">GES</a>
 </div
