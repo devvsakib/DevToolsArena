@@ -15,7 +15,6 @@
 ![Vite](https://img.shields.io/badge/vite-5BB4FF?style=for-the-badge&logo=vite&logoColor=FFC018)
 
 
-> Later may convert to CRA
 <br>
 
 ### Feel free to contribute. 
