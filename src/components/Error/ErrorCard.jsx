@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
-function ErrorCard({ title, error, type }) {
-    // i want to show the solution when the user click on the button
+function ErrorCard({ title, error, solutions, type }) {
     const [show, setShow] = useState(true)
     const [solution, setSolution] = useState(false)
 
@@ -24,14 +23,18 @@ function ErrorCard({ title, error, type }) {
                     }</code>
                 {/* <code className={`error  ${solution ? "hidden" : "block"} `}>{error}</code> */}
                 <div className={`${show ? "hidden" : 'visible'} mt-4`}>
-                    <p className="text-orange-300">git init</p>
-                    <p className="text-orange-300">git add .</p>
-                    <p className="text-orange-300">git commit -m "first commit"</p>
-                    <p className="text-orange-300">git branch -M main</p>
-                    <p className="text-orange-300">git remote add origin</p>
                     <p>
                         <span className="text-purple-400">
-                            <p className="text-orange-300">git push origin main -u</p>
+                            <p className="text-orange-300">{
+                                !solutions ? (
+                                    <>
+                                        <p className="text-red-400 opacity-40">No Solution Found</p>
+                                        <p className="text-gray-400 text-sm opacity-50">You can add solution and be a part of open-source projects</p>
+                                    </>
+                                ) : (
+                                    solutions
+                                )
+                            }</p>
                         </span>
                     </p>
 
