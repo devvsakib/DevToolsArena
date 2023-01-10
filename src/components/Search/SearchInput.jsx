@@ -14,7 +14,6 @@ function SearchInput({ search, setSearch}) {
                         placeholder="Search Error"
                         value={search}
                         onChange={e=> setSearch(e.target.value)}
-
                     />
                 </form>
             </div>

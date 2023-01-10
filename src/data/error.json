@@ -1,32 +1,34 @@
 {
-    "errors": [
-      {
-        "type": "push",
-        "title": "! [rejected] branch -> branch (non-fast-forward)",
-        "description": "Some quick example text to build on the card title and make up the bulk of the card's content.error: failed to push some refs to 'git@github.com:/reponame.git'<br /> To prevent you from losing history, non-fast-forward updates were rejected Merge the remote changes (e.g. 'git pull') before pushing again. See the 'Note about fast-forwards' section of 'git push --help' for details.",
-        "solutions":"git push origin [branch name] -f"
-      },
-      {
-        "type": "merge",
-        "title": "! [rejected] branch -> branch (non-fast-forward)",
-        "description": "Some quick example text to build on the card title and make up the bulk of the card's content.error: failed to push some refs to 'git@github.com:/reponame.git'<br /> To prevent you from losing history, non-fast-forward updates were rejected Merge the remote changes (e.g. 'git pull') before pushing again. See the 'Note about fast-forwards' section of 'git push --help' for details."
-      },
-      {
-        "type": "add",
-        "title": "fata: not a valid object name: 'master/main'",
-        "description": "Unable to add file. While adding file, it shows fatat: noa valid object name: 'master'.",
-        "solutions": "git commit -m \"first commit\""
-      },
-      {
-        "type": "add",
-        "title": "test title",
-        "description": "Some quick example text to build on the card title and make up the bulk of the card's content.error: failed to push some refs to 'git@github.com:/reponame.git'<br /> To prevent you from losing history, non-fast-forward updates were rejected Merge the remote changes (e.g. 'git pull') before pushing again. See the 'Note about fast-forwards' section of 'git push --help' for details."
-      },
-      {
-        "type": "commit",
-        "title": "! [rejected] branch -> branch (non-fast-forward)",
-        "description": "Some quick example text to build on the card title and make up the bulk of the card's content.error: failed to push some refs to 'git@github.com:/reponame.git'<br /> To prevent you from losing history, non-fast-forward updates were rejected Merge the remote changes (e.g. 'git pull') before pushing again. See the 'Note about fast-forwards' section of 'git push --help' for details."
-      }
-    ]
-  }
- 
+  "errors": [
+    {
+      "type": "push",
+      "title": "! [rejected] branch -> branch (non-fast-forward)",
+      "description": "Some quick example text to build on the card title and make up the bulk of the card's content.error: failed to push some refs to 'git@github.com:/reponame.git' To prevent you from losing history, non-fast-forward updates were rejected Merge the remote changes (e.g. 'git pull') before pushing again. See the 'Note about fast-forwards' section of 'git push --help' for details.",
+      "solutions": "git push origin [branch name] -f"
+    },
+    {
+      "type": "merge",
+      "title": "error: src refspec main does not match any",
+      "description": "error: failed to push some refs to 'github.com:user/repo.git'",
+      "solutions": "rm -rf .git<git init<git add .<git commit -m \"ges\"<git branch -M main<git remote add origin YOUR_GITHUB_REPO_LINK<git push -u origin main -f"
+    },
+    {
+      "type": "add",
+      "title": "fatal: not a valid object name: 'master/main'",
+      "description": "Unable to add file. While adding file, it shows fatal: not a valid object name: 'master'.",
+      "solutions": "git commit -m \"first commit\""
+    },
+    {
+      "type": "add",
+      "title": "error: Your local changes to the following files would be overwritten by checkout: <file name>",
+      "description": "Please commit your changes or stash them before you stwitch branches. Aborting",
+      "solutions": "git add .<git commit -m \"ges\""
+    },
+    {
+      "type": "commit",
+      "title": "Changes not staged for commit: <file name>",
+      "description": "no changes added to commit (use \"git add\" and/or \"git commit -a\")",
+      "solutions": "git add .<git commit -m \"ges\""
+    }
+  ]
+}

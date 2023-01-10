@@ -6,8 +6,9 @@
   margin: 0;
   padding: 0;
 }
+
 body {
-  background: #3D0A91;
+  background: linear-gradient(-45deg, rgb(80, 8, 140), #410795);
   color: #fff;
 }
 
@@ -30,6 +31,7 @@ body {
   border-radius: 10px;
   color: #fff !important;
 }
+
 .error {
   color: #A6AFB8;
   font-family: "Space Mono", monospace;

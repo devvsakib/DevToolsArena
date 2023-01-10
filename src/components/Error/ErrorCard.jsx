@@ -25,14 +25,20 @@ function ErrorCard({ title, error, solutions, type }) {
                 <div className={`${show ? "hidden" : 'visible'} mt-4`}>
                     <p>
                         <span className="text-purple-400">
-                            <p className="text-orange-300">{
+                            <p className="text-orange-300 text-md">{
                                 !solutions ? (
                                     <>
                                         <p className="text-red-400 opacity-40">No Solution Found</p>
                                         <p className="text-gray-400 text-sm opacity-50">You can add solution and be a part of open-source projects</p>
                                     </>
                                 ) : (
-                                    solutions
+                                    solutions.split('<').map((item, i) => (
+                                        <p key={i} className="text-sm">
+                                            {item}
+                                            <br />
+                                        </p>
+                                    )
+                                    )
                                 )
                             }</p>
                         </span>
