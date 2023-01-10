@@ -5,7 +5,7 @@ function SearchInput({ search, setSearch}) {
     return (
         <div className="search-div container mt-5 pt-2 mx-auto">
             <div className="text-center p-4">
-                <form>
+                <form onSubmit={e=> e.preventDefault()}>
 
                     <input
                         type="search"
