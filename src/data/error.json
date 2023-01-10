@@ -3,7 +3,8 @@
       {
         "type": "push",
         "title": "! [rejected] branch -> branch (non-fast-forward)",
-        "description": "Some quick example text to build on the card title and make up the bulk of the card's content.error: failed to push some refs to 'git@github.com:/reponame.git'<br /> To prevent you from losing history, non-fast-forward updates were rejected Merge the remote changes (e.g. 'git pull') before pushing again. See the 'Note about fast-forwards' section of 'git push --help' for details."
+        "description": "Some quick example text to build on the card title and make up the bulk of the card's content.error: failed to push some refs to 'git@github.com:/reponame.git'<br /> To prevent you from losing history, non-fast-forward updates were rejected Merge the remote changes (e.g. 'git pull') before pushing again. See the 'Note about fast-forwards' section of 'git push --help' for details.",
+        "solutions":"git push origin [branch name] -f"
       },
       {
         "type": "merge",
@@ -12,8 +13,9 @@
       },
       {
         "type": "add",
-        "title": "! [rejected] branch -> branch (non-fast-forward)",
-        "description": "Some quick example text to build on the card title and make up the bulk of the card's content.error: failed to push some refs to 'git@github.com:/reponame.git'<br /> To prevent you from losing history, non-fast-forward updates were rejected Merge the remote changes (e.g. 'git pull') before pushing again. See the 'Note about fast-forwards' section of 'git push --help' for details."
+        "title": "fata: not a valid object name: 'master/main'",
+        "description": "Unable to add file. While adding file, it shows fatat: noa valid object name: 'master'.",
+        "solutions": "git commit -m \"first commit\""
       },
       {
         "type": "add",
