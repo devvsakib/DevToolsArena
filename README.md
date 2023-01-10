@@ -31,6 +31,6 @@
 
 ### Feel free to contribute.
 
-Live Link <a href='https://github-error-solve.vercel.app/'>GEJ</a>
+Live Link <a href='https://github-error-solve.vercel.app/'>GES</a>
 
 </div
