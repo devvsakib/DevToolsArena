@@ -25,10 +25,22 @@
       "solutions": "git add .<git commit -m \"ges\""
     },
     {
+      "type": "merge",
+      "title": "Auto-merging path/path/filename",
+      "description": "CONFLICT (add/add): Merge conflict in path/path/filename. Automatic merge failed; fix conflicts and then commit the result.",
+      "solutions": "You have to manually solve the conflict and then: <git add .< git commit -m \"ges\""
+    },
+    {
       "type": "push",
       "title": "Everything up-to-date",
       "description": "File changed and git add . done but git push say: Everything is up-to-date",
       "solutions": "git commit -m \"ges\""
+    },
+    {
+      "type": "branch",
+      "title": "Switched to branch 'main'",
+      "description": "Your branch is behind 'origin/main' by 10 commits, and can be fast-forwarded.",
+      "solutions": "git pull"
     }
   ]
 }
