@@ -41,6 +41,18 @@
       "title": "Switched to branch 'main'",
       "description": "Your branch is behind 'origin/main' by 10 commits, and can be fast-forwarded.",
       "solutions": "git pull"
+    },
+    {
+      "type": "push",
+      "title": "remote: Not Found",
+      "description": "fatal: repository 'https://github.com/user/repo.git/' not found",
+      "solutions": "Your repository link is not valid. Try to re-create the repository and copy the new link.<git remote set-url origin YOUR_GITHUB_REPO_LINK"
+    },
+    {
+      "type": "push",
+      "title": "fatal: unable to access 'https://github.com/user/repo.git/': Could not...",
+      "description": "fatal: repository 'https://github.com/user/repo.git/' not found",
+      "solutions": "git config --global --unset http.proxy<git config --global user.name \"user name\"<git config --global user.email \"user email\""
     }
   ]
 }
