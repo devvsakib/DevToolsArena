@@ -10,7 +10,7 @@ const Error = ({ search }) => {
     }, [])
 
     const filteredError = error.filter((error) => {
-        return error.title.toLowerCase().includes(search.toLowerCase())
+        return ((error.title.toLowerCase().includes(search.toLowerCase()) || (error.description.toLowerCase().includes(search.toLowerCase())) || (error.type.toLowerCase().includes(search.toLowerCase()))))
     })
 
     return (
