@@ -3,10 +3,14 @@ import ErrorCard from "./ErrorCard";
 import { errors } from "../../data/error.json";
 
 const Error = ({ search }) => {
-  const [error, setError] = useState([]);
-  useEffect(() => {
-    setError(errors);
-  }, []);
+    const [error, setError] = useState([])
+    useEffect(() => {
+        setError(errors)
+    }, [])
+
+    const filteredError = error.filter((error) => {
+        return ((error.title.toLowerCase().includes(search.toLowerCase()) || (error.description.toLowerCase().includes(search.toLowerCase())) || (error.type.toLowerCase().includes(search.toLowerCase()))))
+    })
 
   const filteredError = error.filter((error) => {
     return (
