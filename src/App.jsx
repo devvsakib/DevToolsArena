@@ -5,7 +5,7 @@ import Header from './components/Header/Header'
 import SearchInput from './components/Search/SearchInput'
 function App() {
   const [search, setSearch] = useState('')
-
+  const [type, setType] = useState('')
   return (
     <>
       <Header
@@ -14,9 +14,11 @@ function App() {
       <SearchInput
         search={search}
         setSearch={setSearch}
+        setType={setType}
       />
       <Error 
         search={search}
+        type={type}
       />
     </>
   )
