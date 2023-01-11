@@ -18,7 +18,7 @@ const Error = ({ search, type }) => {
 
 
     return (
-        <section className="mx-4 md:w-5/6 my-12 grid grid-cols-6/12 justify-center gap-8 md:mx-auto">
+        <section className="mx-4 md:w-5/6 my-12 grid grid-cols-12 justify-center gap-8 md:mx-auto">
             {
                 (filteredErrorByType.length === 0 ? <h1 className="text-center text-2xl text-gray-500">No Error Found</h1> : filteredErrorByType.map((error, idx) => (
                     <ErrorCard key={idx} error={error} />
