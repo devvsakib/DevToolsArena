@@ -11,7 +11,7 @@ function SearchInput({ search, setSearch}) {
                         type="search"
                         id="searchbox"
                         className="search p-4 text-center outline-none rounded-full w-[80%] bg-slate-800"
-                        placeholder="Search Error"
+                        placeholder="Search Error, Solution, Type, etc..."
                         value={search}
                         onChange={e=> setSearch(e.target.value)}
                     />
