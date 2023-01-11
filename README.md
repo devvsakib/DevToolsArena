@@ -1,4 +1,3 @@
-<div align='left'>
   
 ## GitHub Error Solve
 
@@ -30,5 +29,5 @@
 <br>
 
 ### Feel free to contribute. 
+
 Live Link <a href="https://github-error-solve.vercel.app" target="_blank">GES</a>
-</div
