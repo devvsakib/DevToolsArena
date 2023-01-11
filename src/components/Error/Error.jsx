@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react'
-import './css/style.css'
-import ErrorCard from './ErrorCard'
-import { errors } from '../../data/error.json'
+import { useState, useEffect } from "react";
+import ErrorCard from "./ErrorCard";
+import { errors } from "../../data/error.json";
 
 const Error = ({ search, type }) => {
     const [error, setError] = useState([])
@@ -19,14 +18,14 @@ const Error = ({ search, type }) => {
 
 
     return (
-        <section className="container mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xxl:grid-cols-4  gap-4 mx-auto px-4">
+        <section className="mx-4 md:w-5/6 my-12 grid grid-cols-6/12 justify-center gap-8 md:mx-auto">
             {
                 (filteredErrorByType.length === 0 ? <h1 className="text-center text-2xl text-gray-500">No Error Found</h1> : filteredErrorByType.map((error, idx) => (
-                    <ErrorCard key={idx} title={error.title} error={error.description} type={error.type} solutions={error.solutions} />
+                    <ErrorCard key={idx} error={error} />
                 )))
             }
         </section>
-    )
-}
+    );
+};
 
-export default Error
+export default Error;
