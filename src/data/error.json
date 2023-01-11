@@ -31,6 +31,12 @@
       "solutions": "git add .<git commit -m \"ges\""
     },
     {
+      "type": "pull",
+      "title": "fatal: 'main' does not appear to be a git repository",
+      "description": "fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.",
+      "solutions": "git pull origin BRANCHNAME"
+    },
+    {
       "type": "merge",
       "title": "Auto-merging path/path/filename",
       "description": "CONFLICT (add/add): Merge conflict in path/path/filename. Automatic merge failed; fix conflicts and then commit the result.",
