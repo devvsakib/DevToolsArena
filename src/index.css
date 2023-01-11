@@ -7,11 +7,11 @@
   padding: 0;
 }
 
-body {
-  background: linear-gradient(-45deg, rgb(80, 8, 140), #410795);
-  color: #fff;
+@layer base {
+  body {
+    @apply bg-dark text-white;
+  }
 }
-
 
 .card {
   text-align: left;
@@ -33,7 +33,7 @@ body {
 }
 
 .error {
-  color: #A6AFB8;
+  color: #a6afb8;
   font-family: "Space Mono", monospace;
 }
 
