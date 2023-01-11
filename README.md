@@ -12,22 +12,28 @@
 ![JavaScript](https://img.shields.io/badge/javascript-EFD81C?style=for-the-badge&logo=javascript&logoColor=white)
 ![React](https://img.shields.io/badge/react-blue?style=for-the-badge&logo=react&logoColor=navyblue)
 ![Vite](https://img.shields.io/badge/vite-5BB4FF?style=for-the-badge&logo=vite&logoColor=FFC018)
-
-
-### How to start App
-
 <br>
 
+### How to contribute. 
+- Fork this repository.
+- Clone the repository.
 ```console
-    npm i
+git clone git@github.com:<your github username>/github-error-solve.git
+```
+- Navigate to folder
+```console
+cd github-error-solve
+```
+- Install node dependencies
+```console
+npm i
+```
+- Start the project
+```console
+npm run dev
 ```
 
-```console
-    npm run dev
-```
+**Troubleshoot**
+Facing problem starting the server or any other problem? Please let us know by raising an ![issue](https://github.com/devvsakib/github-error-solve/issues/new)
 
-<br>
-
-### Feel free to contribute. 
-
-Live Link <a href="https://github-error-solve.vercel.app" target="_blank">GES</a>
+**Live Link <a href="https://github-error-solve.vercel.app" target="_blank">GES</a>**
