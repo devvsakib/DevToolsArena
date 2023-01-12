@@ -1,9 +1,10 @@
 
-import React from "react";
+import React, {useState} from "react";
 import { MdClear, MdSearch } from "react-icons/md";
 const errorType = ["push", "commit", "merge", "pull", "add", "branch"]
 
 function SearchInput({ search, setSearch, setType }) {
+    const [open, setOpen] = useState(false)
     return (
         <div className="flex flex-col mx-auto mt-12 items-center gap-4 py-3 px-6 rounded-lg w-11/12 md:w-5/6">
             <form
@@ -31,12 +32,10 @@ function SearchInput({ search, setSearch, setType }) {
                                 onClick={() => setType(item)}
                             >{item}</li>
                         ))
-
-
                     }
                 </ul>
             </div>
-        </div>
+        </div >
     );
 }
 
