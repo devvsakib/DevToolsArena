@@ -36,4 +36,7 @@ npm run dev
 **Troubleshoot**
 Facing problem starting the server or any other problem? Please let us know by raising an ![issue](https://github.com/devvsakib/github-error-solve/issues/new)
 
+### Discord
+Join Us ![Sure](https://discord.gg/xwRbDwnbMr)
+
 **Live Link <a href="https://github-error-solve.vercel.app" target="_blank">GES</a>**

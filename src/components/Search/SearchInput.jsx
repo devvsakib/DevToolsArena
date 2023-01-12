@@ -1,26 +1,43 @@
+
 import React from "react";
 import { MdClear, MdSearch } from "react-icons/md";
+const errorType = ["push", "commit", "merge", "pull", "add", "branch"]
 
-function SearchInput({ search, setSearch }) {
-  return (
-    <form
-      onSubmit={(e) => e.preventDefault()}
-      className="flex mx-auto mt-12 items-center gap-4 py-3 px-6 rounded-lg bg-white w-11/12 md:w-5/6"
-    >
-      <MdSearch className="text-gray text-2xl" />
-      <input
-        type="search"
-        id="searchbox"
-        value={search}
-        className="w-full text-sm md:text-base focus:outline-none placholder:font-semibold text-dark bg-transparent"
-        placeholder="Search for errors"
-        onChange={(e) => setSearch(e.target.value)}
-      />
-      <button className="focus:outline-none" onClick={() => setSearch("")}>
-        <MdClear className="text-gray text-xl" />
-      </button>
-    </form>
-  );
+function SearchInput({ search, setSearch, setType }) {
+    return (
+        <div className="flex flex-col mx-auto mt-12 items-center gap-4 py-3 px-6 rounded-lg w-11/12 md:w-5/6">
+            <form
+                onSubmit={(e) => e.preventDefault()}
+                className="flex mx-auto mt-12 items-center gap-4 py-3 px-6 rounded-lg bg-white w-11/12 md:w-5/6"
+            >
+                <MdSearch className="text-gray text-2xl" />
+                <input
+                    type="search"
+                    id="searchbox"
+                    value={search}
+                    className="w-full text-sm md:text-base focus:outline-none placholder:font-semibold text-dark bg-transparent"
+                    placeholder="Search for errors"
+                    onChange={(e) => { setSearch(e.target.value); setType("") }}
+                />
+                <button className="focus:outline-none" onClick={() => setSearch("")}>
+                    <MdClear className="text-gray text-xl" />
+                </button>
+            </form>
+            <div className="types mt-4">
+                <ul className='flex flex-col sm:flex-row mx-auto mt-2 items-start gap-4 py-3 px-6 rounded-lg bg-white w-12/12 md:w-auto'>
+                    {
+                        errorType.map((item, i) => (
+                            <li key={i} className={`${item === "add" ? "bg-[#4024e0]" : item === "commit" ? "bg-[#1a5ba5]" : item === "push" ? "bg-[#1aa0a5]" : "bg-[#7e1aa5]"} w-full md:w-auto rounded-md text-white font-bold py-1 px-3 cursor-pointer`}
+                                onClick={() => setType(item)}
+                            >{item}</li>
+                        ))
+
+
+                    }
+                </ul>
+            </div>
+        </div>
+    );
 }
 
 export default SearchInput;

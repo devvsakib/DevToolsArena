@@ -5,13 +5,22 @@ import Header from "./components/Header/Header";
 import SearchInput from "./components/Search/SearchInput";
 
 function App() {
-  const [search, setSearch] = useState("");
-
+  const [search, setSearch] = useState('')
+  const [type, setType] = useState('')
   return (
     <>
-      <Header notice={"Under Constraction"} />
-      <SearchInput search={search} setSearch={setSearch} />
-      <Error search={search} />
+      <Header
+        notice={"Under Constraction"}
+      />
+      <SearchInput
+        search={search}
+        setSearch={setSearch}
+        setType={setType}
+      />
+      <Error
+        search={search}
+        type={type}
+      />
     </>
   );
 }
