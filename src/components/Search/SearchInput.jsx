@@ -6,6 +6,11 @@ import useWindowsize from "../../hooks/useWindowsize";
 function SearchInput({ search, setSearch, setType }) {
     const [open, setOpen] = useState(true)
     const { width } = useWindowsize();
+    const toggleMenu = ()=>{
+        setTimeout(() => {
+            setOpen(!open)
+        }, 600);
+    }
 
     return (
         <div className="flex flex-col mx-auto mt-12 items-center gap-4 py-3 px-6 rounded-lg w-11/12 md:w-5/6">
@@ -42,7 +47,7 @@ function SearchInput({ search, setSearch, setType }) {
                     ) : (
                         <div className="text-center">
                             <button
-                                onClick={() => setOpen(!open)}>
+                                onClick={toggleMenu}>
                                 Filter By Type
                             </button>
                                 <ul className={`flex flex-col sm:flex-row mx-auto mt-2 items-start gap-4 py-3 pt-4 px-6 rounded-lg bg-white w-[60vw] md:w-auto text-left ${open ? "hidden" : "block"}`}>
