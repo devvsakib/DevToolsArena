@@ -47,5 +47,19 @@
     width: auto;
   }
 }
-
+.menu-primary-enter {
+  position: absolute;
+  transform: translateX(-110%);
+}
+.menu-primary-enter-active {
+  transform: translateX(0%);
+  transition: all 400ms ease;
+}
+.menu-primary-exit {
+  position: absolute;
+}
+.menu-primary-exit-active {
+  transform: translateX(-110%);
+  transition: all 400ms ease;
+}
 /*# sourceMappingURL=style.css.map */
