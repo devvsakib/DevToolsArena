@@ -41,10 +41,12 @@ function SearchInput({ search, setSearch, setType }) {
                         </ul>
                     ) : (
                         <div className="text-center">
-                            <button
+
+                            <button className="bg-white py-3 pt-4 px-6 rounded-lg text-left text-black font-bold"
                                 onClick={() => setOpen(!open)}>
                                 Filter By Type
                             </button>
+                            
                                 <ul className={`flex flex-col sm:flex-row mx-auto mt-2 items-start gap-4 py-3 pt-4 px-6 rounded-lg bg-white w-[60vw] md:w-auto text-left ${open ? "hidden" : "block"}`}>
                                     {
                                         errorType.map((item, i) => (
