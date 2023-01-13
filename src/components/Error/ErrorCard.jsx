@@ -1,23 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { MdKeyboardArrowLeft, MdOutlineArrowRightAlt } from "react-icons/md";
 import ErrorSolutions from "./ErrorSolutions";
 import ErrorType from "./ErrorType";
 
 function ErrorCard({ error }) {
   const [showSolution, setShowSolution] = useState(false);
-  const [errorTypeColor, setErrorTypeColor] = useState(() => {
+  const [errorTypeColor, setErrorTypeColor] = useState('#7e1aa5');
+  useEffect(() => {
     if (error.type == "add") {
-      return "#4024e0";
+      return setErrorTypeColor("#4024e0");
     }
-    if (error.type == "commit" || error.type == "push") {
-      return "#1a5ba5";
+    if (error.type == "branch") {
+      return setErrorTypeColor("#40e4f0");
     }
-    return "#7e1aa5";
-  });
+    if (error.type == "push") {
+      return setErrorTypeColor("#8d54e1");
+    }
+    if (error.type == "merge") {
+      return setErrorTypeColor("#118d7c");
+    }
+    if (error.type == "commit") {
+      return setErrorTypeColor("#1a5ba5");
+    }
+    return setErrorTypeColor("#7e1aa5");
+  }, [errorTypeColor])
+
 
   return (
     <div
-      className="py-4 mb-4 col-span-12 xl:col-span-6 px-6 border-l-4 rounded-lg rounded-tl-none rounded-bl-none  items-start bg-dark-secondary flex flex-col"
+      className="py-4 mb-4 col-span-12 xl:col-span-6 px-6 border-l-4 rounded-lg   items-start bg-dark-secondary flex flex-col"
       style={{
         borderColor: errorTypeColor,
       }}

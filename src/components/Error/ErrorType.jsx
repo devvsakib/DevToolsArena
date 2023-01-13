@@ -6,8 +6,12 @@ function ErrorType({ type }) {
           ? "before:bg-[#4024e0]"
           : type === "commit"
           ? "before:bg-[#1a5ba5]"
+          : type === "merge"
+          ? "before:bg-[#118d7c]"
           : type === "push"
-          ? "before:bg-[#1a5ba5]"
+          ? "before:bg-[#8d54e1]"
+          : type === "branch"
+          ? "before:bg-[#40E4F0]"
           : "before:bg-[#7e1aa5]"
       }`}
     >
