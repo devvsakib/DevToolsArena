@@ -1,4 +1,4 @@
-import { MdConstruction } from "react-icons/md";
+import { MdConstruction, MdInsertDriveFile } from "react-icons/md";
 
 function Header({ notice }) {
   return (
@@ -10,6 +10,8 @@ function Header({ notice }) {
         <div className="flex mt-2 md:mt-0 items-center gap-3 text-sm">
           <MdConstruction className="text-lg" />
           <h6>Under construction</h6>
+          <MdInsertDriveFile className="text-lg" />
+          <h6>doc</h6>
         </div>
       </div>
     </header>
