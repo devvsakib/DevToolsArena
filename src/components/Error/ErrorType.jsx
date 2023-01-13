@@ -7,7 +7,9 @@ function ErrorType({ type }) {
           : type === "commit"
           ? "before:bg-[#1a5ba5]"
           : type === "push"
-          ? "before:bg-[#1a5ba5]"
+          ? "before:bg-[#8d54e1]"
+          : type === "branch"
+          ? "before:bg-[#40e4f0]"
           : "before:bg-[#7e1aa5]"
       }`}
     >
