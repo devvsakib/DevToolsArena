@@ -1,16 +1,12 @@
 import React, { useState } from "react";
 import { MdClear, MdSearch } from "react-icons/md";
+import './css/style.css'
 const errorType = ["push", "commit", "merge", "pull", "add", "branch"]
 import useWindowsize from "../../hooks/useWindowsize";
 
 function SearchInput({ search, setSearch, setType }) {
     const [open, setOpen] = useState(true)
     const { width } = useWindowsize();
-    const toggleMenu = ()=>{
-        setTimeout(() => {
-            setOpen(!open)
-        }, 600);
-    }
 
     return (
         <div className="flex flex-col mx-auto mt-12 items-center gap-4 py-3 px-6 rounded-lg w-11/12 md:w-5/6">
@@ -47,10 +43,10 @@ function SearchInput({ search, setSearch, setType }) {
                     ) : (
                         <div className="text-center">
                             <button
-                                onClick={toggleMenu}>
+                                onClick={()=>setOpen(!open)}>
                                 Filter By Type
                             </button>
-                                <ul className={`flex flex-col sm:flex-row mx-auto mt-2 items-start gap-4 py-3 pt-4 px-6 rounded-lg bg-white w-[60vw] md:w-auto text-left ${open ? "hidden" : "block"}`}>
+                                <ul className={`animate flex flex-col sm:flex-row mx-auto mt-2 items-start gap-4 py-3 pt-4 px-6 rounded-lg bg-white w-[60vw] md:w-auto text-left ${open ? "hidden" : "block"}`}>
                                     {
                                         errorType.map((item, i) => (
                                             <li key={i} className={`${item === "add" ? "bg-[#4024e0]" : item === "commit" ? "bg-[#1a5ba5]" : item === "push" ? "bg-[#1aa0a5]" : "bg-[#7e1aa5]"} w-full md:w-auto rounded-md text-white font-bold py-2 px-3 cursor-pointer`}
