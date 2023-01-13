@@ -1,12 +1,14 @@
 @keyframes slideLeft {
-    from {
-      transform: translateX(-400px);
-    }
-    to {
-      transform: translateX(0px);
-    }
+  from {
+    transform: translateX(-400px);
   }
-  
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
 .animate {
-    animation: slideLeft 0.9s;
+  transform-origin: top;
+  animation: slideLeft 0.5s ease-in-out;
 }

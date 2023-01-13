@@ -36,6 +36,8 @@ npm run dev
 **Troubleshoot**
 Facing problem starting the server or any other problem? Please let us know by raising an ![issue](https://github.com/devvsakib/github-error-solve/issues/new)
 
+### **<p align="center">Please STAR the repository⭐</p>**
+
 ### Discord
 Join Us ![Sure](https://discord.gg/xwRbDwnbMr)
 
