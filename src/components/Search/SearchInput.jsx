@@ -42,11 +42,11 @@ function SearchInput({ search, setSearch, setType }) {
                         </ul>
                     ) : (
                         <div className="text-center">
-                            <button
-                                onClick={()=>setOpen(!open)}>
+                            <button className="bg-white py-3 pt-4 px-6 rounded-lg text-left text-black font-bold"
+                                onClick={() => setOpen(!open)}>
                                 Filter By Type
                             </button>
-                                <ul className={`animate flex flex-col sm:flex-row mx-auto mt-2 items-start gap-4 py-3 pt-4 px-6 rounded-lg bg-white w-[60vw] md:w-auto text-left ${open ? "hidden" : "block"}`}>
+                              <ul className={`animate flex flex-col sm:flex-row mx-auto mt-2 items-start gap-4 py-3 pt-4 px-6 rounded-lg bg-white w-[60vw] md:w-auto text-left ${open ? "hidden" : "block"}`}>
                                     {
                                         errorType.map((item, i) => (
                                             <li key={i} className={`${item === "add" ? "bg-[#4024e0]" : item === "commit" ? "bg-[#1a5ba5]" : item === "push" ? "bg-[#1aa0a5]" : "bg-[#7e1aa5]"} w-full md:w-auto rounded-md text-white font-bold py-2 px-3 cursor-pointer`}
