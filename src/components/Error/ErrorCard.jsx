@@ -16,6 +16,9 @@ function ErrorCard({ error }) {
     if (error.type == "push") {
       return setErrorTypeColor("#8d54e1");
     }
+    if (error.type == "merge") {
+      return setErrorTypeColor("#118d7c");
+    }
     if (error.type == "commit") {
       return setErrorTypeColor("#1a5ba5");
     }
