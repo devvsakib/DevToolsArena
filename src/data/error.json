@@ -25,6 +25,12 @@
       "solutions": "First check which branch you are in, then:<git push --set-upstream origin BRANCHNAME"
     },
     {
+      "type": "commit",
+      "title": "Author identity unknown",
+      "description": "*** Please tell me who you are. Run git config --global user.email \"you@example\" & git config --global user.name \" Your Name\" ",
+      "solutions": "git config --global user.email \"yourgithubgmail\" < git config --global user.email \"Your Name\""
+    },
+    {
       "type": "add",
       "title": "error: Your local changes to the following files would be overwritten by checkout: <file name>",
       "description": "Please commit your changes or stash them before you stwitch branches. Aborting",
