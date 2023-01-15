@@ -1,4 +1,5 @@
 import { MdConstruction, MdInsertDriveFile } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function Header({ notice }) {
   return (
@@ -7,12 +8,14 @@ function Header({ notice }) {
         {/* <h1 className="text-xl font-bold">
           GITHUB <span className="text-primary line-through">ERROR</span> SOLVE
         </h1> */}
-        <img src="assets/TEST2.png" className="w-36" alt="" />
+        <Link to={'/'}>
+          <img src="assets/TEST2.png" className="w-36" alt="" />
+        </Link>
         <div className="flex mt-2 md:mt-0 items-center gap-3 text-sm">
           <MdConstruction className="text-lg" />
-          <h6>Under construction</h6>
+          <h6>Under Construction</h6>
           <MdInsertDriveFile className="text-lg" />
-          <h6>doc</h6>
+          <Link to={'/doc'}>Doc</Link>
         </div>
       </div>
     </header>

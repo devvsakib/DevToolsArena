@@ -28,7 +28,7 @@ function ErrorCard({ error }) {
 
   return (
     <div
-      className="py-4 mb-4 col-span-12 xl:col-span-6 px-6 border-l-4 rounded-lg   items-start bg-dark-secondary flex flex-col"
+    className="py-4 mb-4 col-span-12 md:col-span-6 xl:col-span-4 px-2 md:px-6 border-l-4 rounded-lg   items-start bg-dark-secondary flex flex-col"
       style={{
         borderColor: errorTypeColor,
       }}
