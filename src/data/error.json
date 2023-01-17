@@ -1,0 +1,76 @@
+{
+  "errors": [
+    {
+      "type": "push",
+      "title": "! [rejected] branch -> branch (non-fast-forward)",
+      "description": "Some quick example text to build on the card title and make up the bulk of the card's content.error: failed to push some refs to 'git@github.com:/reponame.git' To prevent you from losing history, non-fast-forward updates were rejected Merge the remote changes (e.g. 'git pull') before pushing again. See the 'Note about fast-forwards' section of 'git push --help' for details.",
+      "solutions": "git pull<git push origin [branch name]"
+    },
+    {
+      "type": "merge",
+      "title": "error: src refspec main does not match any",
+      "description": "error: failed to push some refs to 'github.com:user/repo.git'",
+      "solutions": "rm -rf .git<git init<git add .<git commit -m \"ges\"<git branch -M main<git remote add origin YOUR_GITHUB_REPO_LINK<git push -u origin main -f"
+    },
+    {
+      "type": "add",
+      "title": "fatal: not a valid object name: 'master/main'",
+      "description": "Unable to add file. While adding file, it shows fatal: not a valid object name: 'master'.",
+      "solutions": "git commit -m \"first commit\""
+    },
+    {
+      "type": "push",
+      "title": "fatal: The current branch master has no upstream branch.",
+      "description": "To push the current branch and set the remote as upstream, use.",
+      "solutions": "First check which branch you are in, then:<git push --set-upstream origin BRANCHNAME"
+    },
+    {
+      "type": "add",
+      "title": "error: Your local changes to the following files would be overwritten by checkout: <file name>",
+      "description": "Please commit your changes or stash them before you stwitch branches. Aborting",
+      "solutions": "git add .<git commit -m \"ges\""
+    },
+    {
+      "type": "pull",
+      "title": "fatal: 'main' does not appear to be a git repository",
+      "description": "fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.",
+      "solutions": "git pull origin BRANCHNAME"
+    },
+    {
+      "type": "commit",
+      "title": "fatal: cannot lock ref 'HEAD': unable to resolve reference 'refs/heads/main': reference broken",
+      "description": "Fatal error occurs when you try to commit your changes.",
+      "solutions": "git pull origin BRANCHNAME"
+    },
+    {
+      "type": "merge",
+      "title": "Auto-merging path/path/filename",
+      "description": "CONFLICT (add/add): Merge conflict in path/path/filename. Automatic merge failed; fix conflicts and then commit the result.",
+      "solutions": "You have to manually solve the conflict and then: <git add .< git commit -m \"ges\""
+    },
+    {
+      "type": "push",
+      "title": "Everything up-to-date",
+      "description": "File changed and git add . done but git push say: Everything is up-to-date",
+      "solutions": "git commit -m \"ges\""
+    },
+    {
+      "type": "branch",
+      "title": "Switched to branch 'main'",
+      "description": "Your branch is behind 'origin/main' by 10 commits, and can be fast-forwarded.",
+      "solutions": "git pull"
+    },
+    {
+      "type": "push",
+      "title": "remote: Not Found",
+      "description": "fatal: repository 'https://github.com/user/repo.git/' not found",
+      "solutions": "Your repository link is not valid. Try to re-create the repository and copy the new link.<git remote set-url origin YOUR_GITHUB_REPO_LINK"
+    },
+    {
+      "type": "push",
+      "title": "fatal: unable to access 'https://github.com/user/repo.git/': Could not...",
+      "description": "fatal: repository 'https://github.com/user/repo.git/' not found",
+      "solutions": "git config --global --unset http.proxy<git config --global user.name \"user name\"<git config --global user.email \"user email\""
+    }
+  ]
+}

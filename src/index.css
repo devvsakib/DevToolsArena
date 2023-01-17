@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@layer base {
+  body {
+    @apply bg-dark text-white;
+  }
+}
+
+.card {
+  text-align: left;
+  border-radius: 0.5rem;
+  background: #01111b;
+  /* width: 48%; */
+  box-shadow: 0 3px 10px rgba(123, 200, 68, 0.231372549);
+}
+
+.badge {
+  background: #9912d8;
+  font-size: 0.5rem;
+  position: relative;
+  top: -15px;
+  left: 8px;
+  padding: 2px 5px;
+  border-radius: 10px;
+  color: #fff !important;
+}
+
+.error {
+  color: #a6afb8;
+  font-family: "Space Mono", monospace;
+}
+
+.card-title {
+  color: #c4c8cc;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: auto;
+  }
+}
+.menu-primary-enter {
+  position: absolute;
+  transform: translateX(-110%);
+}
+.menu-primary-enter-active {
+  transform: translateX(0%);
+  transition: all 400ms ease;
+}
+.menu-primary-exit {
+  position: absolute;
+}
+.menu-primary-exit-active {
+  transform: translateX(-110%);
+  transition: all 400ms ease;
+}
+/*# sourceMappingURL=style.css.map */
