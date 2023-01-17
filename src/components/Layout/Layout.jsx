@@ -12,13 +12,9 @@ const Layout = ({children}) => {
           <Header 
               notice={"Under Construction"}
           />
-<<<<<<< HEAD
-          {children}
-=======
           <div className='relative'>
               {children}
           </div>
->>>>>>> ab6ff739206088a7a085920c9ef786c354271d4d
         </>
     );
 };
