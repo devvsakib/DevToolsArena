@@ -40,7 +40,7 @@
       "type": "commit",
       "title": "fatal: cannot lock ref 'HEAD': unable to resolve reference 'refs/heads/main': reference broken",
       "description": "Fatal error occurs when you try to commit your changes.",
-      "solutions": "git pull origin BRANCHNAME"
+      "solutions": "rm .git/refs/heads/main<git add .<git commit -m \"github-error-solve\""
     },
     {
       "type": "merge",
@@ -63,6 +63,12 @@
     {
       "type": "push",
       "title": "remote: Not Found",
+      "description": "fatal: repository 'https://github.com/user/repo.git/' not found",
+      "solutions": "Your repository link is not valid. Try to re-create the repository and copy the new link.<git remote set-url origin YOUR_GITHUB_REPO_LINK"
+    },
+    {
+      "type": "pull",
+      "title": "fatal: refusing to merge unrelated histories",
       "description": "fatal: repository 'https://github.com/user/repo.git/' not found",
       "solutions": "Your repository link is not valid. Try to re-create the repository and copy the new link.<git remote set-url origin YOUR_GITHUB_REPO_LINK"
     },
