@@ -70,13 +70,25 @@
       "type": "pull",
       "title": "fatal: refusing to merge unrelated histories",
       "description": "fatal: repository 'https://github.com/user/repo.git/' not found",
-      "solutions": "Your repository link is not valid. Try to re-create the repository and copy the new link.<git remote set-url origin YOUR_GITHUB_REPO_LINK"
+      "solutions": "git pull origin main --allow-unrelated-histories"
     },
     {
       "type": "push",
       "title": "fatal: unable to access 'https://github.com/user/repo.git/': Could not...",
       "description": "fatal: repository 'https://github.com/user/repo.git/' not found",
       "solutions": "git config --global --unset http.proxy<git config --global user.name \"user name\"<git config --global user.email \"user email\""
-    }
-  ]
+    },
+    {
+     "type": "commit",
+     "title": "Please enter the commit message for your changes",
+     "description": "This error occurs when you attempt to commit changes to a Git repository without specifying a commit message, keep in mind it is also a  good practice to include a more detailed explanation of the changes made in the commit message",
+     "solutions": "git commit -m '<commit message>' "
+   },
+   {
+     "type": "commit",
+     "title": "fatal: Not a git repository (or any of the parent directories): .git",
+     "description": "This error occurs when you attempt to commit without initiating a git repository, before initiating always make sure either you are in root directory or  correct directory where you want to initiate git ",
+     "solutions": "git init"
+   }
+ ]
 }
