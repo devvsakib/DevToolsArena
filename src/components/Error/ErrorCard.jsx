@@ -24,14 +24,22 @@ function ErrorCard({ error }) {
     }
     return setErrorTypeColor("#7e1aa5");
   }, [errorTypeColor])
-
+  let item = error.type;
 
   return (
     <div
-    className="py-4 mb-4 col-span-12 md:col-span-6 xl:col-span-4 px-2 md:px-6 border-l-4 rounded-lg   items-start bg-dark-secondary flex flex-col"
-      style={{
-        borderColor: errorTypeColor,
-      }}
+      className={`py-4 mb-4 col-span-12 md:col-span-6 xl:col-span-4 px-2 md:px-6 border-l-4 rounded-lg   items-start bg-dark-secondary flex flex-col ${item === "add"
+          ? "border-[#4024e0]"
+          : item === "commit"
+            ? "border-[#1a5ba5]"
+            : item === "merge"
+              ? "border-[#118d7c]"
+              : item === "push"
+                ? "border-[#8d54e1]"
+                : item === "branch"
+                  ? "border-[#40E4F0]"
+                  : "border-[#7e1aa5]"
+        }`}
     >
       <h3 className="text-lg font-medium">{error.title}</h3>
 
