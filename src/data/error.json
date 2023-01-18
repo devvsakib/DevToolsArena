@@ -82,7 +82,7 @@
      "type": "commit",
      "title": "Please enter the commit message for your changes",
      "description": "This error occurs when you attempt to commit changes to a Git repository without specifying a commit message, keep in mind it is also a  good practice to include a more detailed explanation of the changes made in the commit message",
-     "solutions": "git commit -m '<commit message>' "
+     "solutions": "git commit -m \"commit message\""
    },
    {
      "type": "commit",
