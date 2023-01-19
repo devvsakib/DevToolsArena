@@ -4,8 +4,10 @@ import ErrorSolutions from "./ErrorSolutions";
 import ErrorType from "./ErrorType";
 
 function ErrorCard({ error }) {
+  
   const [showSolution, setShowSolution] = useState(false);
   const [errorTypeColor, setErrorTypeColor] = useState('#7e1aa5');
+  const [readMore,setReadMore]=useState(false);
   useEffect(() => {
     if (error.type == "add") {
       return setErrorTypeColor("#4024e0");
@@ -50,9 +52,13 @@ function ErrorCard({ error }) {
       {showSolution ? (
         <ErrorSolutions solutions={error.solutions} />
       ) : (
-        <p className="text-sm text-gray line-clamp-3 leading-relaxed">
-          {error.description}
+        <div className="h-fit">
+        <p className="text-sm text-gray line-clamp-11 leading-relaxed">
+          {readMore ? error.description : error.description.substring(0,100)}
+          {error.description.length > 100 ?<button onClick={()=>{setReadMore(!readMore)}}>{readMore ? '...show less': '...show more'} </button>:''}
         </p>
+        
+        </div>
       )}
 
       <button
