@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MdClear, MdSearch } from "react-icons/md";
+import { MdSearch } from "react-icons/md";
 import './css/style.css'
 const errorType = ["push", "commit", "merge", "pull", "add", "branch"]
 import useWindowsize from "../../hooks/useWindowsize";
@@ -23,9 +23,6 @@ function SearchInput({ search, setSearch, setType }) {
                     placeholder="Search for errors"
                     onChange={(e) => { setSearch(e.target.value); setType("") }}
                 />
-                <button className="focus:outline-none" onClick={() => setSearch("")}>
-                    <MdClear className="text-gray text-xl" />
-                </button>
             </form>
             <div className="types mt-4">
 
