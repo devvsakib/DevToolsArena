@@ -1,12 +1,21 @@
 import React from 'react';
 
-const DocItem = ({title, content}) => {
-    return (
-      <div className='px-2'>
-          <h6 className='text-base text-blue-400'>{title}</h6>
-          <p className='text-sm text-gray leading-tight'>{content}</p>
-      </div>
-    );
+
+const DocItem = ({ title, content }) => {
+  const changeColor = () => {
+    const colorArray = ["4024e0", "1a5ba5", "118d7c", "8d54e1", "40E4F0", "7e1aa5"]
+    const code = [1, 0, 3, 2, 5, 7]
+    let element;
+
+    return element = colorArray[Math.floor(Math.random() * 6)];
+  }
+  
+  return (
+    <div className={`p-4 rounded shadow-lg shadow-[#118d7c62] bg-[#${changeColor()}] backdrop-blur-sm`}>
+      <h6 className='font-semibold text-white text-opacity-80 mb-2'>{title}</h6>
+      <p className='text-sm text-white leading-tight'>{content}</p>
+    </div>
+  );
 };
 
 export default DocItem;
