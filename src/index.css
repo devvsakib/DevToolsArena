@@ -62,4 +62,13 @@
   transform: translateX(-110%);
   transition: all 400ms ease;
 }
+body::-webkit-scrollbar {
+  display: none;
+  }
+  
+  html {
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  }
 /*# sourceMappingURL=style.css.map */
