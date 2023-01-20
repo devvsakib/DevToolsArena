@@ -89,6 +89,12 @@
      "title": "fatal: Not a git repository (or any of the parent directories): .git",
      "description": "This error occurs when you attempt to commit without initiating a git repository, before initiating always make sure either you are in root directory or  correct directory where you want to initiate git ",
      "solutions": "git init"
+   },
+   {
+    "type": "add",
+     "title": "fatal: pathspec 'dummyFile.extension' did not match any files",
+     "description": "This error occurs when you attempt to add files in to git but git cannot find correct path to the file from current directory , always make sure there isn't any typo",
+     "solutions": "git add --all || git add '/correct path to file/' "
    }
  ]
 }
