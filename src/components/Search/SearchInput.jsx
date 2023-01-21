@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MdSearch } from "react-icons/md";
+import { MdSearch, MdClear } from "react-icons/md";
 import './css/style.css'
 const errorType = ["push", "commit", "merge", "pull", "add", "branch"]
 import useWindowsize from "../../hooks/useWindowsize";
@@ -16,13 +16,16 @@ function SearchInput({ search, setSearch, setType }) {
             >
                 <MdSearch className="text-gray text-2xl" />
                 <input
-                    type="search"
+                    type="text"
                     id="searchbox"
                     value={search}
                     className="w-full text-sm md:text-base focus:outline-none placholder:font-semibold text-dark bg-transparent"
                     placeholder="Search for errors"
                     onChange={(e) => { setSearch(e.target.value); setType("") }}
                 />
+                <button className={`focus:outline-none ${!search ? "hidden" : "block"}`} onClick={() => setSearch("")}>
+                    <MdClear className="text-gray text-xl" />
+                </button>
             </form>
             <div className="types mt-4">
 
@@ -33,7 +36,7 @@ function SearchInput({ search, setSearch, setType }) {
                                 errorType.map((item, i) => (
                                     <li
                                         key={i}
-                                        className={`${item === "add"? "bg-[#4024e0]": item === "commit"? "bg-[#1a5ba5]": item === "merge"? "bg-[#118d7c]": item === "push"? "bg-[#8d54e1]": item === "branch"? "bg-[#40E4F0]": "bg-[#7e1aa5]"
+                                        className={`${item === "add" ? "bg-[#4024e0]" : item === "commit" ? "bg-[#1a5ba5]" : item === "merge" ? "bg-[#118d7c]" : item === "push" ? "bg-[#8d54e1]" : item === "branch" ? "bg-[#40E4F0]" : "bg-[#7e1aa5]"
                                             }
                                          w-full md:w-auto rounded-md text-white font-bold py-1 px-3 cursor-pointer`}
                                         onClick={() => setType(item)}

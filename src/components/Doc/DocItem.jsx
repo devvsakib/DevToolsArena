@@ -4,7 +4,6 @@ import React from 'react';
 const DocItem = ({ title, content }) => {
   const changeColor = () => {
     const colorArray = ["4024e0", "1a5ba5", "118d7c", "8d54e1", "40E4F0", "7e1aa5"]
-    const code = [1, 0, 3, 2, 5, 7]
     let element;
 
     return element = colorArray[Math.floor(Math.random() * 6)];
