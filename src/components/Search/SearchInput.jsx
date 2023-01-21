@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MdSearch, MdClear } from "react-icons/md";
 import './css/style.css'
-const errorType = ["push", "commit", "merge", "pull", "add", "branch"]
+const errorType = ["All", "push", "commit", "merge", "pull", "add", "branch"]
 import useWindowsize from "../../hooks/useWindowsize";
 
 function SearchInput({ search, setSearch, setType }) {
@@ -55,7 +55,11 @@ function SearchInput({ search, setSearch, setType }) {
                                     errorType.map((item, i) => (
                                         <li key={i} className={`${item === "add" ? "bg-[#4024e0]" : item === "commit" ? "bg-[#1a5ba5]" : item === "push" ? "bg-[#1aa0a5]" : "bg-[#7e1aa5]"} w-full md:w-auto rounded-md text-white font-bold py-2 px-3 cursor-pointer`}
                                             onClick={() => { setType(item); setOpen(!open) }}
-                                        >{item}</li>
+                                        >{
+                                            item                                            
+                                        }
+                                        
+                                        </li>
                                     ))
                                 }
                             </ul>

@@ -17,7 +17,10 @@ const Error = ({ search, type }) => {
   });
 
   const filteredErrorByType = filteredError.filter((error) => {
-    return error.type.toLowerCase().includes(type.toLowerCase());
+    if (type === "All") {
+      return error;
+    } return error.type.toLowerCase().includes(type.toLowerCase());
+
   });
 
   return (
