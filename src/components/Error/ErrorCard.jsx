@@ -45,7 +45,7 @@ function ErrorCard({ error }) {
                   : "border-[#7e1aa5]"
         }`}
     >
-      <h3 className="text-lg font-medium">{error.title}</h3>
+      <h3 className="title">{error.title}</h3>
 
       <ErrorType type={error.type} />
 
