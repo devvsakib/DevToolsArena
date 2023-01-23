@@ -5,7 +5,6 @@ import DocItem from './DocItem';
 
 const DocCard = () => {
     return (
-        <Layout>
           <div className='w-full md:w-5/6 mx-auto px-4 py-8'>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
@@ -65,7 +64,6 @@ const DocCard = () => {
               </div>
             </div>
           </div>
-        </Layout>
     );
 };
 
