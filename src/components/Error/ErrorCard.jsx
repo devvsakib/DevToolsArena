@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { MdKeyboardArrowLeft, MdOutlineArrowRightAlt } from "react-icons/md";
 import ErrorSolutions from "./ErrorSolutions";
 import ErrorType from "./ErrorType";
+import './css/style.css';
 
 function ErrorCard({ error }) {
   
@@ -30,6 +31,7 @@ function ErrorCard({ error }) {
 
   return (
     <div
+    id="main-div"
       className={`py-4 mb-4 col-span-12 md:col-span-6 xl:col-span-4 px-2 md:px-6 border-l-4 rounded-lg   items-start bg-dark-secondary flex flex-col ${item === "add"
           ? "border-[#4024e0]"
           : item === "commit"
@@ -43,7 +45,7 @@ function ErrorCard({ error }) {
                   : "border-[#7e1aa5]"
         }`}
     >
-      <h3 className="text-lg font-medium">{error.title}</h3>
+      <h3 className="title">{error.title}</h3>
 
       <ErrorType type={error.type} />
 
