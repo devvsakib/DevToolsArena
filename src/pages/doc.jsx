@@ -1,9 +1,9 @@
 import React from 'react'
 import DocCard from '/src/components/Doc/DocCard'
-const doc = () => {
+const Doc = () => {
   return (
     <DocCard/>
   )
 }
 
-export default doc
+export default Doc
