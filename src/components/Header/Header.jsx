@@ -16,6 +16,7 @@ function Header({ notice }) {
           <h6>Under Construction</h6>
           <MdInsertDriveFile className="text-lg" />
           <Link to={'/doc'}>Doc</Link>
+          <Link to={'/Contributors'}>Contributors</Link>
         </div>
       </div>
     </header>
