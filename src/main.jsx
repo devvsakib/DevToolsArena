@@ -5,7 +5,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Doc from "./components/Doc/Doc";
+import Doc from "./pages/Doc";
 
 /* Creating a router object that is used to render the correct component based on the url. */
 const router = createBrowserRouter(
