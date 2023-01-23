@@ -9,7 +9,7 @@ function Header({ notice }) {
           GITHUB <span className="text-primary line-through">ERROR</span> SOLVE
         </h1> */}
         <Link to={'/'}>
-          <img src="assets/TEST2.png" className="w-36" alt="" />
+          <img src="assets/logo.png" className="w-36" alt="GES" />
         </Link>
         <div className="flex mt-2 md:mt-0 items-center gap-3 text-sm">
           <MdConstruction className="text-lg" />
