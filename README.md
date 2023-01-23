@@ -33,6 +33,66 @@ npm i
 npm run dev
 ```
 
+- If Project Starts everything is correct , Now you need to stop the project.
+
+```console
+ Cntrl + C
+```
+
+- Make a New branch.The change you are going to make would be a good branch name.
+
+```console
+git checkout -b <name-of-your-branch>
+```
+
+- Stage your changes
+
+```console
+  git add --all
+```
+
+or
+
+```console
+  git add <Name-of-file-to-stage>
+```
+
+- Commit changes
+
+```console
+  git commit -m "<Commit-message>"
+```
+
+- Check status of your repository.
+
+```console
+  git status
+```
+
+- The response should be like this
+
+
+```console
+On branch <name-of-your-branch>
+nothing to commit, working tree clean
+```
+- Pushing your repository to GitHub.
+
+```console
+  git push origin <name-of-your-branch>
+```
+or
+
+
+```console
+  git branch -M main
+  git push -u origin main
+```
+
+- On the GitHub website, navigate to your forked repo - on the top of the files section, you'll notice a new section containing a `Compare & Pull Request` button!
+
+- Click on that button, this will load a new page, comparing the local branch in your forked repository against the main branch. Click the green `Create Pull Request` button.
+
 **Troubleshoot**
 Facing problem starting the server or any other problem? Please let us know by raising an ![issue](https://github.com/devvsakib/github-error-solve/issues/new)
 
