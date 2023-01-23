@@ -4,10 +4,10 @@ import ErrorSolutions from "./ErrorSolutions";
 import ErrorType from "./ErrorType";
 
 function ErrorCard({ error }) {
-
+  
   const [showSolution, setShowSolution] = useState(false);
   const [errorTypeColor, setErrorTypeColor] = useState('#7e1aa5');
-  const [readMore, setReadMore] = useState(false);
+  const [readMore,setReadMore]=useState(false);
   useEffect(() => {
     if (error.type == "add") {
       return setErrorTypeColor("#4024e0");
@@ -31,16 +31,16 @@ function ErrorCard({ error }) {
   return (
     <div
       className={`py-4 mb-4 col-span-12 md:col-span-6 xl:col-span-4 px-2 md:px-6 border-l-4 rounded-lg   items-start bg-dark-secondary flex flex-col ${item === "add"
-        ? "border-[#4024e0]"
-        : item === "commit"
-          ? "border-[#1a5ba5]"
-          : item === "merge"
-            ? "border-[#118d7c]"
-            : item === "push"
-              ? "border-[#8d54e1]"
-              : item === "branch"
-                ? "border-[#40E4F0]"
-                : "border-[#7e1aa5]"
+          ? "border-[#4024e0]"
+          : item === "commit"
+            ? "border-[#1a5ba5]"
+            : item === "merge"
+              ? "border-[#118d7c]"
+              : item === "push"
+                ? "border-[#8d54e1]"
+                : item === "branch"
+                  ? "border-[#40E4F0]"
+                  : "border-[#7e1aa5]"
         }`}
     >
       <h3 className="text-lg font-medium">{error.title}</h3>
@@ -53,11 +53,11 @@ function ErrorCard({ error }) {
         <ErrorSolutions solutions={error.solutions} />
       ) : (
         <div className="h-fit">
-          <p className="text-sm text-gray line-clamp-11 leading-relaxed">
-            {readMore ? error.description : error.description.substring(0, 100)}
-            {error.description.length > 100 ? <button onClick={() => { setReadMore(!readMore) }}>{readMore ? '...show less' : '...show more'} </button> : ''}
-          </p>
-
+        <p className="text-sm text-gray line-clamp-11 leading-relaxed">
+          {readMore ? error.description : error.description.substring(0,100)}
+          {error.description.length > 100 ?<button onClick={()=>{setReadMore(!readMore)}}>{readMore ? '...show less': '...show more'} </button>:''}
+        </p>
+        
         </div>
       )}
 
