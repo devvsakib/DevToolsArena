@@ -1,9 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-<<<<<<< HEAD
-import { BrowserRouter } from "react-router-dom";
-=======
 import {
   createBrowserRouter,
   RouterProvider,
@@ -23,12 +20,9 @@ const router = createBrowserRouter(
     }
   ]
 );
->>>>>>> parent of 8d9c392 (pages created)
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </BrowserRouter>
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );

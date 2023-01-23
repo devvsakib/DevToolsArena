@@ -1,9 +1,8 @@
 import React from 'react';
-import Header from '../Header/Header';
 import Layout from '../Layout/Layout';
 import DocItem from './DocItem';
 
-const DocCard = () => {
+const Doc = () => {
     return (
           <div className='w-full md:w-5/6 mx-auto px-4 py-8'>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -67,4 +66,4 @@ const DocCard = () => {
     );
 };
 
-export default DocCard;
+export default Doc;
