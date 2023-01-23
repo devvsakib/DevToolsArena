@@ -99,6 +99,6 @@ Facing problem starting the server or any other problem? Please let us know by r
 ### **<p align="center">Please STAR the repository⭐</p>**
 
 ### Discord
-Join Us ![Sure](https://discord.gg/xwRbDwnbMr)
+Join Us  <a href="https://discord.gg/xwRbDwnbMr"><img src="https://cdn.worldvectorlogo.com/logos/discord-6.svg" title="Discord" alt="Discord Community" width="20"/></a>
 
 **Live Link <a href="https://github-error-solve.vercel.app" target="_blank">GES</a>**
