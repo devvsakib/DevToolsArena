@@ -1,10 +1,12 @@
 import React from 'react';
 import Data from '../../data/Contributors.json';
+import Header from '../../components/Header/Header';
 import './css/index.css';
 
 function Contribute() {
   return (
     <div>
+       <Header />
         {
           Data.map(data =>
           <div 
