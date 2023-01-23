@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import Error from "/src/components/Error/Error";
-import SearchInput from "/src/components/Search/SearchInput";
-import Layout from "/src/components/Layout/Layout";
+import Error from "../components/Error/Error";
+import SearchInput from "../components/Search/SearchInput";
+import Layout from "../components/Layout/Layout";
 
 const Home = () => {
     const [search, setSearch] = useState('')
