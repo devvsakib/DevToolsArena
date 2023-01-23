@@ -1,11 +1,9 @@
 import React from 'react';
-import Header from '../Header/Header';
 import Layout from '../Layout/Layout';
 import DocItem from './DocItem';
 
 const Doc = () => {
     return (
-        <Layout>
           <div className='w-full md:w-5/6 mx-auto px-4 py-8'>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
@@ -65,7 +63,6 @@ const Doc = () => {
               </div>
             </div>
           </div>
-        </Layout>
     );
 };
 
