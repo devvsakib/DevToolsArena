@@ -1,8 +1,8 @@
 import React from 'react'
-import Doc from '/src/components/Doc/Doc'
+import DocCard from '/src/components/Doc/DocCard'
 const doc = () => {
   return (
-    <Doc/>
+    <DocCard/>
   )
 }
 

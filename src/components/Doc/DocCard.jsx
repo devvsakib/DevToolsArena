@@ -3,7 +3,7 @@ import Header from '../Header/Header';
 import Layout from '../Layout/Layout';
 import DocItem from './DocItem';
 
-const Doc = () => {
+const DocCard = () => {
     return (
         <Layout>
           <div className='w-full md:w-5/6 mx-auto px-4 py-8'>
@@ -69,4 +69,4 @@ const Doc = () => {
     );
 };
 
-export default Doc;
+export default DocCard;
