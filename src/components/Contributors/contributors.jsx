@@ -9,7 +9,6 @@ function Contribute() {
             <h1>{data.name}</h1>
             <a href={data.github}>Github</a>
             <a href={data.twiter}>Twiter</a>
-            
           </>
           )
         }
