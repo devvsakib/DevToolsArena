@@ -1,4 +1,5 @@
 import { MdConstruction, MdInsertDriveFile } from "react-icons/md";
+import {AiFillGithub} from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 function Header({ notice }) {
@@ -16,7 +17,12 @@ function Header({ notice }) {
           <h6>Under Construction</h6>
           <MdInsertDriveFile className="text-lg" />
           <Link to={'/doc'}>Doc</Link>
+
           <Link to={'/Contributors'}>Contributors</Link>
+
+          <a target='_blank' href="https://github.com/devvsakib/github-error-solve"><AiFillGithub size='1.25rem'/></a>
+
+
         </div>
       </div>
     </header>
