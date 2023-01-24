@@ -94,7 +94,7 @@
       "type": "push",
       "title": "ssh: connect to host github.com port 22: Connection timed out",
       "description": "fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.",
-      "solutions": "git init"
+      "solutions": "git add .< git commit -m \"ges\"<git push"
     },
     {
       "type": "add",
