@@ -79,22 +79,28 @@
       "solutions": "git config --global --unset http.proxy<git config --global user.name \"user name\"<git config --global user.email \"user email\""
     },
     {
-     "type": "commit",
-     "title": "Please enter the commit message for your changes",
-     "description": "This error occurs when you attempt to commit changes to a Git repository without specifying a commit message, keep in mind it is also a  good practice to include a more detailed explanation of the changes made in the commit message",
-     "solutions": "git commit -m \"commit message\""
-   },
-   {
-     "type": "commit",
-     "title": "fatal: Not a git repository (or any of the parent directories): .git",
-     "description": "This error occurs when you attempt to commit without initiating a git repository, before initiating always make sure either you are in root directory or  correct directory where you want to initiate git ",
-     "solutions": "git init"
-   },
-   {
-    "type": "add",
-     "title": "fatal: pathspec 'dummyFile.extension' did not match any files",
-     "description": "This error occurs when you attempt to add files in to git but git cannot find correct path to the file from current directory , always make sure there isn't any typo",
-     "solutions": "git add --all || git add '/correct path to file/' "
-   }
- ]
+      "type": "commit",
+      "title": "Please enter the commit message for your changes",
+      "description": "This error occurs when you attempt to commit changes to a Git repository without specifying a commit message, keep in mind it is also a  good practice to include a more detailed explanation of the changes made in the commit message",
+      "solutions": "git commit -m \"commit message\""
+    },
+    {
+      "type": "commit",
+      "title": "fatal: Not a git repository (or any of the parent directories): .git",
+      "description": "This error occurs when you attempt to commit without initiating a git repository, before initiating always make sure either you are in root directory or  correct directory where you want to initiate git ",
+      "solutions": "git init"
+    },
+    {
+      "type": "push",
+      "title": "ssh: connect to host github.com port 22: Connection timed out",
+      "description": "fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.",
+      "solutions": "git init"
+    },
+    {
+      "type": "add",
+      "title": "fatal: pathspec 'dummyFile.extension' did not match any files",
+      "description": "This error occurs when you attempt to add files in to git but git cannot find correct path to the file from current directory , always make sure there isn't any typo",
+      "solutions": "git add --all || git add '/correct path to file/' "
+    }
+  ]
 }
