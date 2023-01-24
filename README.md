@@ -100,20 +100,15 @@ Facing problem starting the server or any other problem? Please let us know by r
 
 ### Discord
 
-Join Us ![Sure](https://discord.gg/xwRbDwnbMr)
-### Contributors 
-Thanks to all contributors ❤️
-
-Make Sure to add your info in ./src/data/Contibutors.json
-
-<a href="https://github.com/devvsakib/github-error-solve/graphs/contributors">
-    <img src=" https://contrib.rocks/image?repo=devvsakib/github-error-solve">
-</a>
-
-**Live Link <a href="https://github-error-solve.vercel.app" target="_blank">GES</a>**
-
-
 Join Us  <a href="https://discord.gg/xwRbDwnbMr"><img src="https://cdn.worldvectorlogo.com/logos/discord-6.svg" title="Discord" alt="Discord Community" width="20"/></a>
 
 **Live Link <a href="https://github-error-solve.vercel.app" target="_blank">GES</a>**
 
+### Contributors 
+Thanks to all contributors ❤️
+
+Make Sure to add your info in `src/data/Contibutors.json`
+
+<a href = "https://github.com/devvsakib/github-error-solve/graphs/contributors">
+  <img src = "https://contrib.rocks/image?repo=devvsakib/github-error-solve"/>
+</a>
