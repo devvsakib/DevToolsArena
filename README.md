@@ -85,8 +85,8 @@ or
 
 
 ```console
-  git branch -M main
-  git push -u origin main
+  git branch -M master
+  git push -u origin master
 ```
 
 - On the GitHub website, navigate to your forked repo - on the top of the files section, you'll notice a new section containing a `Compare & Pull Request` button!

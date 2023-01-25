@@ -4,6 +4,7 @@ import Layout from '../../components/Layout/Layout';
 import './css/index.css';
 
 function Contribute() {
+  const userURL = "https://api.github.com/users/";
   const url = "https://api.github.com/repos/devvsakib/github-error-solve/contributors"
   const [data, setData] = useState([]);
   useEffect(() => {
