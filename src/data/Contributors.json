@@ -1,18 +1,12 @@
 
 [
 
-  { "comment": "// To add image go to your profile right click on the image and copy image address",
-    
-    "name": "devvsakib",
-    "github": "https://github.com/devvsakib",
-    "twiter": "",
-    "image": "https://github.com/devvsakib.png"
+  { 
+    "twiter": ""
   },
-  {
-    "name": "MohamedAlDeep",
-    "github": "https://github.com/MohamedAlDeep",
-    "twiter":"",
-    "image": "https://avatars.githubusercontent.com/u/95958815?s=400&v=4"
+  { 
+    "twiter": ""
   }
+
 ]  
   

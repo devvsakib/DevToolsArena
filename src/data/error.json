@@ -101,6 +101,12 @@
       "title": "fatal: pathspec 'dummyFile.extension' did not match any files",
       "description": "This error occurs when you attempt to add files in to git but git cannot find correct path to the file from current directory , always make sure there isn't any typo",
       "solutions": "git add --all || git add '/correct path to file/' "
+    },
+    {
+      "type": "push",
+      "title": "fatal: The remote end hung up unexpectedly",
+      "description": "This error occurs when the size of the repository is huge for the http to transfer",
+      "solutions": "git config http.postBuffer 524288000"
     }
   ]
 }
