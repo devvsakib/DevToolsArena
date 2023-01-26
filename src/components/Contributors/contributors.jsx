@@ -7,11 +7,14 @@ function Contribute() {
   const userURL = "https://api.github.com/users/";
   const url = "https://api.github.com/repos/devvsakib/github-error-solve/contributors"
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
+    setLoading(false)
     const fetchUsers = async (url) => {
       const response = await fetch(url);
       const users = await response.json();
       setData(users)
+      setLoading(true)
     }
     fetchUsers(url)
   }, [data.length])
@@ -29,7 +32,7 @@ function Contribute() {
         {
           // User filtered by CONTRIBUTIONS number, contribute more to jump in first place
 
-          data.map(user =>
+          loading ? (data.map(user =>
             <div
               id="container"
               className={`py-4 mb-4 col-span-12 md:col-span-6 xl:col-span-4 md:px-6 border-l-4 rounded-lg bg-dark-secondary flex flex-col mt-8 items-center mx-auto gap-2 px-3 border-[#${changeColor()}] hover:border-primary hover:text-primary`}>
@@ -40,6 +43,14 @@ function Contribute() {
                 <a className='spf-link' href={user.twiter}>Twiter</a>
                 {/* spf-link : abbreviation of (specific-link) for css */}
               </div>
+            </div>
+          )
+          ) : (
+            <div className='translate-y-[4rem]'>
+              <img src="/assets/run.gif" 
+              className='w-1/2 mx-auto'
+              alt="Running Gif" />
+              <h1 className='text-center md:text-2xl text-white'>Contributors coming...</h1>
             </div>
           )
         }
