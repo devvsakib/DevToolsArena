@@ -46,9 +46,11 @@ function Contribute() {
             </div>
           )
           ) : (
-            <div>
-              <img src="public/assets/run.gif" alt="" />
-              <h1 className='text-center text-2xl text-white'>Something is Wrong</h1>
+            <div className='translate-y-[4rem]'>
+              <img src="public/assets/run.gif" 
+              className='w-1/2 mx-auto'
+              alt="Running Gif" />
+              <h1 className='text-center md:text-2xl text-white'>Contributors coming...</h1>
             </div>
           )
         }
