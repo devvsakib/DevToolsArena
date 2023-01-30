@@ -107,6 +107,36 @@
       "title": "fatal: The remote end hung up unexpectedly",
       "description": "This error occurs when the size of the repository is huge for the http to transfer",
       "solutions": "git config http.postBuffer 524288000"
+    },
+    {
+      "type": "branch",
+      "title": "error: You have local changes to <branch_name>; cannot switch branches.",
+      "description": "This error occurs when switching a branch without commiting the changes made to that branch",
+      "solutions": "[{'git stash':'stash your current changes'},{'git reset --hard HEAD':'if you dont' mind losing those minor changes'},{'git checkout -b <branch_name>':'When switching branches, proceed even if the index or the working tree differs from HEAD. This is used to throw away local changes.'},{'git switch -f <branch-name>':'-f is short for --force, which is an alias for --discard-changes , works for git 2.23'}]"
+    },
+    {
+      "type": "push",
+      "title": "Not error, but common problem of pushing wrong/unwanted commits to github",
+      "description": "Uploaded private or wrong data to the github repository, and want to remove it from remote repo",
+      "solutions": "[{'git reset --mixed HEAD~':'HEAD~1 indicates a commit just before the recent commit pointed by the current branch HEAD.'},{'git reset --mixed <commit-id>' or 'git reset --soft <commit-id>':'move back to a previous commit, upon pushing, previous commits will get removed.'}]"
+    },
+    {
+      "type": "push",
+      "title": "fatal: remote origin already exists",
+      "description": "It happens when you attempt to change the repository origin URL after cloning it from GitHub or another remote repository to your local machine.",
+      "solutions": "['Update the existing remote URL, use the set-url command', 'rename the existing remote, run git rename with the remote']"
+    },
+    {
+      "type": "push",
+      "title": "fatal: repository not found",
+      "description": "occurs while cloning or pushing modifications to a repository. The error may indicate that the repository doesn’t exist or was removed. The repository exists, but an access-related difficulty or remote origin difficulty causes this error.",
+      "solutions": "{'git clone https://mcnz:githubpass@github.com/cameronmcnz/private-github-repo.git':'You did not authenticate, when trying to access a private github repo without authenticating, you get this error. So, log into the repository with your credentials in the Git URL to authenticate}"
+    },
+    {
+      "type": "push/pull/clone",
+      "title": "ssl certificate problem unable to get local issuer certificate",
+      "description": "It is a common git error encountered by users when attempting to push, pull, or clone a git repository with Git Bash, a Windows-specific command-line tool.",
+      "solutions": "{'git -c http.sslVerify=false clone [URL]':'Command to disable SSL certificate validation in git locally. For security considerations, it is not advised to disable SSL certificate validation. However, it is a possible solution to this issue.'}"
     }
   ]
 }
