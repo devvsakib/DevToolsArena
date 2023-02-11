@@ -137,6 +137,12 @@
       "title": "ssl certificate problem unable to get local issuer certificate",
       "description": "It is a common git error encountered by users when attempting to push, pull, or clone a git repository with Git Bash, a Windows-specific command-line tool.",
       "solutions": "{'git -c http.sslVerify=false clone [URL]':'Command to disable SSL certificate validation in git locally. For security considerations, it is not advised to disable SSL certificate validation. However, it is a possible solution to this issue.'}"
+    },
+    {
+      "type": "pull",
+      "title": "error: failed to push some refs to 'https://github.com/…'",
+      "description": "This error occurs when you try to push to a repository but your local branch is behind the remote branch and you need to pull the changes first.",
+      "solutions": "git fetch origin <git status <git merge origin/REMOTE-BRANCHNAME <\"local and remote changes needs to be resolved before pushing your changes.\"  <git push origin BRANCHNAME"
     }
   ]
 }
