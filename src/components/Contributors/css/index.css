@@ -25,4 +25,17 @@
   left: 11%;
   width: 10rem;
   border-radius: 50%;
+}
+
+.skeleton {
+  animation: skeleton 1s linear infinite alternate;
+}
+
+@keyframes skeleton {
+  0% {
+    background-color: rgb(145, 144, 144);
+  }
+  100% {
+    background-color: rgba(116, 116, 116, 0.4);
+  }
 }/*# sourceMappingURL=index.css.map */
