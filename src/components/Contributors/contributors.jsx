@@ -46,14 +46,14 @@ function Contribute() {
                 id="container"
                 className={`py-4 mb-4 col-span-12 md:col-span-6 xl:col-span-4 md:px-6 border-l-4 rounded-lg bg-dark-secondary flex flex-col mt-8 items-center mx-auto gap-2 px-3 border-[#${changeColor()}] hover:border-primary hover:text-primary`}
               >
-                <h1>
+                <img className="pfp mb-8 skeleton" src={user.avatar_url} />
+                <h1 className="text-center -mb-10 font-semibold uppercase">
                   {user.login}{" "}
                   <small className="text-violet-400 container:hover:text-white">
                     {user.contributions}
                   </small>
                 </h1>
-                <img className="pfp" src={user.avatar_url} />
-                <div className="links">
+                <div className="links text-sm">
                   <a className="spf-link" href={user.html_url}>
                     Github
                   </a>
@@ -69,10 +69,10 @@ function Contribute() {
               <img
                 src="/assets/run.gif"
                 className="w-1/2 mx-auto"
-                alt="Running Gif"
+                alt="Running.gif"
               />
               <h1 className="text-center md:text-2xl text-white">
-                Contributors coming...
+                Contributors coming❤️‍🔥...
               </h1>
             </div>
           )
