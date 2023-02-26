@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Doc from "./components/Doc/Doc";
 import Contributors from "./components/Contributors/contributors";
+import BGShape from "./components/BGShape";
 /* Creating a router object that is used to render the correct component based on the url. */
 const router = createBrowserRouter(
   [
@@ -20,7 +21,7 @@ const router = createBrowserRouter(
     },
     {
       path: '/Contributors',
-      element: <Contributors/>
+      element: <Contributors />
     }
 
   ]
@@ -28,6 +29,7 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <BGShape />
     <RouterProvider router={router} />
   </React.StrictMode>
 );

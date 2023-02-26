@@ -4,7 +4,6 @@ import Layout from "../../components/Layout/Layout";
 import "./css/index.css";
 
 function Contribute() {
-  const userURL = "https://api.github.com/users/";
   const url = "https://api.github.com/repos/devvsakib/github-error-solve/contributors";
     
 
@@ -56,41 +55,47 @@ function Contribute() {
         {
           // User filtered by CONTRIBUTIONS number, contribute more to jump in first place
           
-          loading ? (
-            data.map((user) => (
-              <div key={user.login}
-              id="container"
-              className={`py-4 mb-4 col-span-12 md:col-span-6 xl:col-span-4 md:px-6 border-l-4 rounded-lg bg-dark-secondary flex flex-col mt-8 items-center mx-auto gap-2 px-3 border-[#${changeColor()}] hover:border-primary hover:text-primary`}
-              >
-                <img className="pfp mb-8 skeleton" src={user.avatar_url} />
-                <h1 className="text-center -mb-10 font-semibold uppercase">
-                  {user.login}{" "}
-                  <small className="text-violet-400 container:hover:text-white">
-                    {user.contributions}
-                  </small>
-                </h1>
-                <div className="links text-sm">
-                  <a className="spf-link" href={user.html_url}>
-                    GitHub
-                  </a>
-                  {user.twitter_username && <a className="spf-link" href={`https://twitter.com/${user.twitter_username}`}>
-                    Twitter
-                  </a>}
-                  {/* spf-link : abbreviation of (specific-link) for css */}
+          data && data.length !== 0 ? (
+            loading ? (
+              data.map((user) => (
+                <div key={user.login}
+                id="container"
+                className={`py-4 mb-4 col-span-12 md:col-span-6 xl:col-span-4 md:px-6 border-l-4 rounded-lg bg-dark-secondary flex flex-col mt-8 items-center mx-auto gap-2 px-3 border-[#${changeColor()}] hover:border-primary hover:text-primary`}
+                >
+                  <img className="pfp mb-8 skeleton" src={user.avatar_url} />
+                  <h1 className="text-center -mb-10 font-semibold uppercase">
+                    {user.login}{" "}
+                    <small className="text-violet-400 container:hover:text-white">
+                      {user.contributions}
+                    </small>
+                  </h1>
+                  <div className="links text-sm">
+                    <a className="spf-link" href={user.html_url}>
+                      GitHub
+                    </a>
+                    {user.twitter_username && <a className="spf-link" href={`https://twitter.com/${user.twitter_username}`}>
+                      Twitter
+                    </a>}
+                    {/* spf-link : abbreviation of (specific-link) for css */}
+                  </div>
                 </div>
+              ))
+            ) : (
+              <div className="translate-y-[4rem]">
+                <img
+                  src="/assets/run.gif"
+                  className="w-1/2 mx-auto"
+                  alt="Running.gif"
+                />
+                <h1 className="text-center md:text-2xl text-white">
+                  Contributors coming❤️‍🔥...
+                </h1>
               </div>
-            ))
+            )
           ) : (
-            <div className="translate-y-[4rem]">
-              <img
-                src="/assets/run.gif"
-                className="w-1/2 mx-auto"
-                alt="Running.gif"
-              />
-              <h1 className="text-center md:text-2xl text-white">
-                Contributors coming❤️‍🔥...
-              </h1>
-            </div>
+            <h1 className="text-center md:text-2xl text-white">
+              GitHub API Limit Exceeded
+            </h1>
           )
         }
       </section>

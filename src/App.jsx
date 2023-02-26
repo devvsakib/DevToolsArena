@@ -3,6 +3,7 @@ import "./index.css";
 import Error from "./components/Error/Error";
 import SearchInput from "./components/Search/SearchInput";
 import Layout from "./components/Layout/Layout";
+import BGShape from "./components/BGShape";
 
 function App() {
   const [search, setSearch] = useState('')
@@ -21,7 +22,6 @@ function App() {
           type={type}
         />
       </Layout>
-      
     </>
   );
 }
