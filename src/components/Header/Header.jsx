@@ -22,7 +22,7 @@ function Header({ notice }) {
     {
       name: '',
       link: 'https://github.com/devvsakib/github-error-solve',
-      icon: <AiFillGithub size='1.25rem' />
+      icon: <AiFillGithub size='1.45rem' />
     }
   ]
 
@@ -40,7 +40,7 @@ function Header({ notice }) {
           {
             navLink.map((link, index) => {
               return (
-                link.name == "" ? (<a target='_blank' href={link.link}>{link.icon}</a>
+                link.name == "" ? (<a target='_blank' href={link.link} className="githubbtn">{link.icon}</a>
                 ) : link.name == "Doc" ? (<Link className="flex items-center gap-1" to={link.link}>{link.icon}{link.name}</Link>
                 ) : link.name == "Contributors" ? (<Link className="flex items-center gap-1" to={link.link}>{link.icon}{link.name}</Link>
                 ) : link.name == "Home" ? (<Link className="flex items-center gap-1" to={link.link}>{link.icon}{link.name}</Link>
