@@ -10,7 +10,7 @@ const DocItem = ({ title, content }) => {
   }
   
   return (
-    <div className={`p-4 rounded shadow-lg shadow-[#118d7c62] bg-[#${changeColor()}] backdrop-blur-sm`}>
+    <div className={`p-4 rounded shadow-lg shadow-[#118d7c22] bg-white/5 backdrop-blur-[10px]`}>
       <h6 className='font-semibold text-white text-opacity-80 mb-2'>{title}</h6>
       <p className='text-sm text-white leading-tight'>{content}</p>
     </div>
