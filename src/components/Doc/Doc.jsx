@@ -13,7 +13,7 @@ const Doc = () => {
               {/* <div className="bg-gray w-full h-[1px] my-4" /> */}
               <DocItem
                 title='Set up Git'
-                content='Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.'
+                content="Download git by just searching for git on google, you'll find a first link click on it and download it. After downloading, open the file click on install, make your preferences and Vola, git is on your PC."
               />
               {/* <div className="bg-gray w-full h-[1px] my-4" /> */}
               <DocItem
@@ -23,12 +23,12 @@ const Doc = () => {
               {/* <div className="bg-gray w-full h-[1px] my-4" /> */}
               <DocItem
                 title='Creating and managing repositories'
-                content='Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.'
+                content="You can create as many repo's as you want, all you need is a github account and some internet connection. Create a github account, create a repo, you can see how to add files to the repo on our github repo readme file."
               />
               {/* <div className="bg-gray w-full h-[1px] my-4" /> */}
               <DocItem
                 title='Basic writing and formatting syntax'
-                content='Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.'
+                content="You can use prettier a vscode extension, which format's your code in a perfect manner with all the indentation and colour matchings. This will help you understand the syntax that you have written and help you resolving an issue."
               />
             </div>
           </div>
@@ -38,7 +38,7 @@ const Doc = () => {
               {/* <div className="bg-gray w-full h-[1px] my-4" /> */}
               <DocItem
                 title='About pull request'
-                content='Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.'
+                content="We have many repo's on GitHub. Suppose you want to make some changes to some repo then, you'll fork that repo and make all of your changes. Now, when you create a pull request, it compares what's the difference in your fork and the main project. If owner like's it, he'll approve it."
               />
               {/* <div className="bg-gray w-full h-[1px] my-4" /> */}
               <DocItem
