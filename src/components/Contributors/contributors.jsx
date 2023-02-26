@@ -60,7 +60,7 @@ function Contribute() {
               data.map((user) => (
                 <div key={user.login}
                 id="container"
-                className={`py-4 mb-4 col-span-12 md:col-span-6 xl:col-span-4 md:px-6 border-l-4 rounded-lg bg-dark-secondary flex flex-col mt-8 items-center mx-auto gap-2 px-3 border-[#${changeColor()}] hover:border-primary hover:text-primary`}
+                className={`py-4 mb-4 col-span-12 md:col-span-6 xl:col-span-4 md:px-6 border-l-4 rounded-lg shadow-lg bg-white/5 backdrop-blur-[10px] flex flex-col mt-8 items-center mx-auto gap-2 px-3 border-[#${changeColor()}] hover:border-primary hover:text-primary`}
                 >
                   <img className="pfp mb-8 skeleton" src={user.avatar_url} />
                   <h1 className="text-center -mb-10 font-semibold uppercase">
