@@ -47,28 +47,54 @@
     width: auto;
   }
 }
+
 .menu-primary-enter {
   position: absolute;
   transform: translateX(-110%);
 }
+
 .menu-primary-enter-active {
   transform: translateX(0%);
   transition: all 400ms ease;
 }
+
 .menu-primary-exit {
   position: absolute;
 }
+
 .menu-primary-exit-active {
   transform: translateX(-110%);
   transition: all 400ms ease;
 }
+
 body::-webkit-scrollbar {
   display: none;
-  }
-  
-  html {
+}
+
+html {
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.githubbtn {
+  color: #9912d8;
+  animation: pulse 2s linear infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    color: #9912d8;
   }
+
+  50% {
+    color: #16f8d2f3;
+  }
+
+  100% {
+    color: #1aabff;
+  }
+}
+
+
 /*# sourceMappingURL=style.css.map */
