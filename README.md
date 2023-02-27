@@ -107,8 +107,6 @@ Join Us  <a href="https://discord.gg/xwRbDwnbMr"><img src="https://cdn.worldvect
 ### Contributors 
 Thanks to all contributors ❤️
 
-Make Sure to add your info in `src/data/Contibutors.json`
-
 <a href = "https://github.com/devvsakib/github-error-solve/graphs/contributors">
   <img src = "https://contrib.rocks/image?repo=devvsakib/github-error-solve"/>
 </a>
