@@ -94,7 +94,7 @@ or
 - Click on that button, this will load a new page, comparing the local branch in your forked repository against the main branch. Click the green `Create Pull Request` button.
 
 **Troubleshoot**
-Facing problem starting the server or any other problem? Please let us know by raising an ![issue](https://github.com/devvsakib/github-error-solve/issues/new)
+Facing problem starting the server or any other problem? Please let us know by raising an <a href="https://github.com/devvsakib/github-error-solve/issues/new">Issue</a>
 
 ### **<p align="center">Please STAR the repository⭐</p>**
 
