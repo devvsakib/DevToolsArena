@@ -13,7 +13,7 @@ function ErrorSolutions({ solutions }) {
   return (
     <ul>
       {solutions.split("<").map((solution, index) => (
-        <li key={index} className="text-sm text-white">
+        <li key={index} className="text-sm text-white break-all">
           {solution}
         </li>
       ))}
