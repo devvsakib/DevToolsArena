@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { MdKeyboardArrowLeft, MdOutlineArrowRightAlt } from "react-icons/md";
+import { MdKeyboardArrowLeft, MdOutlineArrowRightAlt, MdContentCopy } from "react-icons/md";
 import ErrorSolutions from "./ErrorSolutions";
 import ErrorType from "./ErrorType";
 import './css/style.css';
+import toast from 'react-hot-toast';
+
 
 function ErrorCard({ error }) {
   
   const [showSolution, setShowSolution] = useState(false);
   const [errorTypeColor, setErrorTypeColor] = useState('#7e1aa5');
   const [readMore,setReadMore]=useState(false);
+  const [solution, setSolution]=useState("");
   useEffect(() => {
     if (error.type == "add") {
       return setErrorTypeColor("#4024e0");
@@ -47,6 +50,7 @@ function ErrorCard({ error }) {
                   : "border-[#7e1aa5]"
         }`}
     >
+
       <h3 className="title">{error.title}</h3>
 
       <ErrorType type={error.type} />
@@ -65,24 +69,41 @@ function ErrorCard({ error }) {
         </div>
       )}
 
-      <button
-        className="flex mt-8 items-center gap-2 px-3 py-2 border border-gray rounded-lg hover:border-primary hover:text-primary"
-        onClick={() => setShowSolution((prev) => !prev)}
-      >
-        {showSolution ? (
-          <>
+      {showSolution ? (
+        <div className="flex flex-row">
+          <button
+            className="flex mt-8 items-center gap-2 px-3 py-2 border border-gray rounded-lg hover:border-primary hover:text-primary"
+            onClick={() => setShowSolution((prev) => !prev)}
+          >
             <MdKeyboardArrowLeft className="text-lg" />
             <span className="text-xs">Back</span>
-          </>
-        ) : (
-          <>
-            <span className="text-xs">Solution</span>
-            <MdOutlineArrowRightAlt className="text-lg" />
-          </>
-        )}
-      </button>
+          </button>
+          <button
+            className="flex mt-8 items-center gap-2 mx-4 px-3 py-2 border border-gray rounded-lg hover:border-primary hover:text-primary"
+            onClick={() => {
+              toast.success('Commands copied to clipboard');
+              navigator.clipboard.writeText(error.solutions.split("<").join(" "));
+              
+            }}
+          >
+            <MdContentCopy className="text-lg" />
+            <span className="text-xs">Copy</span>
+          </button>
+        </div>
+      ) : (
+        <button
+          className="flex mt-8 items-center gap-2 px-3 py-2 border border-gray rounded-lg hover:border-primary hover:text-primary"
+          onClick={() => setShowSolution((prev) => !prev)}
+        >
+          <span className="text-xs">Solution</span>
+          <MdOutlineArrowRightAlt className="text-lg" />
+        </button>
+      )}
+      <span>{solution}</span>
+
     </div>
   );
 }
 
 export default ErrorCard;
+
