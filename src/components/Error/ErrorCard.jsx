@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { MdKeyboardArrowLeft, MdOutlineArrowRightAlt } from "react-icons/md";
+import { MdKeyboardArrowLeft, MdOutlineArrowRightAlt, MdContentCopy } from "react-icons/md";
 import ErrorSolutions from "./ErrorSolutions";
 import ErrorType from "./ErrorType";
 import './css/style.css';
@@ -11,6 +11,7 @@ function ErrorCard({ error }) {
   const [showSolution, setShowSolution] = useState(false);
   const [errorTypeColor, setErrorTypeColor] = useState('#7e1aa5');
   const [readMore,setReadMore]=useState(false);
+  const [solution, setSolution]=useState("");
   useEffect(() => {
     if (error.type == "add") {
       return setErrorTypeColor("#4024e0");
@@ -80,11 +81,12 @@ function ErrorCard({ error }) {
           <button
             className="flex mt-8 items-center gap-2 mx-4 px-3 py-2 border border-gray rounded-lg hover:border-primary hover:text-primary"
             onClick={() => {
-              navigator.clipboard.writeText(error.solutions);
               toast.success('Commands copied to clipboard');
+              navigator.clipboard.writeText(error.solutions.split("<").join(" "));
+              
             }}
           >
-            <MdKeyboardArrowLeft className="text-lg" />
+            <MdContentCopy className="text-lg" />
             <span className="text-xs">Copy</span>
           </button>
         </div>
@@ -97,6 +99,7 @@ function ErrorCard({ error }) {
           <MdOutlineArrowRightAlt className="text-lg" />
         </button>
       )}
+      <span>{solution}</span>
 
     </div>
   );
