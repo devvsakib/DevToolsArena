@@ -161,6 +161,90 @@
       "title": "error: failed to push some refs to 'https://github.com/…'",
       "description": "This error occurs when you try to push to a repository but your local branch is behind the remote branch and you need to pull the changes first.",
       "solutions": "git fetch origin <git status <git merge origin/REMOTE-BRANCHNAME <\"local and remote changes needs to be resolved before pushing your changes.\"  <git push origin BRANCHNAME"
+    },
+    {
+      "type": "cmd",
+      "title": "how to configure Git settings",
+      "description": "This command is used to configure Git settings, such as your name and email address.",
+      "solutions": "git config"
+    },
+    {
+      "type": "cmd",
+      "title": "how to show who changed which line in a file",
+      "description": "This command is used to display the author and commit information for each line of a file.",
+      "solutions": "git blame"
+    },
+    {
+      "type": "cmd",
+      "title": "how to remove untracked files from the working directory",
+      "description": "This command is used to remove untracked files and directories from the working directory.",
+      "solutions": "git clean"
+    },
+    {
+      "type": "cmd",
+      "title": "how to download changes from a remote repository",
+      "description": "This command is used to download changes from a remote repository without merging them into the current branch.",
+      "solutions": "git fetch"
+    },
+    {
+      "type": "cmd",
+      "title": "how to search for a pattern in files and commits",
+      "description": "This command is used to search for a specified pattern in the files and commits of a repository.",
+      "solutions": "git grep"
+    },
+    {
+      "type": "cmd",
+      "title": "how to revert a commit by creating a new commit",
+      "description": "This command is used to revert the changes introduced by a specific commit by creating a new commit that undoes those changes.",
+      "solutions": "git mv"
+    },
+    {
+      "type": "cmd",
+      "title": "how to remove a file, directory, or symlink from the repository",
+      "description": "This command is used to remove a file, directory, or symlink from the repository.",
+      "solutions": "git rm"
+    },
+    {
+      "type": "cmd",
+      "title": "how to show the changes introduced by a specific commit",
+      "description": "This command is used to display the changes made by a specific commit, including the commit message and author information.",
+      "solutions": "git show"
+    },
+    {
+      "type": "cmd",
+      "title": "how to create, list, or delete tags",
+      "description": "This command is used to create, list, or delete tags, which are used to mark specific points in the commit history.",
+      "solutions": "git tag"
+    },
+    {
+      "type": "cmd",
+      "title": "how to reapply commits from one branch onto another",
+      "description": "This command is used to reapply the changes introduced by a series of commits from one branch onto another.",
+      "solutions": "git rebase"
+    },
+    {
+      "type": "cmd",
+      "title": "how to force a merge commit to be created",
+      "description": "This command is used to force a merge commit to be created, even if Git could perform a fast-forward merge.",
+      "solutions": "git merge --no-ff"
+    },
+    {
+      "type": "cmd",
+      "title": "how to find the commit that introduced a bug",
+      "description": "This command is used to find the commit that introduced a bug by performing a binary search through the commit history.",
+      "solutions": "git bisect"
+    },
+    {
+      "type": "cmd",
+      "title": "how to reset the current branch to a specific commit",
+      "description": "This command is used to reset the current branch to a specific commit, discarding any changes made after that commit.",
+      "solutions": "git reset"
+    },
+    {
+      "type": "cmd",
+      "title": "how to revert a commit by creating a new commit",
+      "description": "This command is used to revert the changes introduced by a specific commit by creating a new commit that undoes those changes.",
+      "solutions": "git revert"
     }
   ]
 }
