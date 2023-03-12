@@ -127,6 +127,24 @@
       "solutions": "['Update the existing remote URL, use the set-url command', 'rename the existing remote, run git rename with the remote']"
     },
     {
+      "type": "cmd",
+      "title": "How to clone specific branch",
+      "description": "If you don't know how to clone specific branch, you can use this command. It will clone the branch you want to clone.",
+      "solutions": "git clone -b <branch> <remote_repo>"
+    },
+    {
+      "type": "cmd",
+      "title": "How to remove a Local branch",
+      "description": "If you want to remove a Local branch, you can use this command. It will remove the branch you want to remove.",
+      "solutions": "git branch --delete <branch_name>"
+    },
+    {
+      "type": "cmd",
+      "title": "How to remove a Remote branch",
+      "description": "If you want to remove a Remote branch, you can use this command. It will remove the branch you want to remove.",
+      "solutions": "git push <remote_origin> --delete <branch_name>"
+    },
+    {
       "type": "push",
       "title": "fatal: repository not found",
       "description": "occurs while cloning or pushing modifications to a repository. The error may indicate that the repository doesn’t exist or was removed. The repository exists, but an access-related difficulty or remote origin difficulty causes this error.",
