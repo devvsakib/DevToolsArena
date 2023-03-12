@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 /**
  * The Layout function is a React component that returns a div with a Header component and the children
@@ -15,6 +16,7 @@ const Layout = ({children}) => {
           <div className='relative'>
               {children}
           </div>
+          <Footer />
         </>
     );
 };
