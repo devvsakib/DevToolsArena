@@ -245,6 +245,12 @@
       "title": "how to revert a commit by creating a new commit",
       "description": "This command is used to revert the changes introduced by a specific commit by creating a new commit that undoes those changes.",
       "solutions": "git revert"
+    },
+    {
+      "type": "cmd",
+      "title": "How to rename local git branch",
+      "description": "If a local branch name contains unclear, incorrect, or sensitive information, you can rename it locally.",
+      "solutions": "git branch -m old-name new-name"
     }
   ]
 }
