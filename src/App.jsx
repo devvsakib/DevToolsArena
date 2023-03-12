@@ -4,8 +4,6 @@ import Error from "./components/Error/Error";
 import SearchInput from "./components/Search/SearchInput";
 import Layout from "./components/Layout/Layout";
 import BGShape from "./components/BGShape";
-// import { Route, Routes } from "react-router-dom";
-// import NotFound from "./pages/404";
 
 
 function App() {
@@ -14,9 +12,6 @@ function App() {
   return (
 
     <>
-    {/* <Routes>
-    <Route errorElement={<NotFound></NotFound>} path='*'/>
-    </Routes> */}
       <Layout>
         <SearchInput
           search={search}

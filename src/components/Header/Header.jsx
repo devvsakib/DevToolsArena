@@ -27,13 +27,13 @@ function Header({ notice }) {
   ]
 
   return (
-    <header className="p-4 bg-dark-secondary sticky top-0 z-50">
+    <header className="p-4 shadow-lg backdrop-blur-sm sticky top-0 z-50">
       <div className="w-full md:w-5/6 mx-auto flex flex-col md:flex-row justify-between items-center">
         {/* <h1 className="text-xl font-bold">
           GITHUB <span className="text-primary line-through">ERROR</span> SOLVE
         </h1> */}
         <Link to={'/'}>
-          <img src="/assets/logo.png" className="w-36" alt="GES" />
+          <img src="/assets/logo.png" className="w-36 bg-transparent" alt="GES" />
         </Link>
         <div className="flex mt-2 md:mt-0 items-center gap-7 text-sm">
 
