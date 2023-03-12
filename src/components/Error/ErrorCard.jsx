@@ -40,6 +40,8 @@ function ErrorCard({ error }) {
               ? "border-[#118d7c]"
               : item === "push"
                 ? "border-[#8d54e1]"
+              : item === "cmd"
+                ? "border-[#e100ff]"
                 : item === "branch"
                   ? "border-[#40E4F0]"
                   : "border-[#7e1aa5]"
