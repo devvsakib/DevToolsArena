@@ -3,6 +3,8 @@ import { MdKeyboardArrowLeft, MdOutlineArrowRightAlt } from "react-icons/md";
 import ErrorSolutions from "./ErrorSolutions";
 import ErrorType from "./ErrorType";
 import './css/style.css';
+import toast from 'react-hot-toast';
+
 
 function ErrorCard({ error }) {
   
@@ -47,6 +49,7 @@ function ErrorCard({ error }) {
                   : "border-[#7e1aa5]"
         }`}
     >
+
       <h3 className="title">{error.title}</h3>
 
       <ErrorType type={error.type} />
@@ -65,24 +68,39 @@ function ErrorCard({ error }) {
         </div>
       )}
 
-      <button
-        className="flex mt-8 items-center gap-2 px-3 py-2 border border-gray rounded-lg hover:border-primary hover:text-primary"
-        onClick={() => setShowSolution((prev) => !prev)}
-      >
-        {showSolution ? (
-          <>
+      {showSolution ? (
+        <div className="flex flex-row">
+          <button
+            className="flex mt-8 items-center gap-2 px-3 py-2 border border-gray rounded-lg hover:border-primary hover:text-primary"
+            onClick={() => setShowSolution((prev) => !prev)}
+          >
             <MdKeyboardArrowLeft className="text-lg" />
             <span className="text-xs">Back</span>
-          </>
-        ) : (
-          <>
-            <span className="text-xs">Solution</span>
-            <MdOutlineArrowRightAlt className="text-lg" />
-          </>
-        )}
-      </button>
+          </button>
+          <button
+            className="flex mt-8 items-center gap-2 mx-4 px-3 py-2 border border-gray rounded-lg hover:border-primary hover:text-primary"
+            onClick={() => {
+              navigator.clipboard.writeText(error.solutions);
+              toast.success('Commands copied to clipboard');
+            }}
+          >
+            <MdKeyboardArrowLeft className="text-lg" />
+            <span className="text-xs">Copy</span>
+          </button>
+        </div>
+      ) : (
+        <button
+          className="flex mt-8 items-center gap-2 px-3 py-2 border border-gray rounded-lg hover:border-primary hover:text-primary"
+          onClick={() => setShowSolution((prev) => !prev)}
+        >
+          <span className="text-xs">Solution</span>
+          <MdOutlineArrowRightAlt className="text-lg" />
+        </button>
+      )}
+
     </div>
   );
 }
 
 export default ErrorCard;
+
