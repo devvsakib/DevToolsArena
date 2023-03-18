@@ -16,6 +16,7 @@
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.0",
     "react-icons": "^4.7.1",
+    "react-modal": "^3.16.1",
     "react-router-dom": "^6.6.1",
     "react-transition-group": "^4.4.5"
   },

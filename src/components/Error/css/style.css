@@ -3,3 +3,33 @@ h3 {
   overflow-wrap: break-word;
   font-size: 15px;
 }/*# sourceMappingURL=style.css.map */
+
+
+#scroll-solution{
+  overflow-y:scroll;
+  height: 100px;
+  width: 100%;
+  padding: 0px 10px 0px 10px;
+  text-align: left;
+}
+
+#scroll-solution::-webkit-scrollbar{
+  width: 5px;
+}
+
+#scroll-solution::-webkit-scrollbar-thumb{
+  background-color: white;
+  border-radius: 10px;
+}
+
+.modal {
+  width: 400px;
+  max-height: 450px; 
+}
+
+
+@media (max-width: 768px) {
+  .modal{
+    width: 350px;
+  }
+}
