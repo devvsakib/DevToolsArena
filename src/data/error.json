@@ -251,6 +251,12 @@
       "title": "How to rename local git branch",
       "description": "If a local branch name contains unclear, incorrect, or sensitive information, you can rename it locally.",
       "solutions": "git branch -m old-name new-name"
+    },
+    {
+      "type": "cmd",
+      "title": "How to check status of  git branch",
+      "description": "To see all the changes since last commit. It shows all files added, modified, ready to be commited and kept untracked.",
+      "solutions": "git status"
     }
   ]
 }
