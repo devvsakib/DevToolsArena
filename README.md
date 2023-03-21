@@ -1,112 +1,50 @@
-  
-## GitHub Error Solve
+## GitHub Error Solve - A place to find Git related errors & there solutions
 
-**GES** or GitHub Error Solve, is an open-source project dedicated to resolving any errors or issues that may arise while using GitHub. Our primary objective is to empower individuals to feel comfortable and confident using the platform by providing comprehensive solutions to common problems.
+![GES](https://user-images.githubusercontent.com/88102392/226684787-087307ac-3c8b-45ca-a22d-ba42665ec481.png)
 
-<br>
+## Why GES?
 
-## Tech stack used to build this website: <br>
-![HTML](https://img.shields.io/badge/html-F16529?style=for-the-badge&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/css-254BDD?style=for-the-badge&logo=css3&logoColor=white)
-![Tailwind](https://img.shields.io/badge/tailwindcss-C66394?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-EFD81C?style=for-the-badge&logo=javascript&logoColor=white)
-![React](https://img.shields.io/badge/react-blue?style=for-the-badge&logo=react&logoColor=navyblue)
-![Vite](https://img.shields.io/badge/vite-5BB4FF?style=for-the-badge&logo=vite&logoColor=FFC018)
-<br>
+GitHub Error Solve is a community-driven platform that serves as a hub for finding solutions to various Git-related errors. Git is a powerful and widely-used version control system, but it can sometimes be challenging to navigate its complexities, especially for beginners.
 
-### How to contribute. 
-- Fork this repository.
-- Clone the repository.
-```console
-git clone git@github.com:<your github username>/github-error-solve.git
-```
-- Navigate to folder
-```console
-cd github-error-solve
-```
-- Install node dependencies
-```console
-npm i
-```
-- Start the project
-```console
-npm run dev
-```
+This platform provides a space where users can ask questions about Git errors they encounter and receive responses from experienced developers who have faced and resolved similar issues before. It also offers a repository of knowledge where users can find previously answered questions and solutions, making it a valuable resource for anyone seeking to enhance their Git skills.
 
-- If Project Starts everything is correct , Now you need to stop the project.
+## Tech stack used
 
-```console
- Cntrl + C
-```
+| Language   | Badge                                                                                                             |
+| ---------- | ----------------------------------------------------------------------------------------------------------------- |
+| HTML       | ![HTML](https://img.shields.io/badge/html-F16529?style=for-the-badge&logo=html5&logoColor=white)                  |
+| CSS        | ![CSS](https://img.shields.io/badge/css-254BDD?style=for-the-badge&logo=css3&logoColor=white)                     |
+| Tailwind   | ![Tailwind](https://img.shields.io/badge/tailwindcss-C66394?style=for-the-badge&logo=tailwindcss&logoColor=white) |
+| JavaScript | ![JavaScript](https://img.shields.io/badge/javascript-EFD81C?style=for-the-badge&logo=javascript&logoColor=white) |
+| React      | ![React](https://img.shields.io/badge/react-blue?style=for-the-badge&logo=react&logoColor=navyblue)               |
+| Vite       | ![Vite](https://img.shields.io/badge/vite-5BB4FF?style=for-the-badge&logo=vite&logoColor=FFC018)                  |
 
-- Make a New branch.The change you are going to make would be a good branch name.
+## Where to contribute?
 
-```console
-git checkout -b <name-of-your-branch>
-```
+Getting involved in open-source software (OSS) projects can be a gratifying and enriching experience. It not only enables you to acquire new skills but also allows you to make a valuable impact on a project that serves the wider community.
 
-- Stage your changes
+> Here the some steps you can take to contribute to this project:
 
-```console
-  git add --all
-```
+- Remember to read [Code Of Conduct](/CODE_OF_CONDUCT.md) before contributing.
+- Follow the [Contribution Documents](/contributing.md).
+- Create an issue to report bugs, and vulnerabilities or add a new feature.
 
-or
+## Join our community
 
-```console
-  git add <Name-of-file-to-stage>
-```
+If you're looking to connect with like-minded individuals who share your interests, passions, and goals, joining a community can be an excellent option. Whether it's a local group that meets in person or an online forum where members from around the world come together virtually, communities provide a sense of belonging and the opportunity to learn and grow alongside others.
 
-- Commit changes
+By joining a community, you can gain access to a wealth of knowledge, resources, and support that can help you achieve your personal and professional aspirations. So if you're ready to connect with others who share your interests and build meaningful relationships, consider joining a community today!
 
-```console
-  git commit -m "<Commit-message>"
-```
+[Discord Link](https://discord.gg/xwRbDwnbMr)
 
-- Check status of your repository.
+### Contributors
 
-```console
-  git status
-```
-
-- The response should be like this
-
-
-```console
-On branch <name-of-your-branch>
-nothing to commit, working tree clean
-```
-- Pushing your repository to GitHub.
-
-```console
-  git push origin <name-of-your-branch>
-```
-or
-
-
-```console
-  git branch -M master
-  git push -u origin master
-```
-
-- On the GitHub website, navigate to your forked repo - on the top of the files section, you'll notice a new section containing a `Compare & Pull Request` button!
-
-- Click on that button, this will load a new page, comparing the local branch in your forked repository against the main branch. Click the green `Create Pull Request` button.
-
-**Troubleshoot**
-Facing problem starting the server or any other problem? Please let us know by raising an <a href="https://github.com/devvsakib/github-error-solve/issues/new">Issue</a>
-
-### **<p align="center">Please STAR the repository⭐</p>**
-
-### Discord
-
-Join Us  <a href="https://discord.gg/xwRbDwnbMr"><img src="https://cdn.worldvectorlogo.com/logos/discord-6.svg" title="Discord" alt="Discord Community" width="20"/></a>
-
-**Live Link <a href="https://github-error-solve.vercel.app" target="_blank">GES</a>**
-
-### Contributors 
-Thanks to all contributors ❤️
+We would like to extend our heartfelt gratitude to all the individuals who have contributed to and supported this project. Your time, skills, and knowledge have been indispensable in ensuring the success of this endeavor. Whether you provided code, documentation, testing, or simply gave feedback and suggestions, we are truly grateful for your contributions. ❤️
 
 <a href = "https://github.com/devvsakib/github-error-solve/graphs/contributors">
   <img src = "https://contrib.rocks/image?repo=devvsakib/github-error-solve"/>
 </a>
+
+## License
+
+ProjectsHut is licensed under the [GNU GENERAL PUBLIC LICENSE ](/LICENSE)
