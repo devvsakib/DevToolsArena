@@ -1,5 +1,5 @@
 {
-  "errors": [
+  "errors": [ 
     {
       "type": "push",
       "title": "! [rejected] branch -> branch (non-fast-forward)",
