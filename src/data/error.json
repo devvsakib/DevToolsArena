@@ -263,6 +263,12 @@
       "title":"error: RPC failed; curl transfer closed with outstanding read data remaining",
       "description":"typically occurs when Git is unable to complete a network request, often due to a slow or unstable connection or Small HTTPS Buffer on Client machine",
       "solutions":" increasing the Git buffer size and using a different network connection are two possible solutions that may help resolve the issue < git config http.postBuffer 524288000 < git config --global http.maxRequestBuffer 524288000 < git config --global core.compression 0"
+    },
+     {
+      "type": "commit",
+      "title": "Git nothing to commit",
+      "description": "The Git command line informs us that our local repository contains one more commit than our remote repository.",
+      "solutions": "git push"
     }
   ]
 }
