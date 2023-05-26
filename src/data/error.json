@@ -265,10 +265,10 @@
       "solutions":" increasing the Git buffer size and using a different network connection are two possible solutions that may help resolve the issue < git config http.postBuffer 524288000 < git config --global http.maxRequestBuffer 524288000 < git config --global core.compression 0"
     },
      {
-      "type": "push",
-      "title": "Your branch is ahead of ",
-      "description": "Some quick example text to build on the card title and make up the bulk of the card's content.error: failed to push some refs to 'git@github.com:/reponame.git' To prevent you from losing history, non-fast-forward updates were rejected Merge the remote changes (e.g. 'git pull') before pushing again. See the 'Note about fast-forwards' section of 'git push --help' for details.",
-      "solutions": "git pull<git push origin [branch name]"
+      "type": "commit",
+      "title": "Git nothing to commit",
+      "description": "The Git command line informs us that our local repository contains one more commit than our remote repository.",
+      "solutions": "git push"
     }
   ]
 }
