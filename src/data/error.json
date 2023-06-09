@@ -50,6 +50,12 @@
     },
     {
       "type": "push",
+      "title": "Your branch is ahead of 'origin/main' by 1 commit",
+      "description": "You made a commit on your branch that needs to be merged to the main branch on Github.",
+      "solutions": "If you have the permission to update the repo: <git pull main <git checkout [your-branch] <git merge main <When finished the merge locally: <git push main"
+    },
+    {
+      "type": "push",
       "title": "Everything up-to-date",
       "description": "File changed and git add . done but git push say: Everything is up-to-date",
       "solutions": "git commit -m \"ges\""
