@@ -12,16 +12,12 @@ const ModalSolutions = ({ isOpen, setOpenModal, error }) => {
   const colorBorderBox = useColorBorderBox(error);
 
     return (
-      <div
-      onClick={
-        () => {
-          setOpenModal((prev) => !prev);
-      }
-      }
-      >
       <Modal
         isOpen={isOpen}
-        onRequestClose={setOpenModal}
+        shouldCloseOnOverlayClick={true}
+        onRequestClose={
+          () => setOpenModal((prev) => !prev)
+        }
         contentLabel="Modal solution"
         className={colorBorderBox + " modal"}
         id="main-div"
@@ -69,7 +65,6 @@ const ModalSolutions = ({ isOpen, setOpenModal, error }) => {
           </button>
         </div>
       </Modal>
-      </div>
     );
 };
 
