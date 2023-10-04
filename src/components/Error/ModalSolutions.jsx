@@ -11,8 +11,14 @@ Modal.setAppElement("#root");
 const ModalSolutions = ({ isOpen, setOpenModal, error }) => {
   const colorBorderBox = useColorBorderBox(error);
 
-  if (isOpen) {
     return (
+      <div
+      onClick={
+        () => {
+          setOpenModal((prev) => !prev);
+      }
+      }
+      >
       <Modal
         isOpen={isOpen}
         onRequestClose={setOpenModal}
@@ -63,10 +69,8 @@ const ModalSolutions = ({ isOpen, setOpenModal, error }) => {
           </button>
         </div>
       </Modal>
+      </div>
     );
-  }
-
-  return null;
 };
 
 export default ModalSolutions;
