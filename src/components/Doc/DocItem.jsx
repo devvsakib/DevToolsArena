@@ -9,8 +9,8 @@ const DocItem = ({ title, content }) => {
   // const b = "<b>"
   return (
     <div className={`p-4 rounded shadow-lg shadow-[#118d7c22] bg-white/5 backdrop-blur-[10px]`}>
-      <h6 className='font-semibold text-white text-opacity-80 mb-2'>{title}</h6>
-      <p className={`text-sm text-gray line-clamp-11 leading-relaxed ${!readMore ? "none" : "hidden"}`}>
+      <h6 className='font-semibold text-dark dark:text-white text-opacity-80 mb-2'>{title}</h6>
+      <p className={`text-sm text-zinc-600 dark:text-gray line-clamp-11 leading-relaxed ${!readMore ? "none" : "hidden"}`}>
         {
           content.length > 100 ? content.substring(0, 100).replace(/`/g, '') : content.replace(/`/g, '')
         }

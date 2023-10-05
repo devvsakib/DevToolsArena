@@ -22,7 +22,7 @@ function SearchInput({ search, setSearch, setType }) {
     <div className="flex flex-col mx-auto mt-12 items-center gap-4 py-3 px-6 rounded-lg w-11/12 md:w-5/6">
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="flex mx-auto mt-12 items-center gap-4 py-3 px-6 rounded-lg bg-white w-11/12 md:w-5/6"
+        className="flex mx-auto mt-12 items-center border border-zinc-300 gap-4 py-3 px-6 rounded-lg bg-white w-11/12 md:w-5/6"
       >
         <MdSearch className="text-gray text-2xl" />
         <input
@@ -46,7 +46,7 @@ function SearchInput({ search, setSearch, setType }) {
       <div className="types mt-4">
         {width > 768 ? (
           <ul
-            className={`flex flex-col sm:flex-row mx-auto mt-2 items-start gap-4 py-3 px-6 rounded-lg bg-white w-full md:w-12/12  md:w-auto`}
+            className={`flex flex-col sm:flex-row mx-auto mt-2 border border-zinc-300 items-start gap-4 py-3 px-6 rounded-lg bg-white w-full md:w-12/12  md:w-auto`}
           >
             {errorType.map((item, i) => (
               <li

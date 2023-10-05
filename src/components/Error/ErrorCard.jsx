@@ -27,7 +27,7 @@ function ErrorCard({ error }) {
       <div className="bg-primary w-full h-[2px] my-4" />
 
       <div className="h-fit">
-        <p className="text-sm text-gray line-clamp-11 leading-relaxed">
+        <p className="text-sm text-zinc-700 dark:text-gray line-clamp-11 leading-relaxed">
           {readMore ? error.description : error.description.substring(0, 100)}
           {error.description.length > 100 ? (
             <button
