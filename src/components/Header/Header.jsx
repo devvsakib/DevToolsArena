@@ -2,7 +2,14 @@ import { MdPeople, MdInsertDriveFile } from "react-icons/md";
 import { AiFillGithub } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
+import { HiMoon, HiSun } from "react-icons/hi";
+import { ThemeContext } from '../../context/ThemeContext'
+import { useContext } from "react";
+
 function Header({ notice }) {
+  const { toggleTheme } = useContext(ThemeContext);
+
+
   const navLink = [
     {
       name: 'Home',
@@ -12,12 +19,12 @@ function Header({ notice }) {
     {
       name: 'Doc',
       link: '/doc',
-      icon: <MdInsertDriveFile size='1rem'/>
+      icon: <MdInsertDriveFile size='1rem' />
     },
     {
       name: 'Contributors',
       link: '/Contributors',
-      icon: <MdPeople size='1.25rem'/>
+      icon: <MdPeople size='1.25rem' />
     },
     {
       name: '',
@@ -33,7 +40,7 @@ function Header({ notice }) {
           GITHUB <span className="text-primary line-through">ERROR</span> SOLVE
         </h1> */}
         <Link to={'/'}>
-          <img src="/assets/logo.png" className="w-36 bg-transparent" alt="GES" />
+          <img src="/assets/logo.png" className="w-36 bg-transparent invert dark:invert-0" alt="GES" />
         </Link>
         <div className="flex mt-2 md:mt-0 items-center gap-7 text-sm">
 
@@ -47,8 +54,13 @@ function Header({ notice }) {
                 ) : null
               )
             })
-
           }
+
+          <p className="text-lg cursor-pointer" onClick={toggleTheme}>
+            <HiMoon className="dark:hidden" />
+            <HiSun className="hidden dark:inline" />
+          </p>
+
 
 
           {/* <MdConstruction className="text-lg" />

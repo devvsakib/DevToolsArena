@@ -4,6 +4,7 @@ import Error from "./components/Error/Error";
 import SearchInput from "./components/Search/SearchInput";
 import Layout from "./components/Layout/Layout";
 import BGShape from "./components/BGShape";
+import { ThemeProvider } from "./context/ThemeContext";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -11,10 +12,12 @@ function App() {
 
   return (
     <>
-      <Layout>
-        <SearchInput search={search} setSearch={setSearch} setType={setType} />
-        <Error search={search} type={type} />
-      </Layout>
+      <ThemeProvider>
+        <Layout>
+          <SearchInput search={search} setSearch={setSearch} setType={setType} />
+          <Error search={search} type={type} />
+        </Layout>
+      </ThemeProvider>
     </>
   );
 }
