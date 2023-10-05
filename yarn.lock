@@ -228,10 +228,10 @@
   resolved "https://registry.npmjs.org/@emotion/memoize/-/memoize-0.7.4.tgz"
   integrity sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==
 
-"@esbuild/win32-x64@0.16.15":
+"@esbuild/linux-x64@0.16.15":
   version "0.16.15"
-  resolved "https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.16.15.tgz"
-  integrity sha512-27h5GCcbfomVAqAnMJWvR1LqEY0dFqIq4vTe5nY3becnZNu0SX8F0+gTk3JPvgWQHzaGc6VkPzlOiMkdSUunUA==
+  resolved "https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.16.15.tgz"
+  integrity sha512-t7/fOXBUKfigvhJLGKZ9TPHHgqNgpIpYaAbcXQk1X+fPeUG7x0tpAbXJ2wST9F/gJ02+CLETPMnhG7Tra2wqsQ==
 
 "@jridgewell/gen-mapping@^0.1.0":
   version "0.1.1"
