@@ -76,7 +76,7 @@ function SearchInput({ search, setSearch, setType }) {
         ) : (
           <div className="text-center">
             <button
-              className="bg-white py-3 pt-4 px-6 rounded-lg text-left text-black font-bold"
+              className="bg-white py-3 pt-4 px-6 rounded-lg text-left text-black font-normal"
               onClick={() => {
                 setOpen(!open);
               }}
