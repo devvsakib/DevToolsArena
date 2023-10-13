@@ -36,6 +36,12 @@
       "description": "fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.",
       "solutions": "git pull origin BRANCHNAME"
     },
+      {
+      "type": "pull",
+      "title": "fatal: refusing to merge unrelated histories",
+      "description": "The refusing to merge unrelated histories error typically occurs when Git detects that the branches you are trying to merge have divergent commit histories and are essentially unrelated.",
+      "solutions": "git merge --allow-unrelated-histories BRANCHNAME"
+    },
     {
       "type": "commit",
       "title": "fatal: cannot lock ref 'HEAD': unable to resolve reference 'refs/heads/main': reference broken",
