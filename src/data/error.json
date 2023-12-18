@@ -25,6 +25,12 @@
       "solutions": "First check which branch you are in, then:<git push --set-upstream origin BRANCHNAME"
     },
     {
+      "type": "switch",
+      "title": "fatal: invalid reference",
+      "description": "To push the current branch and set the remote as upstream, use.",
+      "solutions": "This branch is not there, you have to create this branch. < git branch BRANCHNAME -m"
+    },
+    {
       "type": "add",
       "title": "error: Your local changes to the following files would be overwritten by checkout: <file name>",
       "description": "Please commit your changes or stash them before you stwitch branches. Aborting",
