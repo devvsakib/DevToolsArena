@@ -27,7 +27,7 @@
     {
       "type": "branch",
       "title": "fatal: invalid reference",
-      "description": "To push the current branch and set the remote as upstream, use.",
+      "description": "Can't switch/checkout to the BRANCH, bcz this branch is not exits man!",
       "solutions": "This branch is not there, you have to create this branch. < git branch BRANCHNAME -m"
     },
     {
