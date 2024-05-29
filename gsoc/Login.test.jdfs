@@ -1,0 +1,15 @@
+import { mount } from '@vue/test-utils'
+import Login from '@/components/Login.vue'
+
+describe('Login', () => {
+  test('displays the correct heading', () => {
+    const wrapper = mount(Login)
+    expect(wrapper.find('h1').text()).toBe('Login')
+  })
+
+  test('emits a "login" event when the form is submitted', () => {
+    const wrapper = mount(Login)
+    wrapper.find('form').trigger('submit')
+    expect(wrapper.emitted().login).toBeTruthy()
+  })
+})
