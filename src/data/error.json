@@ -79,6 +79,18 @@
       "solutions": "git pull"
     },
     {
+            "type": "branch",
+            "title": "Delete Local branch",
+            "description": "You can easily delete a local branch. If the branch has not been merged, use git branch -d <branchname> instead.",
+            "solutions": "git branch --delete [branchname]"
+        },
+        {
+            "type": "pull",
+            "title": "Pulling issue",
+            "description": "error: bad signature 0x00000000, fatal: index file corrupt. NB: use git bash for this command. if you use cmd then use del instead of rm.",
+            "solutions": "rm -f .git/index<git reset"
+        },
+    {
       "type": "push",
       "title": "remote: Not Found",
       "description": "fatal: repository 'https://github.com/user/repo.git/' not found",
