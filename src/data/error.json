@@ -18,6 +18,12 @@
       "description": "Unable to add file. While adding file, it shows fatal: not a valid object name: 'master'.",
       "solutions": "git commit -m \"first commit\""
     },
+     {
+      "type": "add",
+      "title": "Another git process seems to be running in this repository",
+      "description": "Another git process seems to be running in this repository, e.g. an editor opened by 'git commit'. Please make sure all processes are terminated then try again. If it still fails, a git process may have crashed in this repository earlier: remove the file manually to continue.",
+      "solutions": "git commit -m \"first commit\""
+    },
     {
       "type": "push",
       "title": "fatal: The current branch master has no upstream branch.",
@@ -34,7 +40,13 @@
       "type": "add",
       "title": "error: Your local changes to the following files would be overwritten by checkout: <file name>",
       "description": "Please commit your changes or stash them before you stwitch branches. Aborting",
-      "solutions": "git add .<git commit -m \"ges\""
+      "solutions": "rm -f .git/index.lock"
+    },
+     {
+      "type": "commit",
+      "title": "error: Your local changes to the following files would be overwritten by checkout: <file name>",
+      "description": "Please commit your changes or stash them before you stwitch branches. Aborting",
+      "solutions": "rm -f .git/index.lock"
     },
     {
       "type": "pull",
