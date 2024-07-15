@@ -17,6 +17,7 @@ import useWindowsize from "../../hooks/useWindowsize";
 function SearchInput({ search, setSearch, setType }) {
   const [open, setOpen] = useState(true);
   const { width } = useWindowsize();
+  const [selectedTag, setSelectedTag] = useState("All");
 
   return (
     <div className="flex flex-col mx-auto mt-12 items-center gap-4 py-3 px-6 rounded-lg w-11/12 md:w-5/6">
@@ -55,19 +56,23 @@ function SearchInput({ search, setSearch, setType }) {
                   item === "add"
                     ? "bg-[#4024e0]"
                     : item === "commit"
-                    ? "bg-[#1a5ba5]"
-                    : item === "merge"
-                    ? "bg-[#118d7c]"
-                    : item === "push"
-                    ? "bg-[#8d54e1]"
-                    : item === "cmd"
-                    ? "bg-[#e100ff]"
-                    : item === "branch"
-                    ? "bg-[#40E4F0]"
-                    : "bg-[#7e1aa5]"
-                }
-                                         w-full md:w-auto rounded-md capitalize text-white font-bold py-1 px-3 cursor-pointer`}
-                onClick={() => setType(item)}
+                      ? "bg-[#1a5ba5]"
+                      : item === "merge"
+                        ? "bg-[#118d7c]"
+                        : item === "push"
+                          ? "bg-[#8d54e1]"
+                          : item === "cmd"
+                            ? "bg-[#e100ff]"
+                            : item === "branch"
+                              ? "bg-[#40E4F0]"
+                              : "bg-[#7e1aa5]"
+                } ${
+                  selectedTag === item ? "ring-4 ring-red-500" : ""
+                } w-full md:w-auto rounded-md capitalize text-white font-bold py-1 px-3 cursor-pointer`}
+                onClick={() => {
+                  setSelectedTag(item);
+                  setType(item);
+                }}
               >
                 {item}
               </li>
@@ -103,18 +108,21 @@ function SearchInput({ search, setSearch, setType }) {
                           item === "add"
                             ? "bg-[#4024e0]"
                             : item === "commit"
-                            ? "bg-[#1a5ba5]"
-                            : item === "merge"
-                            ? "bg-[#118d7c]"
-                            : item === "push"
-                            ? "bg-[#8d54e1]"
-                            : item === "cmd"
-                            ? "bg-[#40f058a8]"
-                            : item === "branch"
-                            ? "bg-[#40E4F0]"
-                            : "bg-[#7e1aa5]"
+                              ? "bg-[#1a5ba5]"
+                              : item === "merge"
+                                ? "bg-[#118d7c]"
+                                : item === "push"
+                                  ? "bg-[#8d54e1]"
+                                  : item === "cmd"
+                                    ? "bg-[#40f058a8]"
+                                    : item === "branch"
+                                      ? "bg-[#40E4F0]"
+                                      : "bg-[#7e1aa5]"
+                        } ${
+                          selectedTag === item ? "ring-4 ring-red-500" : ""
                         } w-full md:w-auto rounded-md text-white font-bold py-2 px-3 cursor-pointer`}
                         onClick={() => {
+                          setSelectedTag(item);
                           setType(item);
                           setOpen(!open);
                         }}
