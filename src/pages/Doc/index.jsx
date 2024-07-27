@@ -13,11 +13,14 @@ const DocList = () => {
             try {
                 const response = await fetch('/posts/index.json');
                 if (!response.ok) {
-                    throw new Error('Network response was not ok');
+                    throw new Error(`Failed to fetch docs: ${response.statusText}`);
                 }
+
                 const data = await response.json();
+                console.log('Fetched data:', data);
                 setDocs(data);
             } catch (error) {
+                console.error('Error fetching docs:', error);
                 setError(error.message);
             } finally {
                 setLoading(false);
@@ -26,6 +29,7 @@ const DocList = () => {
 
         fetchDocs();
     }, []);
+
 
     if (loading) return <div className="flex justify-center items-center h-screen"><Spin size="large" /></div>;
     if (error) return <Alert message="Error" description={error} type="error" />;
