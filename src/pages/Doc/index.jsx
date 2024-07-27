@@ -11,7 +11,8 @@ const DocList = () => {
     useEffect(() => {
         const fetchDocs = async () => {
             try {
-                const response = await fetch('/posts/index.json');
+                // const response = await fetch('/posts/index.json');
+                const response = await fetch('https://github-error-solve.vercel.app/posts/index.json');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }

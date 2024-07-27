@@ -1,4 +1,10 @@
 {
+    "routes": [
+        {
+            "src": "/posts/(.*)",
+            "dest": "/posts/$1"
+        }
+    ],
     "rewrites": [
         {
             "source": "/(.*)",
