@@ -9,7 +9,7 @@
 
 @layer base {
   body {
-    @apply bg-dark text-white;
+    @apply bg-white text-dark dark:bg-dark dark:text-white;
   }
 }
 
@@ -77,7 +77,7 @@ html {
   scrollbar-width: none;
 }
 
-.githubbtn {
+.githubBtn {
   color: #9912d8;
   animation: pulse 2s linear infinite alternate;
 }
@@ -95,6 +95,5 @@ html {
     color: #1aabff;
   }
 }
-
 
 /*# sourceMappingURL=style.css.map */

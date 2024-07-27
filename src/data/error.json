@@ -25,6 +25,12 @@
       "description": "Unable to add file. While adding file, it shows fatal: not a valid object name: 'master'.",
       "solutions": "git commit -m \"first commit\""
     },
+     {
+      "type": "add",
+      "title": "Another git process seems to be running in this repository",
+      "description": "Another git process seems to be running in this repository, e.g. an editor opened by 'git commit'. Please make sure all processes are terminated then try again. If it still fails, a git process may have crashed in this repository earlier: remove the file manually to continue.",
+      "solutions": "git commit -m \"first commit\""
+    },
     {
       "type": "push",
       "title": "fatal: The current branch master has no upstream branch.",
@@ -32,16 +38,34 @@
       "solutions": "First check which branch you are in, then:<git push --set-upstream origin BRANCHNAME"
     },
     {
+      "type": "branch",
+      "title": "fatal: invalid reference",
+      "description": "Can't switch/checkout to the BRANCH, bcz this branch is not exits man!",
+      "solutions": "This branch is not there, you have to create this branch. < git branch BRANCHNAME -m"
+    },
+    {
       "type": "add",
       "title": "error: Your local changes to the following files would be overwritten by checkout: <file name>",
       "description": "Please commit your changes or stash them before you stwitch branches. Aborting",
-      "solutions": "git add .<git commit -m \"ges\""
+      "solutions": "rm -f .git/index.lock"
+    },
+     {
+      "type": "commit",
+      "title": "error: Your local changes to the following files would be overwritten by checkout: <file name>",
+      "description": "Please commit your changes or stash them before you stwitch branches. Aborting",
+      "solutions": "rm -f .git/index.lock"
     },
     {
       "type": "pull",
       "title": "fatal: 'main' does not appear to be a git repository",
       "description": "fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.",
       "solutions": "git pull origin BRANCHNAME"
+    },
+      {
+      "type": "pull",
+      "title": "fatal: refusing to merge unrelated histories",
+      "description": "The refusing to merge unrelated histories error typically occurs when Git detects that the branches you are trying to merge have divergent commit histories and are essentially unrelated.",
+      "solutions": "git merge --allow-unrelated-histories BRANCHNAME"
     },
     {
       "type": "commit",
@@ -57,6 +81,12 @@
     },
     {
       "type": "push",
+      "title": "Your branch is ahead of 'origin/main' by 1 commit",
+      "description": "You made a commit on your branch that needs to be merged to the main branch on Github.",
+      "solutions": "If you have the permission to update the repo: <git pull main <git checkout [your-branch] <git merge main <When finished the merge locally: <git push main"
+    },
+    {
+      "type": "push",
       "title": "Everything up-to-date",
       "description": "File changed and git add . done but git push say: Everything is up-to-date",
       "solutions": "git commit -m \"ges\""
@@ -67,6 +97,18 @@
       "description": "Your branch is behind 'origin/main' by 10 commits, and can be fast-forwarded.",
       "solutions": "git pull"
     },
+    {
+            "type": "branch",
+            "title": "Delete Local branch",
+            "description": "You can easily delete a local branch. If the branch has not been merged, use git branch -d <branchname> instead.",
+            "solutions": "git branch --delete [branchname]"
+        },
+        {
+            "type": "pull",
+            "title": "Pulling issue",
+            "description": "error: bad signature 0x00000000, fatal: index file corrupt. NB: use git bash for this command. if you use cmd then use del instead of rm.",
+            "solutions": "rm -f .git/index<git reset"
+        },
     {
       "type": "push",
       "title": "remote: Not Found",
@@ -252,6 +294,30 @@
       "title": "how to revert a commit by creating a new commit",
       "description": "This command is used to revert the changes introduced by a specific commit by creating a new commit that undoes those changes.",
       "solutions": "git revert"
+    },
+    {
+      "type": "cmd",
+      "title": "How to rename local git branch",
+      "description": "If a local branch name contains unclear, incorrect, or sensitive information, you can rename it locally.",
+      "solutions": "git branch -m old-name new-name"
+    },
+    {
+      "type": "cmd",
+      "title": "How to check status of  git branch",
+      "description": "To see all the changes since last commit. It shows all files added, modified, ready to be commited and kept untracked.",
+      "solutions": "git status"
+    },
+    {
+      "type":"cmd",
+      "title":"error: RPC failed; curl transfer closed with outstanding read data remaining",
+      "description":"typically occurs when Git is unable to complete a network request, often due to a slow or unstable connection or Small HTTPS Buffer on Client machine",
+      "solutions":" increasing the Git buffer size and using a different network connection are two possible solutions that may help resolve the issue < git config http.postBuffer 524288000 < git config --global http.maxRequestBuffer 524288000 < git config --global core.compression 0"
+    },
+     {
+      "type": "commit",
+      "title": "Git nothing to commit",
+      "description": "The Git command line informs us that our local repository contains one more commit than our remote repository.",
+      "solutions": "git push"
     }
   ]
 }

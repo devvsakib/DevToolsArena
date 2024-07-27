@@ -1,3 +1,5 @@
+import "./css/style.css";
+
 function ErrorSolutions({ solutions }) {
   if (!solutions) {
     return (
@@ -11,9 +13,9 @@ function ErrorSolutions({ solutions }) {
   }
 
   return (
-    <ul>
+    <ul id="scroll-solution">
       {solutions.split("<").map((solution, index) => (
-        <li key={index} className="text-sm text-white break-all">
+        <li key={index} className="text-sm text-white break-all" >
           {solution}
         </li>
       ))}

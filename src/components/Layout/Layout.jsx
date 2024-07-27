@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import { ThemeProvider } from '../../context/ThemeContext';
 
 /**
  * The Layout function is a React component that returns a div with a Header component and the children
@@ -9,7 +10,7 @@ import Footer from '../Footer/Footer';
  */
 const Layout = ({children}) => {
     return (
-        <div className='flex flex-col justify-between min-h-screen'>
+        <ThemeProvider>
           <Header 
               notice={"Under Construction"}
           />
@@ -17,7 +18,7 @@ const Layout = ({children}) => {
               {children}
           </div>
           <Footer />
-        </div>
+        </ThemeProvider>
     );
 };
 
