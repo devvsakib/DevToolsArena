@@ -1,39 +1,106 @@
 {
-    "errors": [
-        {
-            "type": "push",
-            "title": "! [rejected] branch -> branch (non-fast-forward)",
-            "description": "Some quick example text to build on the card title and make up the bulk of the card's content.error: failed to push some refs to 'git@github.com:/reponame.git' To prevent you from losing history, non-fast-forward updates were rejected Merge the remote changes (e.g. 'git pull') before pushing again. See the 'Note about fast-forwards' section of 'git push --help' for details.",
-            "solutions": "git pull<git push origin [branch name]"
-        },
-        {
-            "type": "merge",
-            "title": "error: src refspec main does not match any",
-            "description": "error: failed to push some refs to 'github.com:user/repo.git'",
-            "solutions": "rm -rf .git<git init<git add .<git commit -m \"ges\"<git branch -M main<git remote add origin YOUR_GITHUB_REPO_LINK<git push -u origin main -f"
-        },
-        {
-            "type": "add",
-            "title": "fatal: not a valid object name: 'master/main'",
-            "description": "Unable to add file. While adding file, it shows fatal: not a valid object name: 'master'.",
-            "solutions": "git commit -m \"first commit\""
-        },
-        {
-            "type": "push",
-            "title": "fatal: The current branch master has no upstream branch.",
-            "description": "To push the current branch and set the remote as upstream, use.",
-            "solutions": "First check which branch you are in, then:<git push --set-upstream origin BRANCHNAME"
-        },
-        {
-            "type": "branch",
-            "title": "fatal: invalid reference",
-            "description": "Can't switch/checkout to the BRANCH, bcz this branch is not exits man!",
-            "solutions": "This branch is not there, you have to create this branch. < git branch BRANCHNAME -m"
-        },
-        {
+  "errors": [
+    {
+      "type": "push",
+      "title": "! [rejected] branch -> branch (non-fast-forward)",
+      "description": "Some quick example text to build on the card title and make up the bulk of the card's content.error: failed to push some refs to 'git@github.com:/reponame.git' To prevent you from losing history, non-fast-forward updates were rejected Merge the remote changes (e.g. 'git pull') before pushing again. See the 'Note about fast-forwards' section of 'git push --help' for details.",
+      "solutions": "git pull<git push origin [branch name]"
+    },
+    {
+      "type": "merge",
+      "title": "error: src refspec main does not match any",
+      "description": "error: failed to push some refs to 'github.com:user/repo.git'",
+      "solutions": "rm -rf .git<git init<git add .<git commit -m \"ges\"<git branch -M main<git remote add origin YOUR_GITHUB_REPO_LINK<git push -u origin main -f"
+    },
+
+    {
+      "type": "merge",
+      "title": "fatal: refusing to merge unrelated histories",
+      "description": "Not able to merge in local and online.",
+      "solutions": "git merge majorUpdate --allow-unrelated-histories"
+    },
+    {
+      "type": "add",
+      "title": "fatal: not a valid object name: 'master/main'",
+      "description": "Unable to add file. While adding file, it shows fatal: not a valid object name: 'master'.",
+      "solutions": "git commit -m \"first commit\""
+    },
+     {
+      "type": "add",
+      "title": "Another git process seems to be running in this repository",
+      "description": "Another git process seems to be running in this repository, e.g. an editor opened by 'git commit'. Please make sure all processes are terminated then try again. If it still fails, a git process may have crashed in this repository earlier: remove the file manually to continue.",
+      "solutions": "git commit -m \"first commit\""
+    },
+    {
+      "type": "push",
+      "title": "fatal: The current branch master has no upstream branch.",
+      "description": "To push the current branch and set the remote as upstream, use.",
+      "solutions": "First check which branch you are in, then:<git push --set-upstream origin BRANCHNAME"
+    },
+    {
+      "type": "branch",
+      "title": "fatal: invalid reference",
+      "description": "Can't switch/checkout to the BRANCH, bcz this branch is not exits man!",
+      "solutions": "This branch is not there, you have to create this branch. < git branch BRANCHNAME -m"
+    },
+    {
+      "type": "add",
+      "title": "error: Your local changes to the following files would be overwritten by checkout: <file name>",
+      "description": "Please commit your changes or stash them before you stwitch branches. Aborting",
+      "solutions": "rm -f .git/index.lock"
+    },
+     {
+      "type": "commit",
+      "title": "error: Your local changes to the following files would be overwritten by checkout: <file name>",
+      "description": "Please commit your changes or stash them before you stwitch branches. Aborting",
+      "solutions": "rm -f .git/index.lock"
+    },
+    {
+      "type": "pull",
+      "title": "fatal: 'main' does not appear to be a git repository",
+      "description": "fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.",
+      "solutions": "git pull origin BRANCHNAME"
+    },
+      {
+      "type": "pull",
+      "title": "fatal: refusing to merge unrelated histories",
+      "description": "The refusing to merge unrelated histories error typically occurs when Git detects that the branches you are trying to merge have divergent commit histories and are essentially unrelated.",
+      "solutions": "git merge --allow-unrelated-histories BRANCHNAME"
+    },
+    {
+      "type": "commit",
+      "title": "fatal: cannot lock ref 'HEAD': unable to resolve reference 'refs/heads/main': reference broken",
+      "description": "Fatal error occurs when you try to commit your changes.",
+      "solutions": "rm .git/refs/heads/main<git add .<git commit -m \"github-error-solve\""
+    },
+    {
+      "type": "merge",
+      "title": "Auto-merging path/path/filename",
+      "description": "CONFLICT (add/add): Merge conflict in path/path/filename. Automatic merge failed; fix conflicts and then commit the result.",
+      "solutions": "You have to manually solve the conflict and then: <git add .< git commit -m \"ges\""
+    },
+    {
+      "type": "push",
+      "title": "Your branch is ahead of 'origin/main' by 1 commit",
+      "description": "You made a commit on your branch that needs to be merged to the main branch on Github.",
+      "solutions": "If you have the permission to update the repo: <git pull main <git checkout [your-branch] <git merge main <When finished the merge locally: <git push main"
+    },
+    {
+      "type": "push",
+      "title": "Everything up-to-date",
+      "description": "File changed and git add . done but git push say: Everything is up-to-date",
+      "solutions": "git commit -m \"ges\""
+    },
+    {
+      "type": "branch",
+      "title": "Switched to branch 'main'",
+      "description": "Your branch is behind 'origin/main' by 10 commits, and can be fast-forwarded.",
+      "solutions": "git pull"
+    },
+    {
             "type": "branch",
             "title": "Delete Local branch",
-            "description": "You can easily delete a local branch. If the branch has not been merged, use git branch -D <branchname> instead.",
+            "description": "You can easily delete a local branch. If the branch has not been merged, use git branch -d <branchname> instead.",
             "solutions": "git branch --delete [branchname]"
         },
         {
@@ -42,263 +109,215 @@
             "description": "error: bad signature 0x00000000, fatal: index file corrupt. NB: use git bash for this command. if you use cmd then use del instead of rm.",
             "solutions": "rm -f .git/index<git reset"
         },
-        {
-            "type": "add",
-            "title": "error: Your local changes to the following files would be overwritten by checkout: <file name>",
-            "description": "Please commit your changes or stash them before you stwitch branches. Aborting",
-            "solutions": "git add .<git commit -m \"ges\""
-        },
-        {
-            "type": "pull",
-            "title": "fatal: 'main' does not appear to be a git repository",
-            "description": "fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.",
-            "solutions": "git pull origin BRANCHNAME"
-        },
-        {
-            "type": "pull",
-            "title": "fatal: refusing to merge unrelated histories",
-            "description": "The refusing to merge unrelated histories error typically occurs when Git detects that the branches you are trying to merge have divergent commit histories and are essentially unrelated.",
-            "solutions": "git merge --allow-unrelated-histories BRANCHNAME"
-        },
-        {
-            "type": "commit",
-            "title": "fatal: cannot lock ref 'HEAD': unable to resolve reference 'refs/heads/main': reference broken",
-            "description": "Fatal error occurs when you try to commit your changes.",
-            "solutions": "rm .git/refs/heads/main<git add .<git commit -m \"github-error-solve\""
-        },
-        {
-            "type": "merge",
-            "title": "Auto-merging path/path/filename",
-            "description": "CONFLICT (add/add): Merge conflict in path/path/filename. Automatic merge failed; fix conflicts and then commit the result.",
-            "solutions": "You have to manually solve the conflict and then: <git add .< git commit -m \"ges\""
-        },
-        {
-            "type": "push",
-            "title": "Your branch is ahead of 'origin/main' by 1 commit",
-            "description": "You made a commit on your branch that needs to be merged to the main branch on Github.",
-            "solutions": "If you have the permission to update the repo: <git pull main <git checkout [your-branch] <git merge main <When finished the merge locally: <git push main"
-        },
-        {
-            "type": "push",
-            "title": "Everything up-to-date",
-            "description": "File changed and git add . done but git push say: Everything is up-to-date",
-            "solutions": "git commit -m \"ges\""
-        },
-        {
-            "type": "branch",
-            "title": "Switched to branch 'main'",
-            "description": "Your branch is behind 'origin/main' by 10 commits, and can be fast-forwarded.",
-            "solutions": "git pull"
-        },
-        {
-            "type": "push",
-            "title": "remote: Not Found",
-            "description": "fatal: repository 'https://github.com/user/repo.git/' not found",
-            "solutions": "Your repository link is not valid. Try to re-create the repository and copy the new link.<git remote set-url origin YOUR_GITHUB_REPO_LINK"
-        },
-        {
-            "type": "pull",
-            "title": "fatal: refusing to merge unrelated histories",
-            "description": "fatal: repository 'https://github.com/user/repo.git/' not found",
-            "solutions": "git pull origin main --allow-unrelated-histories"
-        },
-        {
-            "type": "push",
-            "title": "fatal: unable to access 'https://github.com/user/repo.git/': Could not...",
-            "description": "fatal: repository 'https://github.com/user/repo.git/' not found",
-            "solutions": "git config --global --unset http.proxy<git config --global user.name \"user name\"<git config --global user.email \"user email\""
-        },
-        {
-            "type": "commit",
-            "title": "Please enter the commit message for your changes",
-            "description": "This error occurs when you attempt to commit changes to a Git repository without specifying a commit message, keep in mind it is also a  good practice to include a more detailed explanation of the changes made in the commit message",
-            "solutions": "git commit -m \"commit message\""
-        },
-        {
-            "type": "commit",
-            "title": "fatal: Not a git repository (or any of the parent directories): .git",
-            "description": "This error occurs when you attempt to commit without initiating a git repository, before initiating always make sure either you are in root directory or  correct directory where you want to initiate git ",
-            "solutions": "git init"
-        },
-        {
-            "type": "push",
-            "title": "ssh: connect to host github.com port 22: Connection timed out",
-            "description": "fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.",
-            "solutions": "git add .< git commit -m \"ges\"<git push"
-        },
-        {
-            "type": "add",
-            "title": "fatal: pathspec 'dummyFile.extension' did not match any files",
-            "description": "This error occurs when you attempt to add files in to git but git cannot find correct path to the file from current directory , always make sure there isn't any typo",
-            "solutions": "git add --all || git add '/correct path to file/' "
-        },
-        {
-            "type": "push",
-            "title": "fatal: The remote end hung up unexpectedly",
-            "description": "This error occurs when the size of the repository is huge for the http to transfer",
-            "solutions": "git config http.postBuffer 524288000"
-        },
-        {
-            "type": "branch",
-            "title": "error: You have local changes to <branch_name>; cannot switch branches.",
-            "description": "This error occurs when switching a branch without commiting the changes made to that branch",
-            "solutions": "[{'git stash':'stash your current changes'},{'git reset --hard HEAD':'if you dont' mind losing those minor changes'},{'git checkout -b <branch_name>':'When switching branches, proceed even if the index or the working tree differs from HEAD. This is used to throw away local changes.'},{'git switch -f <branch-name>':'-f is short for --force, which is an alias for --discard-changes , works for git 2.23'}]"
-        },
-        {
-            "type": "push",
-            "title": "Not error, but common problem of pushing wrong/unwanted commits to github",
-            "description": "Uploaded private or wrong data to the github repository, and want to remove it from remote repo",
-            "solutions": "[{'git reset --mixed HEAD~':'HEAD~1 indicates a commit just before the recent commit pointed by the current branch HEAD.'},{'git reset --mixed <commit-id>' or 'git reset --soft <commit-id>':'move back to a previous commit, upon pushing, previous commits will get removed.'}]"
-        },
-        {
-            "type": "push",
-            "title": "fatal: remote origin already exists",
-            "description": "It happens when you attempt to change the repository origin URL after cloning it from GitHub or another remote repository to your local machine.",
-            "solutions": "['Update the existing remote URL, use the set-url command', 'rename the existing remote, run git rename with the remote']"
-        },
-        {
-            "type": "cmd",
-            "title": "How to clone specific branch",
-            "description": "If you don't know how to clone specific branch, you can use this command. It will clone the branch you want to clone.",
-            "solutions": "git clone -b branch remote_repo"
-        },
-        {
-            "type": "cmd",
-            "title": "How to remove a Local branch",
-            "description": "If you want to remove a Local branch, you can use this command. It will remove the branch you want to remove.",
-            "solutions": "git branch --delete branch_name"
-        },
-        {
-            "type": "cmd",
-            "title": "How to remove a Remote branch",
-            "description": "If you want to remove a Remote branch, you can use this command. It will remove the branch you want to remove.",
-            "solutions": "git push remote_origin_name --delete branch_name"
-        },
-        {
-            "type": "push",
-            "title": "fatal: repository not found",
-            "description": "occurs while cloning or pushing modifications to a repository. The error may indicate that the repository doesn’t exist or was removed. The repository exists, but an access-related difficulty or remote origin difficulty causes this error.",
-            "solutions": "{'git clone https://mcnz:githubpass@github.com/cameronmcnz/private-github-repo.git':'You did not authenticate, when trying to access a private github repo without authenticating, you get this error. So, log into the repository with your credentials in the Git URL to authenticate}"
-        },
-        {
-            "type": "push/pull/clone",
-            "title": "ssl certificate problem unable to get local issuer certificate",
-            "description": "It is a common git error encountered by users when attempting to push, pull, or clone a git repository with Git Bash, a Windows-specific command-line tool.",
-            "solutions": "{'git -c http.sslVerify=false clone [URL]':'Command to disable SSL certificate validation in git locally. For security considerations, it is not advised to disable SSL certificate validation. However, it is a possible solution to this issue.'}"
-        },
-        {
-            "type": "pull",
-            "title": "error: failed to push some refs to 'https://github.com/…'",
-            "description": "This error occurs when you try to push to a repository but your local branch is behind the remote branch and you need to pull the changes first.",
-            "solutions": "git fetch origin <git status <git merge origin/REMOTE-BRANCHNAME <\"local and remote changes needs to be resolved before pushing your changes.\"  <git push origin BRANCHNAME"
-        },
-        {
-            "type": "cmd",
-            "title": "how to configure Git settings",
-            "description": "This command is used to configure Git settings, such as your name and email address.",
-            "solutions": "git config"
-        },
-        {
-            "type": "cmd",
-            "title": "how to show who changed which line in a file",
-            "description": "This command is used to display the author and commit information for each line of a file.",
-            "solutions": "git blame"
-        },
-        {
-            "type": "cmd",
-            "title": "how to remove untracked files from the working directory",
-            "description": "This command is used to remove untracked files and directories from the working directory.",
-            "solutions": "git clean"
-        },
-        {
-            "type": "cmd",
-            "title": "how to download changes from a remote repository",
-            "description": "This command is used to download changes from a remote repository without merging them into the current branch.",
-            "solutions": "git fetch"
-        },
-        {
-            "type": "cmd",
-            "title": "how to search for a pattern in files and commits",
-            "description": "This command is used to search for a specified pattern in the files and commits of a repository.",
-            "solutions": "git grep"
-        },
-        {
-            "type": "cmd",
-            "title": "how to revert a commit by creating a new commit",
-            "description": "This command is used to revert the changes introduced by a specific commit by creating a new commit that undoes those changes.",
-            "solutions": "git mv"
-        },
-        {
-            "type": "cmd",
-            "title": "how to remove a file, directory, or symlink from the repository",
-            "description": "This command is used to remove a file, directory, or symlink from the repository.",
-            "solutions": "git rm"
-        },
-        {
-            "type": "cmd",
-            "title": "how to show the changes introduced by a specific commit",
-            "description": "This command is used to display the changes made by a specific commit, including the commit message and author information.",
-            "solutions": "git show"
-        },
-        {
-            "type": "cmd",
-            "title": "how to create, list, or delete tags",
-            "description": "This command is used to create, list, or delete tags, which are used to mark specific points in the commit history.",
-            "solutions": "git tag"
-        },
-        {
-            "type": "cmd",
-            "title": "how to reapply commits from one branch onto another",
-            "description": "This command is used to reapply the changes introduced by a series of commits from one branch onto another.",
-            "solutions": "git rebase"
-        },
-        {
-            "type": "cmd",
-            "title": "how to force a merge commit to be created",
-            "description": "This command is used to force a merge commit to be created, even if Git could perform a fast-forward merge.",
-            "solutions": "git merge --no-ff"
-        },
-        {
-            "type": "cmd",
-            "title": "how to find the commit that introduced a bug",
-            "description": "This command is used to find the commit that introduced a bug by performing a binary search through the commit history.",
-            "solutions": "git bisect"
-        },
-        {
-            "type": "cmd",
-            "title": "how to reset the current branch to a specific commit",
-            "description": "This command is used to reset the current branch to a specific commit, discarding any changes made after that commit.",
-            "solutions": "git reset"
-        },
-        {
-            "type": "cmd",
-            "title": "how to revert a commit by creating a new commit",
-            "description": "This command is used to revert the changes introduced by a specific commit by creating a new commit that undoes those changes.",
-            "solutions": "git revert"
-        },
-        {
-            "type": "cmd",
-            "title": "How to rename local git branch",
-            "description": "If a local branch name contains unclear, incorrect, or sensitive information, you can rename it locally.",
-            "solutions": "git branch -m old-name new-name"
-        },
-        {
-            "type": "cmd",
-            "title": "How to check status of  git branch",
-            "description": "To see all the changes since last commit. It shows all files added, modified, ready to be commited and kept untracked.",
-            "solutions": "git status"
-        },
-        {
-            "type": "cmd",
-            "title": "error: RPC failed; curl transfer closed with outstanding read data remaining",
-            "description": "typically occurs when Git is unable to complete a network request, often due to a slow or unstable connection or Small HTTPS Buffer on Client machine",
-            "solutions": " increasing the Git buffer size and using a different network connection are two possible solutions that may help resolve the issue < git config http.postBuffer 524288000 < git config --global http.maxRequestBuffer 524288000 < git config --global core.compression 0"
-        },
-        {
-            "type": "commit",
-            "title": "Git nothing to commit",
-            "description": "The Git command line informs us that our local repository contains one more commit than our remote repository.",
-            "solutions": "git push"
-        }
-    ]
+    {
+      "type": "push",
+      "title": "remote: Not Found",
+      "description": "fatal: repository 'https://github.com/user/repo.git/' not found",
+      "solutions": "Your repository link is not valid. Try to re-create the repository and copy the new link.<git remote set-url origin YOUR_GITHUB_REPO_LINK"
+    },
+    {
+      "type": "pull",
+      "title": "fatal: refusing to merge unrelated histories",
+      "description": "fatal: repository 'https://github.com/user/repo.git/' not found",
+      "solutions": "git pull origin main --allow-unrelated-histories"
+    },
+    {
+      "type": "push",
+      "title": "fatal: unable to access 'https://github.com/user/repo.git/': Could not...",
+      "description": "fatal: repository 'https://github.com/user/repo.git/' not found",
+      "solutions": "git config --global --unset http.proxy<git config --global user.name \"user name\"<git config --global user.email \"user email\""
+    },
+    {
+      "type": "commit",
+      "title": "Please enter the commit message for your changes",
+      "description": "This error occurs when you attempt to commit changes to a Git repository without specifying a commit message, keep in mind it is also a  good practice to include a more detailed explanation of the changes made in the commit message",
+      "solutions": "git commit -m \"commit message\""
+    },
+    {
+      "type": "commit",
+      "title": "fatal: Not a git repository (or any of the parent directories): .git",
+      "description": "This error occurs when you attempt to commit without initiating a git repository, before initiating always make sure either you are in root directory or  correct directory where you want to initiate git ",
+      "solutions": "git init"
+    },
+    {
+      "type": "push",
+      "title": "ssh: connect to host github.com port 22: Connection timed out",
+      "description": "fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.",
+      "solutions": "git add .< git commit -m \"ges\"<git push"
+    },
+    {
+      "type": "add",
+      "title": "fatal: pathspec 'dummyFile.extension' did not match any files",
+      "description": "This error occurs when you attempt to add files in to git but git cannot find correct path to the file from current directory , always make sure there isn't any typo",
+      "solutions": "git add --all || git add '/correct path to file/' "
+    },
+    {
+      "type": "push",
+      "title": "fatal: The remote end hung up unexpectedly",
+      "description": "This error occurs when the size of the repository is huge for the http to transfer",
+      "solutions": "git config http.postBuffer 524288000"
+    },
+    {
+      "type": "branch",
+      "title": "error: You have local changes to <branch_name>; cannot switch branches.",
+      "description": "This error occurs when switching a branch without commiting the changes made to that branch",
+      "solutions": "[{'git stash':'stash your current changes'},{'git reset --hard HEAD':'if you dont' mind losing those minor changes'},{'git checkout -b <branch_name>':'When switching branches, proceed even if the index or the working tree differs from HEAD. This is used to throw away local changes.'},{'git switch -f <branch-name>':'-f is short for --force, which is an alias for --discard-changes , works for git 2.23'}]"
+    },
+    {
+      "type": "push",
+      "title": "Not error, but common problem of pushing wrong/unwanted commits to github",
+      "description": "Uploaded private or wrong data to the github repository, and want to remove it from remote repo",
+      "solutions": "[{'git reset --mixed HEAD~':'HEAD~1 indicates a commit just before the recent commit pointed by the current branch HEAD.'},{'git reset --mixed <commit-id>' or 'git reset --soft <commit-id>':'move back to a previous commit, upon pushing, previous commits will get removed.'}]"
+    },
+    {
+      "type": "push",
+      "title": "fatal: remote origin already exists",
+      "description": "It happens when you attempt to change the repository origin URL after cloning it from GitHub or another remote repository to your local machine.",
+      "solutions": "['Update the existing remote URL, use the set-url command', 'rename the existing remote, run git rename with the remote']"
+    },
+    {
+      "type": "cmd",
+      "title": "How to clone specific branch",
+      "description": "If you don't know how to clone specific branch, you can use this command. It will clone the branch you want to clone.",
+      "solutions": "git clone -b branch remote_repo"
+    },
+    {
+      "type": "cmd",
+      "title": "How to remove a Local branch",
+      "description": "If you want to remove a Local branch, you can use this command. It will remove the branch you want to remove.",
+      "solutions": "git branch --delete branch_name"
+    },
+    {
+      "type": "cmd",
+      "title": "How to remove a Remote branch",
+      "description": "If you want to remove a Remote branch, you can use this command. It will remove the branch you want to remove.",
+      "solutions": "git push remote_origin_name --delete branch_name"
+    },
+    {
+      "type": "push",
+      "title": "fatal: repository not found",
+      "description": "occurs while cloning or pushing modifications to a repository. The error may indicate that the repository doesn’t exist or was removed. The repository exists, but an access-related difficulty or remote origin difficulty causes this error.",
+      "solutions": "{'git clone https://mcnz:githubpass@github.com/cameronmcnz/private-github-repo.git':'You did not authenticate, when trying to access a private github repo without authenticating, you get this error. So, log into the repository with your credentials in the Git URL to authenticate}"
+    },
+    {
+      "type": "push/pull/clone",
+      "title": "ssl certificate problem unable to get local issuer certificate",
+      "description": "It is a common git error encountered by users when attempting to push, pull, or clone a git repository with Git Bash, a Windows-specific command-line tool.",
+      "solutions": "{'git -c http.sslVerify=false clone [URL]':'Command to disable SSL certificate validation in git locally. For security considerations, it is not advised to disable SSL certificate validation. However, it is a possible solution to this issue.'}"
+    },
+    {
+      "type": "pull",
+      "title": "error: failed to push some refs to 'https://github.com/…'",
+      "description": "This error occurs when you try to push to a repository but your local branch is behind the remote branch and you need to pull the changes first.",
+      "solutions": "git fetch origin <git status <git merge origin/REMOTE-BRANCHNAME <\"local and remote changes needs to be resolved before pushing your changes.\"  <git push origin BRANCHNAME"
+    },
+    {
+      "type": "cmd",
+      "title": "how to configure Git settings",
+      "description": "This command is used to configure Git settings, such as your name and email address.",
+      "solutions": "git config"
+    },
+    {
+      "type": "cmd",
+      "title": "how to show who changed which line in a file",
+      "description": "This command is used to display the author and commit information for each line of a file.",
+      "solutions": "git blame"
+    },
+    {
+      "type": "cmd",
+      "title": "how to remove untracked files from the working directory",
+      "description": "This command is used to remove untracked files and directories from the working directory.",
+      "solutions": "git clean"
+    },
+    {
+      "type": "cmd",
+      "title": "how to download changes from a remote repository",
+      "description": "This command is used to download changes from a remote repository without merging them into the current branch.",
+      "solutions": "git fetch"
+    },
+    {
+      "type": "cmd",
+      "title": "how to search for a pattern in files and commits",
+      "description": "This command is used to search for a specified pattern in the files and commits of a repository.",
+      "solutions": "git grep"
+    },
+    {
+      "type": "cmd",
+      "title": "how to revert a commit by creating a new commit",
+      "description": "This command is used to revert the changes introduced by a specific commit by creating a new commit that undoes those changes.",
+      "solutions": "git mv"
+    },
+    {
+      "type": "cmd",
+      "title": "how to remove a file, directory, or symlink from the repository",
+      "description": "This command is used to remove a file, directory, or symlink from the repository.",
+      "solutions": "git rm"
+    },
+    {
+      "type": "cmd",
+      "title": "how to show the changes introduced by a specific commit",
+      "description": "This command is used to display the changes made by a specific commit, including the commit message and author information.",
+      "solutions": "git show"
+    },
+    {
+      "type": "cmd",
+      "title": "how to create, list, or delete tags",
+      "description": "This command is used to create, list, or delete tags, which are used to mark specific points in the commit history.",
+      "solutions": "git tag"
+    },
+    {
+      "type": "cmd",
+      "title": "how to reapply commits from one branch onto another",
+      "description": "This command is used to reapply the changes introduced by a series of commits from one branch onto another.",
+      "solutions": "git rebase"
+    },
+    {
+      "type": "cmd",
+      "title": "how to force a merge commit to be created",
+      "description": "This command is used to force a merge commit to be created, even if Git could perform a fast-forward merge.",
+      "solutions": "git merge --no-ff"
+    },
+    {
+      "type": "cmd",
+      "title": "how to find the commit that introduced a bug",
+      "description": "This command is used to find the commit that introduced a bug by performing a binary search through the commit history.",
+      "solutions": "git bisect"
+    },
+    {
+      "type": "cmd",
+      "title": "how to reset the current branch to a specific commit",
+      "description": "This command is used to reset the current branch to a specific commit, discarding any changes made after that commit.",
+      "solutions": "git reset"
+    },
+    {
+      "type": "cmd",
+      "title": "how to revert a commit by creating a new commit",
+      "description": "This command is used to revert the changes introduced by a specific commit by creating a new commit that undoes those changes.",
+      "solutions": "git revert"
+    },
+    {
+      "type": "cmd",
+      "title": "How to rename local git branch",
+      "description": "If a local branch name contains unclear, incorrect, or sensitive information, you can rename it locally.",
+      "solutions": "git branch -m old-name new-name"
+    },
+    {
+      "type": "cmd",
+      "title": "How to check status of  git branch",
+      "description": "To see all the changes since last commit. It shows all files added, modified, ready to be commited and kept untracked.",
+      "solutions": "git status"
+    },
+    {
+      "type":"cmd",
+      "title":"error: RPC failed; curl transfer closed with outstanding read data remaining",
+      "description":"typically occurs when Git is unable to complete a network request, often due to a slow or unstable connection or Small HTTPS Buffer on Client machine",
+      "solutions":" increasing the Git buffer size and using a different network connection are two possible solutions that may help resolve the issue < git config http.postBuffer 524288000 < git config --global http.maxRequestBuffer 524288000 < git config --global core.compression 0"
+    },
+     {
+      "type": "commit",
+      "title": "Git nothing to commit",
+      "description": "The Git command line informs us that our local repository contains one more commit than our remote repository.",
+      "solutions": "git push"
+    }
+  ]
 }
