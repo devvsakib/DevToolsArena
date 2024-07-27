@@ -33,7 +33,6 @@ const DocDetail = () => {
         fetchContent();
     }, [slug]);
 
-
     const extractHeadings = (markdown) => {
         const headings = [];
         const regex = /^#{1,6}\s+(.*)$/gm;
