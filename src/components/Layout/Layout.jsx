@@ -9,7 +9,7 @@ import Footer from '../Footer/Footer';
  */
 const Layout = ({children}) => {
     return (
-        <>
+        <div className='flex flex-col justify-between min-h-screen'>
           <Header 
               notice={"Under Construction"}
           />
@@ -17,7 +17,7 @@ const Layout = ({children}) => {
               {children}
           </div>
           <Footer />
-        </>
+        </div>
     );
 };
 

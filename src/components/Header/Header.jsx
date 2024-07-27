@@ -1,4 +1,4 @@
-import { MdPeople, MdInsertDriveFile } from "react-icons/md";
+import { MdPeople, MdInsertDriveFile, MdConstruction } from "react-icons/md";
 import { AiFillGithub } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
@@ -12,12 +12,12 @@ function Header({ notice }) {
     {
       name: 'Doc',
       link: '/doc',
-      icon: <MdInsertDriveFile size='1rem'/>
+      icon: <MdInsertDriveFile size='1rem' />
     },
     {
       name: 'Contributors',
       link: '/Contributors',
-      icon: <MdPeople size='1.25rem'/>
+      icon: <MdPeople size='1.25rem' />
     },
     {
       name: '',
