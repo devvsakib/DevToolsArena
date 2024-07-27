@@ -1,14 +1,13 @@
 {
-    "routes": [
-        {
-            "src": "/posts/(.*)",
-            "dest": "/posts/$1"
-        }
-    ],
     "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/"
-        }
+      {
+        "source": "/posts/(.*)",
+        "destination": "/posts/$1"
+      },
+      {
+        "source": "/(.*)",
+        "destination": "/"
+      }
     ]
-}
+  }
+  
