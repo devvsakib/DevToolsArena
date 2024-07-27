@@ -2,7 +2,7 @@ import React from 'react'
 
 const BGShape = () => {
   return (
-    <div className='-z-[99999] fixed top-0 left-0 w-full h-full'>
+    <div className='-z-[99999] fixed top-0 left-0 w-full h-full opacity-40'>
       {/* <div className='-z-[999] absolute top-0 left-0 w-full h-full bg-[#44ff15]/20 backdrop-blur-[5px] rounded-lg'></div>*/}
       <div className='-z-[99999999999999] absolute -top-[70%] md:-top-[90%] -left-[50%] md:left-0 w-[800px] md:w-full h-[500px] rounded-full bg-[#16f8d2f3]/30 blur-[100px]'></div>
       

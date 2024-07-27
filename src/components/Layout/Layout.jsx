@@ -8,17 +8,20 @@ import { ThemeProvider } from '../../context/ThemeContext';
  * prop
  * @returns A div with a header and children.
  */
-const Layout = ({children}) => {
+const Layout = ({ stars, children }) => {
     return (
-        <ThemeProvider>
-          <Header 
-              notice={"Under Construction"}
-          />
-          <div className='relative'>
-              {children}
-          </div>
-          <Footer />
-        </ThemeProvider>
+        <div className='flex flex-col justify-between min-h-screen'>
+            <ThemeProvider>
+                <Header
+                    countStar={stars}
+                    notice={"Under Construction"}
+                />
+                <div className='relative'>
+                    {children}
+                </div>
+                <Footer />
+            </ThemeProvider>
+        </div>
     );
 };
 

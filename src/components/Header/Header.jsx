@@ -12,7 +12,7 @@ import { HiMoon, HiSun } from "react-icons/hi";
 import { ThemeContext } from "../../context/ThemeContext";
 import { useContext, useState } from "react";
 
-function Header({ notice }) {
+function Header({ countStar, notice }) {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const [open, setOpen] = useState(false);
 
@@ -78,8 +78,19 @@ function Header({ notice }) {
             return (
               <div key={`${link.name}-${index}`}>
                 {link?.isExternalURL ? (
-                  <a target="_blank" href={link.link} className="githubBtn">
-                    {link.icon}
+                  <a target="_blank" href={link.link}>
+                    <div className="bg-blue-600/50 shadow font-semibold flex gap-1 p-1 px-2 items-center rounded-full">
+                      <span className="githubBtn">
+                        {link.icon}
+                      </span>
+                      {
+                        countStar && (
+                          <div className="flex items-center gap-1">
+                            {countStar}
+                          </div>
+                        )
+                      }
+                    </div>
                   </a>
                 ) : (
                   <Link className="flex items-center gap-1" to={link.link}>
@@ -90,7 +101,6 @@ function Header({ notice }) {
               </div>
             );
           })}
-
           <div className="text-lg cursor-pointer" onClick={toggleTheme}>
             <HiMoon className="dark:hidden" />
             <HiSun className="hidden dark:inline" />
