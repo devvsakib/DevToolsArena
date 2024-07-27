@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -13,6 +13,20 @@ const DocDetail = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [headings, setHeadings] = useState([]);
+    const tableRef = useRef(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (tableRef.current) {
+                const rect = tableRef.current.getBoundingClientRect();
+                const isTableVisible = rect.top <= 0 && rect.bottom >= 100;
+                setIsSticky(isTableVisible);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     useEffect(() => {
         const fetchContent = async () => {
@@ -52,8 +66,9 @@ const DocDetail = () => {
     }, [content]);
 
     useEffect(() => {
-        if (window.location.hash) {
-            const id = window.location.hash.substring(1);
+        const hash = window.location.hash;
+        if (hash) {
+            const id = hash.substring(1);
             const element = document.getElementById(id);
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
@@ -66,17 +81,20 @@ const DocDetail = () => {
 
     return (
         <Layout>
-            <section className="container mx-auto p-4">
+            <section className="container mx-auto p-4 min-h-screen">
                 <h3 className="text-2xl md:text-3xl capitalize text-center my-10 mb-20 font-semibold">
                     {slug.replace(/-/g, ' ')}
                 </h3>
-                <div className="flex sticky top-20">
-                    <aside className="w-1/4 p-4">
+                <div className="flex">
+                    <aside ref={tableRef} className="sticky top-20 w-1/4 p-4 h-0">
                         <h2 className="text-xl font-bold mb-2">Table of Contents</h2>
                         <ul>
                             {headings.map((heading, index) => (
                                 <li key={index} className={`ml-${heading.level}`}>
-                                    <a href={`#${heading.title.replace(/\s+/g, '-').toLowerCase()}`}>
+                                    <a href={`#${heading.title.replace(/\s+/g, '-').toLowerCase()}`}
+
+                                        onClick={() => console.log(heading.title.replace(/\s+/g, '-').toLowerCase())}
+                                    >
                                         {heading.title}
                                     </a>
                                 </li>
@@ -105,13 +123,13 @@ const DocDetail = () => {
                                     );
                                 },
                                 h1({ node, children }) {
-                                    return <h1 className='text-xl font-normal mt-5' id={children[0].toLowerCase().replace(/\s+/g, '-')}> {children}</h1>;
+                                    return <h1 className='text-xl font-normal mt-10 mb-3' id={children.toLowerCase().replace(/\s+/g, '-')}> {children}</h1>;
                                 },
                                 h2({ node, children }) {
-                                    return <h2 className='text-xl font-normal mt-5' id={children[0].toLowerCase().replace(/\s+/g, '-')}>🌿 {children}</h2>;
+                                    return <h2 className='text-xl font-normal mt-10 mb-3' id={children.toLowerCase().replace(/\s+/g, '-')}>🌿 {children}</h2>;
                                 },
                                 h3({ node, children }) {
-                                    return <h3 className='text-xl font-normal mt-5' id={children[0].toLowerCase().replace(/\s+/g, '-')}>🌿 {children}</h3>;
+                                    return <h3 className='text-xl font-normal mt-10 mb-3' id={children.toLowerCase().replace(/\s+/g, '-')}>🌿 {children}</h3>;
                                 },
                                 // Handle other heading levels if needed
                             }}
