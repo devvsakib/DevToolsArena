@@ -9,8 +9,11 @@ import Contributors from "./components/Contributors/contributors";
 import BGShape from "./components/BGShape";
 import NotFound from "./pages/404";
 import SingleDoc from "./pages/single doc";
-import Doc from "./pages/doc";
-/* Creating a router object that is used to render the correct component based on the url. */
+import DocList from "./pages/Doc";
+import DocDetail from "./pages/Doc/single doc";
+import 'antd/dist/reset.css'; // Import Ant Design styles
+import 'tailwindcss/tailwind.css'; // Import Tailwind CSS styles
+
 const router = createBrowserRouter(
   [
     {
@@ -19,11 +22,11 @@ const router = createBrowserRouter(
     },
     {
       path: '/doc',
-      element: <Doc />
+      element: <DocList />
     },
     {
-      path: '/doc/:doc_name',
-      element: <SingleDoc />
+      path: '/doc/:slug',
+      element: <DocDetail />
     },
     {
       path: '/Contributors',

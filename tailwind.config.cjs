@@ -14,6 +14,24 @@ module.exports = {
         dark: "#1E1E1F",
         "dark-secondary": "#28282A",
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            // code: {
+            //   backgroundColor: theme('colors.gray.100'),
+            //   padding: '0.2rem 0.4rem',
+            //   borderRadius: theme('borderRadius.md'),
+            // },
+            // pre: {
+            //   backgroundColor: theme('colors.gray.900'),
+            //   color: theme('colors.gray.100'),
+            //   padding: '1rem',
+            //   borderRadius: theme('borderRadius.md'),
+            //   overflowX: 'auto',
+            // },
+          },
+        },
+      }),
     },
   },
   plugins: [
