@@ -19,9 +19,9 @@ const DocDetail = () => {
             try {
                 const response = await fetch(`/posts/${slug}.md`);
                 if (!response.ok) {
-                    throw new Error('Network response was not ok');
+                    throw new Error(`Failed to fetch content: ${response.statusText}`);
                 }
-                const text = await response.text();
+                const text = await response.text(); // Ensure you're reading text
                 setContent(text);
             } catch (error) {
                 setError(error.message);
@@ -32,6 +32,7 @@ const DocDetail = () => {
 
         fetchContent();
     }, [slug]);
+
 
     const extractHeadings = (markdown) => {
         const headings = [];
