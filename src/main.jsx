@@ -29,6 +29,10 @@ const router = createBrowserRouter(
       element: <DocDetail />
     },
     {
+      path: '/doc/:doc_name',
+      element: <SingleDoc />
+    },
+    {
       path: '/Contributors',
       element: <Contributors />
     },
