@@ -13,12 +13,12 @@ function ErrorCard({ error }) {
   const [readMore, setReadMore] = useState(false);
   const [isOpenModal, setOpenModal] = useState(false);
   const [solution, setSolution] = useState("");
-  const colorBorderBox = useColorBorderBox(error)
+  const { errorTypeColor } = useColorBorderBox(error.type)
 
   return (
     <div
       id="main-div"
-      className={colorBorderBox}
+      className={`py-4 mb-4 col-span-12 md:col-span-6 xl:col-span-4 px-2 md:px-6 border-l-4 rounded-lg items-start bg-dark/5 dark:bg-white/5 backdrop-blur-[10px] flex flex-col hover:scale-105 duration-300 border-[${errorTypeColor}]`}
     >
       <h3 className="title">{error.title}</h3>
 

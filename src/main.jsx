@@ -7,12 +7,9 @@ import {
 } from "react-router-dom";
 import Contributors from "./components/Contributors/contributors";
 import BGShape from "./components/BGShape";
-import NotFound from "./pages/404";
-import SingleDoc from "./pages/single doc";
+import NotFound from "./pages/NotFound";
 import DocList from "./pages/Doc";
 import DocDetail from "./pages/Doc/single doc";
-import 'antd/dist/reset.css'; // Import Ant Design styles
-import 'tailwindcss/tailwind.css'; // Import Tailwind CSS styles
 
 const router = createBrowserRouter(
   [
@@ -27,10 +24,6 @@ const router = createBrowserRouter(
     {
       path: '/doc/:slug',
       element: <DocDetail />
-    },
-    {
-      path: '/doc/:doc_name',
-      element: <SingleDoc />
     },
     {
       path: '/Contributors',

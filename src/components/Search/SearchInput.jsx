@@ -64,7 +64,7 @@ function SearchInput({ search, setSearch, setType }) {
                           : item === "cmd"
                             ? "bg-[#e100ff]"
                             : item === "branch"
-                              ? "bg-[#ff0000]"
+                              ? "bg-[#099104]"
                               : "bg-[#7e1aa5]"
                 } ${
                   selectedTag === item ? "ring-4 ring-red-500" : ""
@@ -116,7 +116,7 @@ function SearchInput({ search, setSearch, setType }) {
                                   : item === "cmd"
                                     ? "bg-[#40f058a8]"
                                     : item === "branch"
-                                      ? "bg-[#ff0000]"
+                                      ? "bg-[#099104]"
                                       : "bg-[#7e1aa5]"
                         } ${
                           selectedTag === item ? "ring-4 ring-red-500" : ""
