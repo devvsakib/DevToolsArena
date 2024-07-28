@@ -42,7 +42,7 @@ function Contribute() {
       "1a5ba5",
       "118d7c",
       "8d54e1",
-      "40E4F0",
+      "ff0000",
       "7e1aa5",
     ];
     let element;
