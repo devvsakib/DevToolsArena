@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -7,6 +7,22 @@ import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { Spin, Alert } from 'antd';
 import Layout from '../../../components/Layout/Layout';
 
+const Table = ({ children }) => {
+    return <table className="min-w-full mt-4 border border-gray-300">{children}</table>;
+};
+
+const TableRow = ({ children }) => {
+    return <tr className="border-b border-gray-300">{children}</tr>;
+};
+
+const TableCell = ({ children }) => {
+    return <td className="px-4 py-2">{children}</td>;
+};
+
+const TableHeader = ({ children }) => {
+    return <th className="px-4 py-2 bg-gray-100 font-bold">{children}</th>;
+};
+
 const DocDetail = () => {
     const { slug } = useParams();
     const [content, setContent] = useState('');
@@ -14,20 +30,6 @@ const DocDetail = () => {
     const [error, setError] = useState(null);
     const [activeSection, setActiveSection] = useState(null);
     const [headings, setHeadings] = useState([]);
-    const tableRef = useRef(null);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (tableRef.current) {
-                const rect = tableRef.current.getBoundingClientRect();
-                const isTableVisible = rect.top <= 0 && rect.bottom >= 100;
-                setIsSticky(isTableVisible);
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
 
     useEffect(() => {
         const fetchContent = async () => {
@@ -55,6 +57,7 @@ const DocDetail = () => {
         while ((match = regex.exec(markdown)) !== null) {
             const level = match[0].split(' ')[0].length;
             const title = match[1];
+            if (level > 3) continue;
             headings.push({ level, title });
         }
         setHeadings(headings);
@@ -87,7 +90,7 @@ const DocDetail = () => {
                     {slug.replace(/_/g, ' ')}
                 </h3>
                 <div className="flex">
-                    <aside ref={tableRef} className="sticky top-20 w-1/4 p-4 h-0">
+                    <aside className="sticky top-20 w-1/4 p-4 h-0">
                         <h2 className="text-xl font-bold mb-2">Table of Contents</h2>
                         <ul className='grid gap-2'>
                             {headings.map((heading, index) => (
@@ -132,7 +135,19 @@ const DocDetail = () => {
                                 h3({ node, children }) {
                                     return <h3 className='text-xl font-normal mt-10 mb-3' id={children.toLowerCase().replace(/\s+/g, '-')}>🌿 {children}</h3>;
                                 },
-                                // Handle other heading levels if needed
+                                blockquote({ node, children }) {
+                                    return <span className='bg-gray-100 p-4 pl-0 text-sm my-4 block text-gray'>{children}</span>;
+                                },
+                                table: Table,
+                                tr: TableRow,
+                                td: TableCell,
+                                th: TableHeader,
+                                li({ node, children }) {
+                                    return <li className='list-disc ml-4'>{children}</li>;
+                                },
+                                ul({ node, children }) {
+                                    return <ul className='list-disc ml-4 mb-2'>{children}</ul>;
+                                }
                             }}
                         >
                             {content}
