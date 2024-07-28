@@ -8,7 +8,7 @@ const useColorBorderBox = (error = "") => {
           return setErrorTypeColor("#4024e0");
         }
         if (error.type == "branch") {
-          return setErrorTypeColor("#40e4f0");
+          return setErrorTypeColor("#ff0000");
         }
         if (error.type == "push") {
           return setErrorTypeColor("#8d54e1");
@@ -36,7 +36,7 @@ const useColorBorderBox = (error = "") => {
           : item === "cmd"
           ? "border-[#e100ff]"
           : item === "branch"
-          ? "border-[#40E4F0]"
+          ? "border-[#ff0000]"
           : "border-[#7e1aa5]"
       }`
 
