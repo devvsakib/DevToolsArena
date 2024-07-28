@@ -72,6 +72,7 @@ body::-webkit-scrollbar {
 }
 
 html {
+  scroll-behavior: smooth;
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;

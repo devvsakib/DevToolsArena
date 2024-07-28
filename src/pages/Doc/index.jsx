@@ -11,14 +11,16 @@ const DocList = () => {
     useEffect(() => {
         const fetchDocs = async () => {
             try {
-                const response = await fetch('/posts/index.json');
+                // const response = await fetch('/posts/index.json');
+                const response = await fetch('https://github-error-solve.vercel.app/posts/index.json');
                 if (!response.ok) {
-                    throw new Error('Network response was not ok');
+                    throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 const data = await response.json();
                 setDocs(data);
             } catch (error) {
                 setError(error.message);
+                console.error("Error fetching JSON data:", error);
             } finally {
                 setLoading(false);
             }
@@ -26,6 +28,8 @@ const DocList = () => {
 
         fetchDocs();
     }, []);
+
+
 
     if (loading) return <div className="flex justify-center items-center h-screen"><Spin size="large" /></div>;
     if (error) return <Alert message="Error" description={error} type="error" />;
