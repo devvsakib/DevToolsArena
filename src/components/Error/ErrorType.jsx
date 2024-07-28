@@ -11,7 +11,7 @@ function ErrorType({ type }) {
           : type === "push"
           ? "before:bg-[#8d54e1]"
           : type === "branch"
-          ? "before:bg-[#40E4F0]"
+          ? "before:bg-[#ff0000]"
           : type === "cmd"
           ? "before:bg-[#e100ff]"
           : "before:bg-[#7e1aa5]"
