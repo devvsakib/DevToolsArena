@@ -41,7 +41,7 @@ const DocList = () => {
                 <ul>
                     {
                         docs.map(item =>
-                            <Link to={item.title} className='capitalize'>{item.title.replace(/_/g, ' ')}</Link>
+                            <Link to={item} className='capitalize'>{item.replace(/_/g, ' ')}</Link>
                         )
                     }
                 </ul>
