@@ -1,5 +1,3 @@
-# git-hooks-automating-your-workflow
-
 Git hooks are powerful scripts that can automate various aspects of your development workflow. They allow you to execute custom scripts before or after important Git events, such as committing, pushing, or merging. This post will introduce you to Git hooks and show you how to leverage them effectively.
 
 ## What Are Git Hooks?

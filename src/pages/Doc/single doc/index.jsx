@@ -12,6 +12,7 @@ const DocDetail = () => {
     const [content, setContent] = useState('');
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [activeSection, setActiveSection] = useState(null);
     const [headings, setHeadings] = useState([]);
     const tableRef = useRef(null);
 
@@ -83,17 +84,17 @@ const DocDetail = () => {
         <Layout>
             <section className="container mx-auto p-4 min-h-screen">
                 <h3 className="text-2xl md:text-3xl capitalize text-center my-10 mb-20 font-semibold">
-                    {slug.replace(/-/g, ' ')}
+                    {slug.replace(/_/g, ' ')}
                 </h3>
                 <div className="flex">
                     <aside ref={tableRef} className="sticky top-20 w-1/4 p-4 h-0">
                         <h2 className="text-xl font-bold mb-2">Table of Contents</h2>
-                        <ul>
+                        <ul className='grid gap-2'>
                             {headings.map((heading, index) => (
-                                <li key={index} className={`ml-${heading.level}`}>
+                                <li key={index} className={`ml-${heading.level} ${activeSection === heading.title.replace(/\s+/g, '-').toLowerCase() && 'text-green-500 font-semibold'}`}>
                                     <a href={`#${heading.title.replace(/\s+/g, '-').toLowerCase()}`}
 
-                                        onClick={() => console.log(heading.title.replace(/\s+/g, '-').toLowerCase())}
+                                        onClick={() => setActiveSection(heading.title.replace(/\s+/g, '-').toLowerCase())}
                                     >
                                         {heading.title}
                                     </a>

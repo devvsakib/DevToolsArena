@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { List, Spin, Alert } from 'antd';
 import Layout from '../../components/Layout/Layout';
+import { FaArrowRight } from "react-icons/fa";
 
 const DocList = () => {
     const [docs, setDocs] = useState([]);
@@ -11,7 +12,7 @@ const DocList = () => {
     useEffect(() => {
         const fetchDocs = async () => {
             try {
-                const response = await fetch('https://github-error-solve.vercel.app/docs/index.json');
+                const response = await fetch('/docs/index.json');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
@@ -37,10 +38,12 @@ const DocList = () => {
         <Layout>
             <div className="container mx-auto p-4 min-h-screen">
                 <h1 className="text-3xl font-bold mb-20 mt-5 text-center">Documentation</h1>
-                <ul>
+                <ul className='grid gap-5 mx-auto md:max-w-2xl'>
                     {
                         docs.map(item =>
-                            <Link to={item.title} className='capitalize'>{item.title.replace(/_/g, ' ')}</Link>
+                            <Link to={item.title} className='capitalize group flex items-center justify-between bg-white/10 p-5 rounded-md'>{item.title.replace(/_/g, ' ')}
+                                 <FaArrowRight className="dark:text-white opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 transition duration-300" />
+                            </Link>
                         )
                     }
                 </ul>
