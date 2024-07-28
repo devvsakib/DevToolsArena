@@ -1,15 +1,20 @@
-import React from "react";
+import React,{ useContext } from "react";
 import { MdKeyboardArrowLeft, MdContentCopy } from "react-icons/md";
 import ErrorSolutions from "./ErrorSolutions";
 import useColorBorderBox from "../../hooks/useColorBorderBox";
 import ErrorType from "./ErrorType";
 import Modal from "react-modal";
 import toast from "react-hot-toast";
+import { ThemeContext } from '../../context/ThemeContext';
 
 Modal.setAppElement("#root");
 
 const ModalSolutions = ({ isOpen, setOpenModal, error }) => {
   const { errorTypeColor } = useColorBorderBox(error.type);
+  const { theme } = useContext(ThemeContext);
+  const overlayBackgroundColor = theme === 'dark' 
+    ? 'rgba(0, 0, 0, 0.6)' 
+    : 'rgba(0, 0, 0, 0.2)';
 
   return (
     <Modal
@@ -23,7 +28,7 @@ const ModalSolutions = ({ isOpen, setOpenModal, error }) => {
       id="main-div"
       style={{
         overlay: {
-          backgroundColor: "rgba(0, 0 ,0, .6)",
+          backgroundColor: overlayBackgroundColor,
         },
         content: {
           position: "fixed",
