@@ -11,8 +11,7 @@ const DocList = () => {
     useEffect(() => {
         const fetchDocs = async () => {
             try {
-                // const response = await fetch('/posts/index.json');
-                const response = await fetch('https://github-error-solve.vercel.app/posts/index.json');
+                const response = await fetch('https://github-error-solve.vercel.app/docs/index.json');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
@@ -41,7 +40,7 @@ const DocList = () => {
                 <ul>
                     {
                         docs.map(item =>
-                            <Link to={item} className='capitalize'>{item.replace(/_/g, ' ')}</Link>
+                            <Link to={item.title} className='capitalize'>{item.title.replace(/_/g, ' ')}</Link>
                         )
                     }
                 </ul>

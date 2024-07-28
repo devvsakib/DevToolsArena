@@ -93,3 +93,5 @@ A well-implemented Git branching strategy can significantly improve your team's 
 Remember, the best strategy is one that your team can follow effectively. Start with a basic approach and evolve it as your project and team grow.
 
 Happy branching!
+
+> Written by **Sakib Ahmed** | [GitHub](https://github.com/devvsakib)

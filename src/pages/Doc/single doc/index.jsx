@@ -31,7 +31,7 @@ const DocDetail = () => {
     useEffect(() => {
         const fetchContent = async () => {
             try {
-                const response = await fetch(`/posts/${slug}.md`);
+                const response = await fetch(`/docs/${slug}.md`);
                 if (!response.ok) {
                     throw new Error(`Failed to fetch content: ${response.statusText}`);
                 }
