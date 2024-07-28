@@ -120,3 +120,5 @@ You may also delete the branch from your fork on GitHub.
 Congratulations! You've successfully created and merged a pull request. This process helps maintain code quality and encourages collaboration among developers.
 
 This tutorial covers the basics of creating a pull request and includes best practices to help beginners understand the process.
+
+> Written by **Sakib Ahmed** | [GitHub](https://github.com/devvsakib)
