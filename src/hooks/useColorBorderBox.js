@@ -1,46 +1,29 @@
 import { useState, useEffect } from "react";
 
-const useColorBorderBox = (error = "") => {
-    const [errorTypeColor, setErrorTypeColor] = useState("#7e1aa5");
-    
-    useEffect(() => {
-        if (error.type == "add") {
-          return setErrorTypeColor("#4024e0");
-        }
-        if (error.type == "branch") {
-          return setErrorTypeColor("#ff0000");
-        }
-        if (error.type == "push") {
-          return setErrorTypeColor("#8d54e1");
-        }
-        if (error.type == "merge") {
-          return setErrorTypeColor("#118d7c");
-        }
-        if (error.type == "commit") {
-          return setErrorTypeColor("#1a5ba5");
-        }
-        return setErrorTypeColor("#7e1aa5");
-      }, [errorTypeColor]);
+const useColorBorderBox = (errorType = "") => {
+  const [errorTypeColor, setErrorTypeColor] = useState("#7e1aa5");
 
-      let item = error.type;
+  useEffect(() => {
+    if (errorType == "add") {
+      return setErrorTypeColor("#4024e0");
+    }
+    if (errorType == "branch") {
+      return setErrorTypeColor("#099104");
+    }
+    if (errorType == "push") {
+      return setErrorTypeColor("#8d54e1");
+    }
+    if (errorType == "merge") {
+      return setErrorTypeColor("#118d7c");
+    }
+    if (errorType == "commit") {
+      return setErrorTypeColor("#1a5ba5");
+    }
+    return setErrorTypeColor("#7e1aa5");
+  }, [errorType]);
 
-      let response = `py-4 mb-4 col-span-12 md:col-span-6 xl:col-span-4 px-2 md:px-6 border-l-4 rounded-lg   items-start bg-dark/5 dark:bg-white/5 backdrop-blur-[10px] flex flex-col hover:scale-105 duration-300 ${
-        item === "add"
-          ? "border-[#4024e0]"
-          : item === "commit"
-          ? "border-[#1a5ba5]"
-          : item === "merge"
-          ? "border-[#118d7c]"
-          : item === "push"
-          ? "border-[#8d54e1]"
-          : item === "cmd"
-          ? "border-[#e100ff]"
-          : item === "branch"
-          ? "border-[#ff0000]"
-          : "border-[#7e1aa5]"
-      }`
 
-    return response
+  return { errorTypeColor, setErrorTypeColor };
 }
 
 export default useColorBorderBox;

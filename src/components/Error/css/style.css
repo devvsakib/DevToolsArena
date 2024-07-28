@@ -22,6 +22,12 @@ h3 {
   border-radius: 10px;
 }
 
+h3{
+  max-width: 100%;
+  overflow-wrap: break-word;
+  font-size: 15px;
+}
+
 .modal {
   width: 400px;
   max-height: 450px; 
