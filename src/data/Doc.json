@@ -1,46 +1,34 @@
 {
-    "docs": [
-        {
-            "tag": [
-                "gettingStarted"
-            ],
-            "title": "Set up Git",
-            "description": "Download git by just searching for git on google, you'll find a first link click on it and download it. After downloading, open the file click on install, make your preferences and Vola, git is on your PC."
-        },
-        {
-            "tag": [
-                "gettingStarted"
-            ],
-            "title": "Creating and managing repositories",
-            "description": "You can create as many repo's as you want, all you need is a github account and some internet connection. Create a github account, create a repo, you can see how to add files to the repo on our github repo readme file."
-        },
-        {
-            "tag": [
-                "gettingStarted"
-            ],
-            "title": "Basic writing and formatting syntax",
-            "description": "You can use prettier a vscode extension, which format's your code in a perfect manner with all the indentation and colour matchings. This will help you understand the syntax that you have written and help you resolving an issue."
-        },
-        {
-            "tag": [
-                "gettingStarted"
-            ],
-            "title": "Adding locally hosted code to Github",
-            "description": "`1. Create a new repository on GitHub: Log in to your GitHub account and create a new repository by clicking on the \"+\" icon in the top-right corner of the screen and selecting \"New repository\". Give your repository a name, description, and choose any other desired settings.`2. Initialize a Git repository locally: Navigate to the directory on your local machine where your code is hosted, and initialize a Git repository using the git init command.`3. Add files to the local repository: Use the git add command to add the files you want to track to the local Git repository. For example, to add all files in the current directory and its subdirectories, use the following command: {git add .}`4. Commit changes to the local repository: Use the 'git commit' command to commit the changes you've made to the local repository. Make sure to include a meaningful commit message that describes the changes you've made. For example: {git commit -m \"Initial commit\"}.`5. Add the remote repository: Use the git remote command to add a reference to the remote repository on GitHub. For example, to add a remote called \"origin\" that points to the repository you created in step 1, use the following command: 'git remote add origin https://github.com/username/repo.git'.`6. Push changes to GitHub: Use the git push command to push the changes you've made in the local repository to the remote repository on GitHub. For example, to push the changes to the master branch of the remote repository, use the following command: 'git push -u origin master'.`That's it! Your locally hosted code should now be available on GitHub. Let me know if you have any further questions."
-        },
-        {
-            "tag": [
-                "popular"
-            ],
-            "title": "About pull request",
-            "description": "We have many repo's on GitHub. Suppose you want to make some changes to some repo then, you'll fork that repo and make all of your changes. Now, when you create a pull request, it compares what's the difference in your fork and the main project. If owner like's it, he'll approve it."
-        },
-        {
-            "tag": [
-                "popular"
-            ],
-            "title": "Adding locally hosted code to Github",
-            "description": "`1. Create a new repository on GitHub: Log in to your GitHub account and create a new repository by clicking on the \"+\" icon in the top-right corner of the screen and selecting \"New repository\". Give your repository a name, description, and choose any other desired settings.`2. Initialize a Git repository locally: Navigate to the directory on your local machine where your code is hosted, and initialize a Git repository using the git init command.`3. Add files to the local repository: Use the git add command to add the files you want to track to the local Git repository. For example, to add all files in the current directory and its subdirectories, use the following command: {git add .}`4. Commit changes to the local repository: Use the 'git commit' command to commit the changes you've made to the local repository. Make sure to include a meaningful commit message that describes the changes you've made. For example: 'git commit -m \"Initial commit\"'.`5. Add the remote repository: Use the git remote command to add a reference to the remote repository on GitHub. For example, to add a remote called \"origin\" that points to the repository you created in step 1, use the following command: 'git remote add origin https://github.com/username/repo.git'.`6. Push changes to GitHub: Use the git push command to push the changes you've made in the local repository to the remote repository on GitHub. For example, to push the changes to the master branch of the remote repository, use the following command: 'git push -u origin master'.`That's it! Your locally hosted code should now be available on GitHub. Let me know if you have any further questions."
-        }
-    ]
+  "docs": [
+    {
+      "tag": ["gettingStarted"],
+      "title": "Set up Git",
+      "description": "Download git by just searching for git on google, you'll find a first link click on it and download it. After downloading, open the file click on install, make your preferences and Vola, git is on your PC."
+    },
+    {
+      "tag": ["gettingStarted"],
+      "title": "Creating and managing repositories",
+      "description": "You can create as many repo's as you want, all you need is a github account and some internet connection. Create a github account, create a repo, you can see how to add files to the repo on our github repo readme file."
+    },
+    {
+      "tag": ["gettingStarted"],
+      "title": "Basic writing and formatting syntax",
+      "description": "You can use prettier a vscode extension, which format's your code in a perfect manner with all the indentation and colour matchings. This will help you understand the syntax that you have written and help you resolving an issue."
+    },
+    {
+      "tag": ["gettingStarted"],
+      "title": "Adding locally hosted code to Github",
+      "description": "`1. Create a new repository on GitHub: Log in to your GitHub account and create a new repository by clicking on the \"+\" icon in the top-right corner of the screen and selecting \"New repository\". Give your repository a name, description, and choose any other desired settings.`2. Initialize a Git repository locally: Navigate to the directory on your local machine where your code is hosted, and initialize a Git repository using the git init command.`3. Add files to the local repository: Use the git add command to add the files you want to track to the local Git repository. For example, to add all files in the current directory and its subdirectories, use the following command: {git add .}`4. Commit changes to the local repository: Use the 'git commit' command to commit the changes you've made to the local repository. Make sure to include a meaningful commit message that describes the changes you've made. For example: {git commit -m \"Initial commit\"}.`5. Add the remote repository: Use the git remote command to add a reference to the remote repository on GitHub. For example, to add a remote called \"origin\" that points to the repository you created in step 1, use the following command: 'git remote add origin https://github.com/username/repo.git'.`6. Push changes to GitHub: Use the git push command to push the changes you've made in the local repository to the remote repository on GitHub. For example, to push the changes to the master branch of the remote repository, use the following command: 'git push -u origin master'.`That's it! Your locally hosted code should now be available on GitHub. Let me know if you have any further questions."
+    },
+    {
+      "tag": ["popular"],
+      "title": "About pull request",
+      "description": "We have many repo's on GitHub. Suppose you want to make some changes to some repo then, you'll fork that repo and make all of your changes. Now, when you create a pull request, it compares what's the difference in your fork and the main project. If owner like's it, he'll approve it."
+    },
+    {
+      "tag": ["popular"],
+      "title": "Adding locally hosted code to Github",
+      "description": "`1. Create a new repository on GitHub: Log in to your GitHub account and create a new repository by clicking on the \"+\" icon in the top-right corner of the screen and selecting \"New repository\". Give your repository a name, description, and choose any other desired settings.`2. Initialize a Git repository locally: Navigate to the directory on your local machine where your code is hosted, and initialize a Git repository using the git init command.`3. Add files to the local repository: Use the git add command to add the files you want to track to the local Git repository. For example, to add all files in the current directory and its subdirectories, use the following command: {git add .}`4. Commit changes to the local repository: Use the 'git commit' command to commit the changes you've made to the local repository. Make sure to include a meaningful commit message that describes the changes you've made. For example: 'git commit -m \"Initial commit\"'.`5. Add the remote repository: Use the git remote command to add a reference to the remote repository on GitHub. For example, to add a remote called \"origin\" that points to the repository you created in step 1, use the following command: 'git remote add origin https://github.com/username/repo.git'.`6. Push changes to GitHub: Use the git push command to push the changes you've made in the local repository to the remote repository on GitHub. For example, to push the changes to the master branch of the remote repository, use the following command: 'git push -u origin master'.`That's it! Your locally hosted code should now be available on GitHub. Let me know if you have any further questions."
+    }
+  ]
 }

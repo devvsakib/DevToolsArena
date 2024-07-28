@@ -15,7 +15,7 @@ function ErrorSolutions({ solutions }) {
   return (
     <ul id="scroll-solution">
       {solutions.split("<").map((solution, index) => (
-        <li key={index} className="text-sm break-all" >
+        <li key={index} className="text-sm break-all">
           {solution}
         </li>
       ))}

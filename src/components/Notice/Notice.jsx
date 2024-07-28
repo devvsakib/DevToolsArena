@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Notice() {
-  return (
-    <span className='text-black'>Site Under Constructions</span>
-  )
+  return <span className="text-black">Site Under Constructions</span>;
 }
 
-export default Notice
+export default Notice;

@@ -1,66 +1,71 @@
-### How to contribute. 
+### How to contribute.
 
 > There two ways you can contribute here
-- Direct from GitHub  
+
+- Direct from GitHub
 - Using a code editor(e.g vs code)
-
-
 
 First Fork the repository
 ![First Fork the repository](https://user-images.githubusercontent.com/88102392/226692241-59d8adad-78ac-437a-99bb-c1396b9e61cf.png)
 
 # 1. Step Direct from GitHub
- - After forking the repository click on  `go to file`
 
- ![Go to file](https://user-images.githubusercontent.com/88102392/226693809-e96e3bfd-c5c2-4463-871e-5bcc1f8ef9e3.png)
+- After forking the repository click on `go to file`
 
- - Navigate to the `src/data/error.json`
+![Go to file](https://user-images.githubusercontent.com/88102392/226693809-e96e3bfd-c5c2-4463-871e-5bcc1f8ef9e3.png)
 
- ![image](https://user-images.githubusercontent.com/88102392/226694741-92c67935-db29-4340-ae15-8beaa2651b09.png)
- 
- - Add your code in the `error.json` file usng this format
+- Navigate to the `src/data/error.json`
 
- ```code
-    {
-      "type": "<Problem-type (e.g push, merge etc.)>",
-      "title": "<Exact title of the error>",
-      "description": "<Description of the error>",
-      "solutions": "<Soliution of the error>"
-    }
+![image](https://user-images.githubusercontent.com/88102392/226694741-92c67935-db29-4340-ae15-8beaa2651b09.png)
 
- ```
- - Now add a suitable commit message like this & create a new branch by clicking the second option. Click on Propose changes
+- Add your code in the `error.json` file usng this format
 
- ![image](https://user-images.githubusercontent.com/88102392/226696447-ca59da05-47e9-48d4-9b11-0821356d7dab.png)
+```code
+   {
+     "type": "<Problem-type (e.g push, merge etc.)>",
+     "title": "<Exact title of the error>",
+     "description": "<Description of the error>",
+     "solutions": "<Soliution of the error>"
+   }
 
+```
 
- - Click on `Compare & across forks `, Select  `devvsakib/github-error-solve` in the base repository & also click on `Create Pull Request ` button. 
+- Now add a suitable commit message like this & create a new branch by clicking the second option. Click on Propose changes
 
- ![image](https://user-images.githubusercontent.com/88102392/226697482-95f5b392-bfae-4301-bd9d-eead9734045f.png)
+![image](https://user-images.githubusercontent.com/88102392/226696447-ca59da05-47e9-48d4-9b11-0821356d7dab.png)
 
- - Fill the description & add a best commit title & create Pull request
+- Click on `Compare & across forks `, Select `devvsakib/github-error-solve` in the base repository & also click on `Create Pull Request ` button.
 
- ![image](https://user-images.githubusercontent.com/88102392/226698872-e2254cf0-a794-4e76-8926-cd1aa3bbb804.png)
- 
- 
+![image](https://user-images.githubusercontent.com/88102392/226697482-95f5b392-bfae-4301-bd9d-eead9734045f.png)
 
- That's it. 
+- Fill the description & add a best commit title & create Pull request
 
- # 2. Using a Code editor(e.g Vs code)
- 
+![image](https://user-images.githubusercontent.com/88102392/226698872-e2254cf0-a794-4e76-8926-cd1aa3bbb804.png)
+
+That's it.
+
+# 2. Using a Code editor(e.g Vs code)
+
 Clone the repository.
+
 ```console
 git clone https://github.com/<Your-GitHub-Username>/github-error-solve.git
 ```
+
 - Navigate to folder
+
 ```console
 cd github-error-solve
 ```
+
 - Install node dependencies
+
 ```console
 yarn
 ```
+
 - Start the project
+
 ```console
 yarn run dev
 ```
@@ -70,7 +75,9 @@ yarn run dev
 ```console
 git checkout -b <name-of-your-branch>
 ```
-- Add upstream command 
+
+- Add upstream command
+
 ```console
 git remote add upstream https://github.com/devvsakib/github-error-solve.git
 ```
@@ -101,11 +108,11 @@ or
 
 - The response should be like this
 
-
 ```console
 On branch <name-of-your-branch>
 nothing to commit, working tree clean
 ```
+
 - Pushing your repository to GitHub.
 
 ```console

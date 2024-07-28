@@ -25,10 +25,12 @@ Additional supporting branches include:
 - Hotfix branches
 
 #### Pros:
+
 - Clear separation of concerns
 - Suitable for projects with scheduled releases
 
 #### Cons:
+
 - Can be complex for smaller projects
 - May lead to long-lived feature branches
 
@@ -44,10 +46,12 @@ GitHub Flow is a simpler alternative to GitFlow. It uses a single main branch an
 6. Merge to `main`
 
 #### Pros:
+
 - Simple and easy to understand
 - Encourages continuous delivery
 
 #### Cons:
+
 - Less suitable for projects with multiple versions in production
 
 ### 3. Trunk-Based Development
@@ -59,10 +63,12 @@ This strategy involves keeping branches short-lived and merging frequently to a 
 - `main` is always in a releasable state
 
 #### Pros:
+
 - Supports continuous integration effectively
 - Reduces merge conflicts
 
 #### Cons:
+
 - Requires a robust testing and CI/CD pipeline
 - May be challenging for less experienced teams
 

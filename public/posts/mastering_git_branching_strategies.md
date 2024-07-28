@@ -19,13 +19,14 @@ GitFlow is one of the most well-known branching models. It uses two main branche
 - `develop`: Serves as an integration branch for features.
 
 Additional supporting branches include:
+
 - Feature branches
 - Release branches
 - Hotfix branches
 
-| Pros | Cons |
-|------|------|
-| Clear separation of concerns | Can be complex for smaller projects |
+| Pros                                          | Cons                                    |
+| --------------------------------------------- | --------------------------------------- |
+| Clear separation of concerns                  | Can be complex for smaller projects     |
 | Suitable for projects with scheduled releases | May lead to long-lived feature branches |
 
 ### 2. GitHub Flow
@@ -39,10 +40,10 @@ GitHub Flow is a simpler alternative to GitFlow. It uses a single main branch an
 5. Deploy for testing
 6. Merge to `main`
 
-| Pros | Cons |
-|------|------|
-| Simple and easy to understand | Less suitable for projects with multiple versions in production |
-| Encourages continuous delivery | |
+| Pros                           | Cons                                                            |
+| ------------------------------ | --------------------------------------------------------------- |
+| Simple and easy to understand  | Less suitable for projects with multiple versions in production |
+| Encourages continuous delivery |                                                                 |
 
 ### 3. Trunk-Based Development
 
@@ -52,10 +53,10 @@ This strategy involves keeping branches short-lived and merging frequently to a 
 - Branches are merged to `main` at least once a day
 - `main` is always in a releasable state
 
-| Pros | Cons |
-|------|------|
-| Supports continuous integration effectively | Requires a robust testing and CI/CD pipeline |
-| Reduces merge conflicts | May be challenging for less experienced teams |
+| Pros                                        | Cons                                          |
+| ------------------------------------------- | --------------------------------------------- |
+| Supports continuous integration effectively | Requires a robust testing and CI/CD pipeline  |
+| Reduces merge conflicts                     | May be challenging for less experienced teams |
 
 ## Choosing the Right Strategy
 

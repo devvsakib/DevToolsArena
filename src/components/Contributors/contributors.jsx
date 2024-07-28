@@ -4,8 +4,8 @@ import Layout from "../../components/Layout/Layout";
 import "./css/index.css";
 
 function Contribute() {
-  const url = "https://api.github.com/repos/devvsakib/github-error-solve/contributors";
-
+  const url =
+    "https://api.github.com/repos/devvsakib/github-error-solve/contributors";
 
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -16,22 +16,24 @@ function Contribute() {
       const response = await fetch(url);
       const users = await response.json();
       setData(users);
-      const usersMerged = await Promise.all(users.map(async item => {
-        const result = await getUserObj(item.url)
-        let tempFinData = {
-          ...item,
-          ...result
-        }
-        return tempFinData
-      }))
-      setData(usersMerged)
+      const usersMerged = await Promise.all(
+        users.map(async (item) => {
+          const result = await getUserObj(item.url);
+          let tempFinData = {
+            ...item,
+            ...result,
+          };
+          return tempFinData;
+        }),
+      );
+      setData(usersMerged);
       setLoading(true);
     };
-    const getUserObj = async url => {
+    const getUserObj = async (url) => {
       const response = await fetch(url);
       let dataOfUser = await response.json();
-      return ({ twitter_username: dataOfUser.twitter_username })
-    }
+      return { twitter_username: dataOfUser.twitter_username };
+    };
     fetchUsers(url);
   }, [data.length]);
 
@@ -58,7 +60,8 @@ function Contribute() {
           data && data.length !== 0 ? (
             loading ? (
               data.map((user) => (
-                <div key={user.login}
+                <div
+                  key={user.login}
                   id="container"
                   className={`py-4 mb-4 col-span-12 md:col-span-6 xl:col-span-4 md:px-6 border-l-4 rounded-lg shadow-lg bg-[#${changeColor()}]/10 backdrop-blur-[10px] flex flex-col mt-8 items-center mx-auto gap-2 px-3 border-[#${changeColor()}] hover:border-primary hover:text-primary`}
                 >
@@ -73,9 +76,14 @@ function Contribute() {
                     <a className="spf-link" href={user.html_url}>
                       GitHub
                     </a>
-                    {user.twitter_username && <a className="spf-link" href={`https://twitter.com/${user.twitter_username}`}>
-                      Twitter
-                    </a>}
+                    {user.twitter_username && (
+                      <a
+                        className="spf-link"
+                        href={`https://twitter.com/${user.twitter_username}`}
+                      >
+                        Twitter
+                      </a>
+                    )}
                     {/* spf-link : abbreviation of (specific-link) for css */}
                   </div>
                 </div>

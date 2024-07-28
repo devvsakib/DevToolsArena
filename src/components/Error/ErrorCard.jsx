@@ -1,19 +1,16 @@
 import React, { useState } from "react";
-import useColorBorderBox from "../../hooks/useColorBorderBox"
-import {
-  MdOutlineArrowRightAlt,
-} from "react-icons/md";
+import useColorBorderBox from "../../hooks/useColorBorderBox";
+import { MdOutlineArrowRightAlt } from "react-icons/md";
 import ErrorType from "./ErrorType";
 import "./css/style.css";
 
 import ModalSolutions from "./ModalSolutions";
 
 function ErrorCard({ error }) {
-
   const [readMore, setReadMore] = useState(false);
   const [isOpenModal, setOpenModal] = useState(false);
   const [solution, setSolution] = useState("");
-  const { errorTypeColor } = useColorBorderBox(error.type)
+  const { errorTypeColor } = useColorBorderBox(error.type);
 
   return (
     <div
