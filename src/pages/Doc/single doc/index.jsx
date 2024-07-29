@@ -30,6 +30,7 @@ const DocDetail = () => {
     const [error, setError] = useState(null);
     const [activeSection, setActiveSection] = useState(null);
     const [headings, setHeadings] = useState([]);
+    const [isTOCOpen, setIsTOCOpen] = useState(false);
 
     useEffect(() => {
         const fetchContent = async () => {
@@ -38,7 +39,7 @@ const DocDetail = () => {
                 if (!response.ok) {
                     throw new Error(`Failed to fetch content: ${response.statusText}`);
                 }
-                const text = await response.text(); // Ensure you're reading text
+                const text = await response.text();
                 setContent(text);
             } catch (error) {
                 setError(error.message);
@@ -83,29 +84,70 @@ const DocDetail = () => {
     if (loading) return <div className="flex justify-center items-center h-screen"><Spin size="large" /></div>;
     if (error) return <Alert message="Error" description={error} type="error" />;
     const headingToId = (children) => String(children).toLowerCase().replace(/\s+/g, '-');
+
     return (
         <Layout>
             <section className="container mx-auto p-4 min-h-screen">
                 <h3 className="text-2xl md:text-3xl capitalize text-center my-10 mb-20 font-semibold">
                     {slug.replace(/_/g, ' ')}
                 </h3>
-                <div className="flex">
-                    <aside className="sticky top-20 w-1/4 p-4 h-0">
+                <div className="flex flex-col md:flex-row">
+                    {/* Table of Contents button for smaller screens */}
+                    <div className="md:hidden flex justify-center mb-4">
+                        <button
+                            className="bg-white py-3 px-6 rounded-lg text-left text-black font-normal"
+                            onClick={() => setIsTOCOpen(!isTOCOpen)}
+                        >
+                            Table of Contents
+                        </button>
+                    </div>
+
+                    {/* Table of Contents for larger screens */}
+                    <aside className="md:w-1/4 p-4 hidden md:block">
                         <h2 className="text-xl font-bold mb-2">Table of Contents</h2>
                         <ul className='grid gap-2'>
-                            {headings.map((heading, index) => (
-                                <li key={index} className={`ml-${heading.level} ${activeSection === heading.title.replace(/\s+/g, '-').toLowerCase() && 'text-green-500 font-semibold'}`}>
-                                    <a href={`#${heading.title.replace(/\s+/g, '-').toLowerCase()}`}
-
-                                        onClick={() => setActiveSection(heading.title.replace(/\s+/g, '-')?.toLowerCase())}
+                            {headings.map((heading, index) => {
+                                const id = heading.title.replace(/\s+/g, '-').toLowerCase();
+                                return (
+                                    <li
+                                        key={index}
+                                        className={`ml-${heading.level} ${activeSection === id ? 'text-green-500 font-semibold' : ''}`}
                                     >
-                                        {heading.title}
-                                    </a>
-                                </li>
-                            ))}
+                                        <a
+                                            href={`#${id}`}
+                                            onClick={() => setActiveSection(id)}
+                                        >
+                                            {heading.title}
+                                        </a>
+                                    </li>
+                                );
+                            })}
                         </ul>
                     </aside>
-                    <div className="prose lg:prose-xl w-3/4">
+
+                    {/* Toggleable Table of Contents for smaller screens */}
+                    <div className={`md:hidden ${isTOCOpen ? 'block' : 'hidden'} p-4`}>
+                        <ul className='grid gap-2'>
+                            {headings.map((heading, index) => {
+                                const id = heading.title.replace(/\s+/g, '-').toLowerCase();
+                                return (
+                                    <li
+                                        key={index}
+                                        className={`ml-${heading.level} ${activeSection === id ? 'text-green-500 font-semibold' : ''}`}
+                                    >
+                                        <a
+                                            href={`#${id}`}
+                                            onClick={() => setActiveSection(id)}
+                                        >
+                                            {heading.title}
+                                        </a>
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </div>
+
+                    <div className="prose lg:prose-xl md:w-3/4">
                         <ReactMarkdown
                             remarkPlugins={[remarkGfm]}
                             components={{
@@ -154,7 +196,6 @@ const DocDetail = () => {
                                 img({ node, src, alt }) {
                                     return <img src={src} alt={alt} className='mb-4 rounded-md' />;
                                 }
-
                             }}
                         >
                             {content}
