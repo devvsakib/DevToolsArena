@@ -18,8 +18,8 @@ Clone the forked repository to your local machine:
 ```bash
 git clone https://github.com/your-username/repository-name.git
 ```
-
 Replace your-username with your GitHub username and repository-name with the name of the repository.
+
 
 ## Step 3: Create a New Branch
 
@@ -30,7 +30,6 @@ cd repository-name
 ```
 
 Create and switch to a new branch for your changes:
-
 ```bash
 git checkout -b feature-branch-name
 ```
@@ -71,12 +70,14 @@ git push origin feature-branch-name
 
 Once your pull request is created, other contributors or maintainers may review it and leave feedback. Be prepared to make additional changes based on this feedback.
 
-**To make changes:** 1. Make the required changes on your local branch. 2. Commit and push the changes:
-`bash
+**To make changes:**
+    1. Make the required changes on your local branch.
+    2. Commit and push the changes:
+        ```bash
         git add .
         git commit -m "Addressed feedback on XYZ"
         git push origin feature-branch-name
-        `
+        ```
 The pull request will automatically update with your new commits.
 
 ## Step 9: Merge the Pull Request

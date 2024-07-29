@@ -15,7 +15,7 @@ function App() {
       .then((data) => setCountStar(data.stargazers_count))
       .catch((error) => console.error("Error fetching GitHub stars:", error));
   }, []);
-  console.log(countStar);
+console.log(countStar)
   return (
     <>
       <Layout stars={countStar}>

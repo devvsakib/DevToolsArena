@@ -22,7 +22,8 @@ const useColorBorderBox = (errorType = "") => {
     return setErrorTypeColor("#7e1aa5");
   }, [errorType]);
 
+
   return { errorTypeColor, setErrorTypeColor };
-};
+}
 
 export default useColorBorderBox;
