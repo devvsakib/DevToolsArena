@@ -90,7 +90,7 @@ function Header({ countStar, notice }) {
                   </a>
                 ) : (
                   <Link className="flex items-center gap-1" to={link.link}>
-                    {link.icon}
+                    {/* {link.icon} */}
                     {link.name}
                   </Link>
                 )}
