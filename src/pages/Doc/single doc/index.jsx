@@ -82,7 +82,7 @@ const DocDetail = () => {
 
     if (loading) return <div className="flex justify-center items-center h-screen"><Spin size="large" /></div>;
     if (error) return <Alert message="Error" description={error} type="error" />;
-
+    const headingToId = (children) => String(children).toLowerCase().replace(/\s+/g, '-');
     return (
         <Layout>
             <section className="container mx-auto p-4 min-h-screen">
@@ -97,7 +97,7 @@ const DocDetail = () => {
                                 <li key={index} className={`ml-${heading.level} ${activeSection === heading.title.replace(/\s+/g, '-').toLowerCase() && 'text-green-500 font-semibold'}`}>
                                     <a href={`#${heading.title.replace(/\s+/g, '-').toLowerCase()}`}
 
-                                        onClick={() => setActiveSection(heading.title.replace(/\s+/g, '-').toLowerCase())}
+                                        onClick={() => setActiveSection(heading.title.replace(/\s+/g, '-')?.toLowerCase())}
                                     >
                                         {heading.title}
                                     </a>
@@ -127,13 +127,13 @@ const DocDetail = () => {
                                     );
                                 },
                                 h1({ node, children }) {
-                                    return <h1 className='text-xl font-normal mt-10 mb-3' id={children.toLowerCase().replace(/\s+/g, '-')}> {children}</h1>;
+                                    return <h1 className='text-xl font-normal mt-10 mb-3' id={headingToId(children)}> {children}</h1>;
                                 },
                                 h2({ node, children }) {
-                                    return <h2 className='text-xl font-normal mt-10 mb-3' id={children.toLowerCase().replace(/\s+/g, '-')}>🌿 {children}</h2>;
+                                    return <h2 className='text-xl font-normal mt-10 mb-3' id={headingToId(children)}>🌿 {children}</h2>;
                                 },
                                 h3({ node, children }) {
-                                    return <h3 className='text-xl font-normal mt-10 mb-3' id={children.toLowerCase().replace(/\s+/g, '-')}>🌿 {children}</h3>;
+                                    return <h3 className='text-xl font-normal mt-10 mb-3' id={headingToId(children)}>🌿 {children}</h3>;
                                 },
                                 blockquote({ node, children }) {
                                     return <span className='bg-gray-100 p-4 pl-0 text-sm my-4 block text-gray'>{children}</span>;
@@ -147,7 +147,14 @@ const DocDetail = () => {
                                 },
                                 ul({ node, children }) {
                                     return <ul className='list-disc ml-4 mb-2'>{children}</ul>;
+                                },
+                                ol({ node, children }) {
+                                    return <ul className='list-disc ml-4 mb-2'>{children}</ul>;
+                                },
+                                img({ node, src, alt }) {
+                                    return <img src={src} alt={alt} className='mb-4 rounded-md' />;
                                 }
+
                             }}
                         >
                             {content}
