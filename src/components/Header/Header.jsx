@@ -80,16 +80,12 @@ function Header({ countStar, notice }) {
                 {link?.isExternalURL ? (
                   <a target="_blank" href={link.link}>
                     <div className="bg-blue-600/50 shadow font-semibold flex gap-1 p-1 px-2 items-center rounded-full">
-                      <span className="githubBtn">
-                        {link.icon}
-                      </span>
-                      {
-                        countStar && (
-                          <div className="flex items-center gap-1">
-                            {countStar}
-                          </div>
-                        )
-                      }
+                      <span className="githubBtn">{link.icon}</span>
+                      {countStar && (
+                        <div className="flex items-center gap-1">
+                          {countStar}
+                        </div>
+                      )}
                     </div>
                   </a>
                 ) : (

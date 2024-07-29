@@ -1,27 +1,27 @@
 header {
-    background: #4a0eaa;
-    text-align: center;
-    padding: .8vw 0;
-    text-transform: uppercase;
+  background: #4a0eaa;
+  text-align: center;
+  padding: 0.8vw 0;
+  text-transform: uppercase;
 }
 
 span {
-    font-size: 1.5rem;
-    font-weight: 900;
-    font-family: Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-family: Arial, sans-serif;
 
-    &:nth-child(1) {
-        color: rgb(218, 221, 214);
-    }
+  &:nth-child(1) {
+    color: rgb(218, 221, 214);
+  }
 
-    &:nth-child(2) {
-        color: rgb(255, 0, 64);
-        text-decoration: line-through;
-        text-transform: none;
-        margin: 0 1rem;
-    }
+  &:nth-child(2) {
+    color: rgb(255, 0, 64);
+    text-decoration: line-through;
+    text-transform: none;
+    margin: 0 1rem;
+  }
 
-    &:nth-child(3) {
-        color: #76df2b;
-    }
+  &:nth-child(3) {
+    color: #76df2b;
+  }
 }

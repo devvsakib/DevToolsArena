@@ -1,8 +1,7 @@
-import React from 'react'
-import Contributors from '../components/Contributors/contributors.jsx'
+import React from "react";
+import Contributors from "../components/Contributors/contributors.jsx";
 function Contribute() {
-  return <Contributors />
-
+  return <Contributors />;
 }
 
-export default Contribute
+export default Contribute;
