@@ -93,27 +93,6 @@ git pull origin main
 git branch -d feature-branch-name
 ```
 
-```javascript
-useEffect(() => {
-  const fetchDocs = async () => {
-    try {
-      const response = await fetch("/posts/index.json");
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      const data = await response.json();
-      setDocs(data);
-    } catch (error) {
-      setError(error.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  fetchDocs();
-}, []);
-```
-
 You may also delete the branch from your fork on GitHub.
 
 Congratulations! You've successfully created and merged a pull request. This process helps maintain code quality and encourages collaboration among developers.
