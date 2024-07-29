@@ -1,7 +1,7 @@
-import React from "react";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
-import { ThemeProvider } from "../../context/ThemeContext";
+import React from 'react';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+import { ThemeProvider } from '../../context/ThemeContext';
 
 /**
  * The Layout function is a React component that returns a div with a Header component and the children
@@ -9,15 +9,20 @@ import { ThemeProvider } from "../../context/ThemeContext";
  * @returns A div with a header and children.
  */
 const Layout = ({ stars, children }) => {
-  return (
-    <div className="flex flex-col justify-between min-h-screen">
-      <ThemeProvider>
-        <Header countStar={stars} notice={"Under Construction"} />
-        <div className="relative">{children}</div>
-        <Footer />
-      </ThemeProvider>
-    </div>
-  );
+    return (
+        <div className='flex flex-col justify-between min-h-screen'>
+            <ThemeProvider>
+                <Header
+                    countStar={stars}
+                    notice={"Under Construction"}
+                />
+                <div className='relative'>
+                    {children}
+                </div>
+                <Footer />
+            </ThemeProvider>
+        </div>
+    );
 };
 
 export default Layout;

@@ -1,18 +1,17 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     {
-      name: "html-transform",
+      name: 'html-transform',
       transformIndexHtml(html) {
         return html.replace(
-          "%VITE_GOOGLE_SITE_VERIFICATION%",
-          process.env.VITE_GOOGLE_SITE_VERIFICATION,
+          '%VITE_GOOGLE_SITE_VERIFICATION%',
+          process.env.VITE_GOOGLE_SITE_VERIFICATION
         );
-      },
-    },
-  ],
-});
+      }
+    }],
+})
