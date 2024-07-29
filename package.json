@@ -7,7 +7,7 @@
     "dev": "vite --open",
     "build": "vite build",
     "preview": "vite preview",
-    "format": "prettier . --write"
+    "format": "prettier src/. --write"
   },
   "dependencies": {
     "@ant-design/icons": "^5.3.7",
