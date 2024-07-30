@@ -11,6 +11,54 @@
             "description": "Comprehensive documentation and tutorials for web technologies.",
             "link": "https://developer.mozilla.org",
             "image": "https://community.mozilla.org/wp-content/uploads/2021/11/mdn_web_docs_feature.png"
+        },
+        {
+            "title": "W3Schools",
+            "description": "Tutorials and references for web development technologies.",
+            "link": "https://www.w3schools.com",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-DGcGz4BXfhXDLGtih-TGcqPMBytYnscynQ&s"
+        },
+        {
+            "title": "Codecademy",
+            "description": "Interactive coding lessons on various programming languages.",
+            "link": "https://www.codecademy.com",
+            "image": "https://images.codecademy.com/social/logo-codecademy-social.png"
+        },
+        {
+            "title": "Coursera",
+            "description": "Free online courses from top universities and companies.",
+            "link": "https://www.coursera.org",
+            "image": "https://infostride.com/wp-content/uploads/2024/06/Thumbnail_508fa1.png?w=1024"
+        },
+        {
+            "title": "edX",
+            "description": "Free online courses from universities and institutions.",
+            "link": "https://www.edx.org",
+            "image": "https://logowik.com/content/uploads/images/edx-free-online-course-new6759.jpg"
+        },
+        {
+            "title": "Khan Academy",
+            "description": "Free educational resources for a wide range of subjects.",
+            "link": "https://www.khanacademy.org",
+            "image": "https://logowik.com/content/uploads/images/khan-academy6250.jpg"
+        },
+        {
+            "title": "The Odin Project",
+            "description": "Free full-stack web development curriculum.",
+            "link": "https://www.theodinproject.com",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnoZBN3vJcazky2e1lBBOMuUmKAFaIJxm6oA&s"
+        },
+        {
+            "title": "SoloLearn",
+            "description": "Learn to code with interactive lessons and a community of learners.",
+            "link": "https://www.sololearn.com",
+            "image": "https://logowik.com/content/uploads/images/sololearn8062.jpg"
+        },
+        {
+            "title": "JavaScript.info",
+            "description": "Comprehensive guide to modern JavaScript.",
+            "link": "https://javascript.info",
+            "image": "https://javascript.info/img/site_preview_en_1200x630.png"
         }
     ],
     "toolsLibraries": [
@@ -25,6 +73,54 @@
             "description": "A popular framework for building responsive and mobile-first websites.",
             "link": "https://getbootstrap.com",
             "image": "https://icons.getbootstrap.com/assets/img/icons-hero.png"
+        },
+        {
+            "title": "Vue.js",
+            "description": "A progressive JavaScript framework for building user interfaces.",
+            "link": "https://vuejs.org",
+            "image": "https://www.teknei.com/wp-content/uploads/2019/02/vue.png"
+        },
+        {
+            "title": "Tailwind CSS",
+            "description": "A utility-first CSS framework for creating custom designs.",
+            "link": "https://tailwindcss.com",
+            "image": "https://getlogovector.com/wp-content/uploads/2021/01/tailwind-css-logo-vector.png"
+        },
+        {
+            "title": "Angular",
+            "description": "A platform for building mobile and desktop web applications.",
+            "link": "https://angular.io",
+            "image": "https://w7.pngwing.com/pngs/311/952/png-transparent-angular-logo-landscape-tech-companies-thumbnail.png"
+        },
+        {
+            "title": "Sass",
+            "description": "A CSS preprocessor that makes writing CSS easier.",
+            "link": "https://sass-lang.com",
+            "image": "https://cdn.mos.cms.futurecdn.net/TTgVoW3Q5WPkMBHi2VD59Q.jpg"
+        },
+        {
+            "title": "jQuery",
+            "description": "A fast, small, and feature-rich JavaScript library.",
+            "link": "https://jquery.com",
+            "image": "https://www.devopsschool.com/blog/wp-content/uploads/2020/04/jquery.png"
+        },
+        {
+            "title": "Lodash",
+            "description": "A modern JavaScript utility library delivering modularity.",
+            "link": "https://lodash.com",
+            "image": "https://almablog-media.s3.ap-south-1.amazonaws.com/008_7fe10d3c4a.png"
+        },
+        {
+            "title": "Webpack",
+            "description": "A static module bundler for JavaScript applications.",
+            "link": "https://webpack.js.org",
+            "image": "https://logowik.com/content/uploads/images/webpack4233.jpg"
+        },
+        {
+            "title": "Parcel",
+            "description": "A zero-configuration web application bundler.",
+            "link": "https://parceljs.org",
+            "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2019/10/parcel-box-title.png?fit=1200%2C600&ssl=1"
         }
     ],
     "careerRoadmaps": [
@@ -39,6 +135,54 @@
             "description": "A complete guide for becoming a backend developer.",
             "link": "https://roadmap.sh/backend",
             "image": "https://roadmap.sh/og/roadmap/backend"
+        },
+        {
+            "title": "Full Stack Developer Roadmap",
+            "description": "A complete guide to becoming a full stack developer.",
+            "link": "https://roadmap.sh/fullstack",
+            "image": "https://roadmap.sh/og/roadmap/full-stack"
+        },
+        {
+            "title": "DevOps Roadmap",
+            "description": "A guide to becoming a DevOps engineer.",
+            "link": "https://roadmap.sh/devops",
+            "image": "https://roadmap.sh/og/roadmap/devops"
+        },
+        {
+            "title": "AI Data Scientist Roadmap",
+            "description": "A roadmap for becoming a data scientist.",
+            "link": "https://roadmap.sh/ai-data-scientist",
+            "image": "https://roadmap.sh/og/roadmap/ai-data-scientist"
+        },
+        {
+            "title": "Machine Learning Engineer Roadmap",
+            "description": "A guide to becoming a machine learning engineer.",
+            "link": "https://www.scaler.com/blog/machine-learning-roadmap/",
+            "image": "https://scaler-blog-prod-wp-content.s3.ap-south-1.amazonaws.com/wp-content/uploads/2024/03/11235140/step-by-step-machine-learning-roadmap-1024x585.webp"
+        },
+        {
+            "title": "Cybersecurity Roadmap",
+            "description": "A roadmap for a career in cybersecurity.",
+            "link": "https://roadmap.sh/cybersecurity",
+            "image": "https://roadmap.sh/og/roadmap/cyber-security"
+        },
+        {
+            "title": "Product Manager Roadmap",
+            "description": "A guide for becoming a product manager.",
+            "link": "https://roadmap.sh/product-manager",
+            "image": "https://roadmap.sh/og/roadmap/product-manager"
+        },
+        {
+            "title": "UX Designer Roadmap",
+            "description": "A roadmap to becoming a UX designer.",
+            "link": "https://roadmap.sh/ux-designer",
+            "image": "https://roadmap.sh/og/roadmap/ux-design"
+        },
+        {
+            "title": "Game Developer Roadmap",
+            "description": "A comprehensive guide for becoming a game developer.",
+            "link": "https://roadmap.sh/game-developer",
+            "image": "https://roadmap.sh/og/roadmap/game-developer"
         }
     ]
 }
