@@ -10,7 +10,7 @@ import { ThemeProvider } from '../../context/ThemeContext';
  */
 const Layout = ({ stars, children }) => {
     return (
-        <div className='flex flex-col justify-between min-h-screen'>
+        <div className='flex flex-col justify-between min-h-screen font-[poppins]'>
             <ThemeProvider>
                 <Header
                     notice={"Under Construction"}
