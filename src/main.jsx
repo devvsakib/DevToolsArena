@@ -10,6 +10,7 @@ import BGShape from "./components/BGShape";
 import NotFound from "./pages/NotFound";
 import DocList from "./pages/Doc";
 import DocDetail from "./pages/Doc/single doc";
+import Resources from "./pages/Resources";
 
 const router = createBrowserRouter(
   [
@@ -26,7 +27,11 @@ const router = createBrowserRouter(
       element: <DocDetail />
     },
     {
-      path: '/Contributors',
+      path: '/resources',
+      element: <Resources />
+    },
+    {
+      path: '/contributors',
       element: <Contributors />
     },
     {

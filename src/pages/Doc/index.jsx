@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { List, Spin, Alert } from 'antd';
 import Layout from '../../components/Layout/Layout';
 import { FaArrowRight } from "react-icons/fa";
+import MainTitle from '../../components/Common/MainTitle';
 
 const DocList = () => {
     const [docs, setDocs] = useState([]);
@@ -37,12 +38,12 @@ const DocList = () => {
     return (
         <Layout>
             <div className="container mx-auto p-4 min-h-screen">
-                <h1 className="text-3xl font-bold mb-20 mt-5 text-center">Documentation</h1>
+                <MainTitle highlight={'Documentation'} />
                 <ul className='grid gap-5 mx-auto md:max-w-2xl'>
                     {
                         docs.map(item =>
                             <Link to={item.title} className='capitalize group flex items-center justify-between bg-white/10 p-5 rounded-md'>{item.title.replace(/_/g, ' ')}
-                                 <FaArrowRight className="dark:text-white opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 transition duration-300" />
+                                <FaArrowRight className="dark:text-white opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 transition duration-300" />
                             </Link>
                         )
                     }

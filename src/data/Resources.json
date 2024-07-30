@@ -1,0 +1,44 @@
+{
+    "learningResources": [
+        {
+            "title": "FreeCodeCamp",
+            "description": "Learn web development for free with interactive tutorials.",
+            "link": "https://www.freecodecamp.org",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/3/39/FreeCodeCamp_logo.png"
+        },
+        {
+            "title": "MDN Web Docs",
+            "description": "Comprehensive documentation and tutorials for web technologies.",
+            "link": "https://developer.mozilla.org",
+            "image": "https://community.mozilla.org/wp-content/uploads/2021/11/mdn_web_docs_feature.png"
+        }
+    ],
+    "toolsLibraries": [
+        {
+            "title": "React",
+            "description": "A JavaScript library for building user interfaces.",
+            "link": "https://reactjs.org",
+            "image": "https://www.nexoid.com/technology/reactjs/react_js_logo.webp"
+        },
+        {
+            "title": "Bootstrap",
+            "description": "A popular framework for building responsive and mobile-first websites.",
+            "link": "https://getbootstrap.com",
+            "image": "https://icons.getbootstrap.com/assets/img/icons-hero.png"
+        }
+    ],
+    "careerRoadmaps": [
+        {
+            "title": "Frontend Developer Roadmap",
+            "description": "A comprehensive guide for becoming a frontend developer.",
+            "link": "https://roadmap.sh/frontend",
+            "image": "https://roadmap.sh/og/roadmap/frontend"
+        },
+        {
+            "title": "Backend Developer Roadmap",
+            "description": "A complete guide for becoming a backend developer.",
+            "link": "https://roadmap.sh/backend",
+            "image": "https://roadmap.sh/og/roadmap/backend"
+        }
+    ]
+}
