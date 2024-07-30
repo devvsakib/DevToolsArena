@@ -10,11 +10,19 @@ import { Link } from "react-router-dom";
 
 import { HiMoon, HiSun } from "react-icons/hi";
 import { ThemeContext } from "../../context/ThemeContext";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect} from "react";
 
-function Header({ countStar, notice }) {
+function Header({notice }) {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const [open, setOpen] = useState(false);
+  const [countStar, setCountStar] = useState(0);
+
+  useEffect(() => {
+    fetch("https://api.github.com/repos/devvsakib/github-error-solve")
+      .then((response) => response.json())
+      .then((data) => setCountStar(data.stargazers_count))
+      .catch((error) => console.error("Error fetching GitHub stars:", error));
+  }, []);
 
   const navLink = [
     {

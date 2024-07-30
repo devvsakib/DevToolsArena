@@ -13,7 +13,6 @@ const Layout = ({ stars, children }) => {
         <div className='flex flex-col justify-between min-h-screen'>
             <ThemeProvider>
                 <Header
-                    countStar={stars}
                     notice={"Under Construction"}
                 />
                 <div className='relative'>
