@@ -1,9 +1,8 @@
-import React from 'react';
 import Layout from '../components/Layout/Layout';
 import { Space } from 'antd';
 import MainTitle from '../components/Common/MainTitle';
 import ResourceSection from '../components/Resources/ResourceSection';
-import resources from '../data/resources';
+import resources from '../data/Resources';
 
 
 const Resources = () => {
