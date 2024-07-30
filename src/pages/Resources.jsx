@@ -74,7 +74,7 @@ const Resources = () => {
                             placeholder="Search..."
                             value={searchQuery}
                             onChange={handleChange}
-                            className="w-full outline-none p-2 border border-gray-300 rounded-md pl-10" // Added padding to the left for icon
+                            className="w-full dark:bg-black outline-none p-2 border border-gray-300 rounded-md pl-10"
                         />
                         <SearchOutlined className='text-2xl absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500' />
                     </div>
