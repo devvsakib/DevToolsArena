@@ -18,11 +18,12 @@ function ErrorCard({ error }) {
   return (
     <div
       id="main-div"
-      className={borderColor}
+      className={borderColor + " relative"}
     >
       <h3 className="title">{error.title}</h3>
-
-      <ErrorType type={error.type} />
+      <div className="absolute h-full -right-2 -top-2">
+        <ErrorType type={error.type} />
+      </div>
 
       <div className="bg-primary w-full h-[2px] my-4" />
 
@@ -44,7 +45,7 @@ function ErrorCard({ error }) {
       </div>
 
       <button
-        className="flex mt-8 items-center gap-2 px-3 py-2 border border-gray rounded-lg hover:border-primary hover:text-primary"
+        className="flex mt-2 items-center gap-2 px-3 py-2 border border-white/40 rounded-lg hover:border-primary hover:text-primary"
         onClick={() => setOpenModal((prev) => !prev)}
       >
         <span className="text-xs">Solution</span>

@@ -50,7 +50,7 @@ function Header({notice }) {
   ];
 
   return (
-    <header className="p-4 shadow-lg backdrop-blur-sm  z-50">
+    <header className="p-4 shadow-lg backdrop-blur-sm  z-40">
       <div className="w-full md:w-5/6 mx-auto flex flex-row md:flex-row justify-between items-center">
         {/* Logo */}
         <Link to={"/"}>
