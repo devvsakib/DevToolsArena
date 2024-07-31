@@ -11,6 +11,8 @@ import NotFound from "./pages/NotFound";
 import DocList from "./pages/Doc";
 import DocDetail from "./pages/Doc/single doc";
 import Resources from "./pages/Resources";
+import BlogsList from "./pages/blogs";
+import BlogDetail from "./pages/blogs/blog";
 
 const router = createBrowserRouter(
   [
@@ -21,6 +23,14 @@ const router = createBrowserRouter(
     {
       path: '/doc',
       element: <DocList />
+    },
+    {
+      path: '/blogs',
+      element:<BlogsList/>
+    },
+    {
+      path: '/blogs/:slug',
+      element:<BlogDetail />
     },
     {
       path: '/doc/:slug',
