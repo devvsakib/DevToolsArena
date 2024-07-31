@@ -1,21 +1,18 @@
-import { Link } from "react-router-dom";
+import ResourceCard from "./ResourceCard";
 
-const ResourceSection = ({ title, resources }) => (
-    <section className="my-10">
-        <h2 className="text-2xl font-bold mb-4">{title}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {resources.map((resource, index) => (
-                <div key={index} className="p-4 bg-black rounded-lg shadow-md flex flex-col items-center overflow-hidden">
-                    {resource.image && <img src={resource.image} alt={resource.title} className="mb-4 object-cover object-center w-full h-36 rounded-t-lg" />}
-                    <h3 className="text-xl font-semibold mb-2">{resource.title}</h3>
-                    <p className="mb-4">{resource.description}</p>
-                    <Link to={resource.link} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
-                        Learn More
-                    </Link>
-                </div>
-            ))}
-        </div>
-    </section>
-);
-
+const ResourceSection = ({ id, title, resources }) => {
+    return (
+        <section id={id} className="my-12">
+            <h2 className="text-3xl font-bold mb-10 text-center">{title}</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                {resources.length === 0 ? <div>
+                    <h3 className="text-xl font-medium text-center mb-20">No resources found</h3>
+                </div> :
+                    resources.map((resource, index) => (
+                        <ResourceCard idx={index} resource={resource} />
+                    ))}
+            </div>
+        </section>
+    );
+}
 export default ResourceSection;
