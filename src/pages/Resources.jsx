@@ -77,8 +77,11 @@ const Resources = () => {
                     <ResourceSection 
                         key={index} 
                         id={key} 
-                        title={key.replace(/(^[a-z])/g,($1)=>{return $1.toUpperCase()})
-                                .replace(/([A-Z])/g," $1")}
+                        title={
+                            key
+                            .replace(/(^[a-z])/g,($1)=>{return $1.toUpperCase()})
+                            .replace(/([A-Z])/g," $1")
+                        }
                         resources={filteredResources[key]} 
                     />
                 ))}
