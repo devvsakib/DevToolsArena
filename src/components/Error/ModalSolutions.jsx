@@ -1,4 +1,4 @@
-import React,{ useContext } from "react";
+import React, { useContext } from "react";
 import { MdKeyboardArrowLeft, MdContentCopy } from "react-icons/md";
 import ErrorSolutions from "./ErrorSolutions";
 import useColorBorderBox from "../../hooks/useColorBorderBox";
@@ -10,10 +10,10 @@ import { ThemeContext } from '../../context/ThemeContext';
 Modal.setAppElement("#root");
 
 const ModalSolutions = ({ isOpen, setOpenModal, error }) => {
-  const { errorTypeColor } = useColorBorderBox(error.type);
+  const { borderColor } = useColorBorderBox(error)
   const { theme } = useContext(ThemeContext);
-  const overlayBackgroundColor = theme === 'dark' 
-    ? 'rgba(0, 0, 0, 0.6)' 
+  const overlayBackgroundColor = theme === 'dark'
+    ? 'rgba(0, 0, 0, .5)'
     : 'rgba(0, 0, 0, 0.2)';
 
   return (
@@ -24,7 +24,7 @@ const ModalSolutions = ({ isOpen, setOpenModal, error }) => {
         () => setOpenModal((prev) => !prev)
       }
       contentLabel="Modal solution"
-      className={`py-4 mb-4 col-span-12 md:col-span-6 xl:col-span-4 px-2 md:px-6 border-l-4 rounded-lg items-start bg-dark/5 dark:bg-white/5 backdrop-blur-[10px] flex flex-col hover:scale-105 duration-300 border-[${errorTypeColor}] modal`}
+      className={borderColor + " modal !bg-black/80 max-h-[90vh] "}
       id="main-div"
       style={{
         overlay: {

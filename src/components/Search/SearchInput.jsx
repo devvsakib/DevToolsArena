@@ -52,23 +52,21 @@ function SearchInput({ search, setSearch, setType }) {
             {errorType.map((item, i) => (
               <li
                 key={i}
-                className={`${
-                  item === "add"
-                    ? "bg-[#4024e0]"
+                className={`${item === "add"
+                    ? "bg-add"
                     : item === "commit"
-                      ? "bg-[#1a5ba5]"
+                      ? "bg-commit"
                       : item === "merge"
-                        ? "bg-[#118d7c]"
+                        ? "bg-merge"
                         : item === "push"
-                          ? "bg-[#8d54e1]"
+                          ? "bg-push"
                           : item === "cmd"
-                            ? "bg-[#e100ff]"
+                            ? "bg-cmd"
                             : item === "branch"
-                              ? "bg-[#099104]"
-                              : "bg-[#7e1aa5]"
-                } ${
-                  selectedTag === item ? "ring-4 ring-red-500" : ""
-                } w-full md:w-auto rounded-md capitalize text-white font-bold py-1 px-3 cursor-pointer`}
+                              ? "bg-branch"
+                              : "bg-default"
+                  } ${selectedTag === item ? "ring-4 ring-red-500" : ""
+                  } w-full md:w-auto rounded-md capitalize text-white font-bold py-1 px-3 cursor-pointer`}
                 onClick={() => {
                   setSelectedTag(item);
                   setType(item);
@@ -97,30 +95,27 @@ function SearchInput({ search, setSearch, setType }) {
                   transition={{ duration: 0.5 }}
                 >
                   <ul
-                    className={`animate flex flex-col sm:flex-row mx-auto mt-2 items-start gap-4 py-3 pt-4 px-6 rounded-lg bg-white backdrop-blur-md w-[60vw] md:w-auto text-left ${
-                      open ? "hidden" : "block"
-                    }`}
+                    className={`animate flex flex-col sm:flex-row mx-auto mt-2 items-start gap-4 py-3 pt-4 px-6 rounded-lg bg-white backdrop-blur-md w-[60vw] md:w-auto text-left ${open ? "hidden" : "block"
+                      }`}
                   >
                     {errorType.map((item, i) => (
                       <li
                         key={i}
-                        className={`${
-                          item === "add"
-                            ? "bg-[#4024e0]"
-                            : item === "commit"
-                              ? "bg-[#1a5ba5]"
-                              : item === "merge"
-                                ? "bg-[#118d7c]"
-                                : item === "push"
-                                  ? "bg-[#8d54e1]"
-                                  : item === "cmd"
-                                    ? "bg-[#40f058a8]"
-                                    : item === "branch"
-                                      ? "bg-[#099104]"
-                                      : "bg-[#7e1aa5]"
-                        } ${
-                          selectedTag === item ? "ring-4 ring-red-500" : ""
-                        } w-full md:w-auto rounded-md text-white font-bold py-2 px-3 cursor-pointer`}
+                        className={`${item === "add"
+                          ? "bg-[#4024e0]"
+                          : item === "commit"
+                            ? "bg-[#1a5ba5]"
+                            : item === "merge"
+                              ? "bg-merge"
+                              : item === "push"
+                                ? "bg-push"
+                                : item === "cmd"
+                                  ? "bg-[#40f058a8]"
+                                  : item === "branch"
+                                    ? "bg-branch"
+                                    : "bg-default"
+                          } ${selectedTag === item ? "ring-4 ring-red-500" : ""
+                          } w-full md:w-auto rounded-md text-white font-bold py-2 px-3 cursor-pointer`}
                         onClick={() => {
                           setSelectedTag(item);
                           setType(item);
@@ -137,7 +132,7 @@ function SearchInput({ search, setSearch, setType }) {
           </div>
         )}
       </div>
-    </div>
+    </div >
   );
 }
 

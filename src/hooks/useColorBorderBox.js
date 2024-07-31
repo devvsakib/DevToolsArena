@@ -1,29 +1,21 @@
-import { useState, useEffect } from "react";
-
-const useColorBorderBox = (errorType = "") => {
-  const [errorTypeColor, setErrorTypeColor] = useState("#7e1aa5");
-
-  useEffect(() => {
-    if (errorType == "add") {
-      return setErrorTypeColor("#4024e0");
-    }
-    if (errorType == "branch") {
-      return setErrorTypeColor("#099104");
-    }
-    if (errorType == "push") {
-      return setErrorTypeColor("#8d54e1");
-    }
-    if (errorType == "merge") {
-      return setErrorTypeColor("#118d7c");
-    }
-    if (errorType == "commit") {
-      return setErrorTypeColor("#1a5ba5");
-    }
-    return setErrorTypeColor("#7e1aa5");
-  }, [errorType]);
+const useColorBorderBox = (error = "") => {
+  let item = error.type;
+  let borderColor = `py-4 mb-4 col-span-12 md:col-span-6 xl:col-span-4 px-2 md:px-6 border-l-4 rounded-lg   items-start bg-dark/5 dark:bg-white/5 backdrop-blur-[10px] flex flex-col hover:scale-105 duration-300 ${item === "add"
+    ? "border-add"
+    : item === "commit"
+      ? "border-commit"
+      : item === "merge"
+        ? "border-merge"
+        : item === "push"
+          ? "border-push"
+          : item === "cmd"
+            ? "border-cmd"
+            : item === "branch"
+              ? "border-branch"
+              : "border-default"
+    }`
 
 
-  return { errorTypeColor, setErrorTypeColor };
+  return { borderColor }
 }
-
 export default useColorBorderBox;

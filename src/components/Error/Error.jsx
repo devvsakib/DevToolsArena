@@ -38,7 +38,7 @@ const Error = ({ search, type }) => {
           }}
         ></Toaster>
       </div>
-      <section className="mx-4 md:w-5/6 my-12 grid grid-cols-12 justify-center gap-8 md:mx-auto ">
+      <section className="mx-4 md:w-5/6 my-12 grid grid-cols-12 px-5 md:px-0 justify-center gap-8 md:mx-auto ">
         {filteredErrorByType.length === 0 ? (
           <div className="col-span-12">
             <h1 className="text-center text-2xl text-gray-500 mx-auto">
