@@ -34,13 +34,8 @@ const Resources = () => {
             };
             setFilteredResources(newFilteredResources);
 
-            // Scroll to the relevant section if there are results
             if (lowerQuery) {
-                const sections = [
-                    { id: 'learning-resources', resources: newFilteredResources.learningResources },
-                    { id: 'tools-libraries', resources: newFilteredResources.toolsLibraries },
-                    { id: 'career-roadmaps', resources: newFilteredResources.careerRoadmaps }
-                ];
+                const sections = (Object.keys(newFilteredResources)).map(key => ({ id: key, resources: newFilteredResources[key] }));
                 const targetSection = sections.find(section => section.resources.length > 0);
                 if (targetSection) {
                     const sectionElement = document.getElementById(targetSection.id);
@@ -49,7 +44,7 @@ const Resources = () => {
                     }
                 }
             }
-        }, 300), // Debounce delay in milliseconds
+        }, 100),
         []
     );
 
@@ -67,7 +62,6 @@ const Resources = () => {
                     highlight="Web Development"
                 />
                 <div className="w-full md:w-1/4 sticky top-0 p-4 pl-0">
-                    {/* Icon and Input container */}
                     <div className="relative">
                         <input
                             type="text"
@@ -79,15 +73,9 @@ const Resources = () => {
                         <SearchOutlined className='text-2xl absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500' />
                     </div>
                 </div>
-                {filteredResources.learningResources.length > 0 && (
-                    <ResourceSection id="learning-resources" title="Learning Resources" resources={filteredResources.learningResources} />
-                )}
-                {filteredResources.toolsLibraries.length > 0 && (
-                    <ResourceSection id="tools-libraries" title="Tools & Libraries" resources={filteredResources.toolsLibraries} />
-                )}
-                {filteredResources.careerRoadmaps.length > 0 && (
-                    <ResourceSection id="career-roadmaps" title="Career Roadmaps" resources={filteredResources.careerRoadmaps} />
-                )}
+                {Object.keys(filteredResources).map((key, index) => (
+                    <ResourceSection key={index} id={key} title={key.replace(/-/g, ' ')} resources={filteredResources[key]} />
+                ))}
             </div>
         </Layout>
     );

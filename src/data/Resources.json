@@ -64,43 +64,37 @@
             "title": "CS50 by Harvard",
             "description": "An introduction to computer science, available for free online.",
             "link": "https://cs50.harvard.edu",
-            "image": "https://cs50.harvard.edu/images/cs50x-logo.png"
+            "image": "https://media.licdn.com/dms/image/D4D12AQEBOHQtw677Mg/article-cover_image-shrink_600_2000/0/1693564480366?e=2147483647&v=beta&t=EYPMRRqdwRB6y-PiACBhYCfBhOmzkk1WWtNnoQRUZAE"
         },
         {
             "title": "MIT OpenCourseWare",
             "description": "Free lecture notes, exams, and videos from MIT.",
             "link": "https://ocw.mit.edu",
-            "image": "https://ocw.mit.edu/courses/media/ocw_logo-2x.png"
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIyauQ46N-CFeyPFemlxo6iKPeCGIeWojBCA&s"
         },
         {
-            "title": "Udemy Free Courses",
+            "title": "Udemy",
             "description": "A collection of free courses on various topics.",
             "link": "https://www.udemy.com/courses/free",
-            "image": "https://udemy-images.udemy.com/course/480x270/1071882_59a0.jpg"
-        },
-        {
-            "title": "Codecademy Learn",
-            "description": "Free interactive coding lessons on various programming languages.",
-            "link": "https://www.codecademy.com/learn",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/6/63/Codecademy_Logo.png"
+            "image": "https://course.lk/uploads/institute/91/udemy.jpg"
         },
         {
             "title": "Frontend Masters",
             "description": "Free webinars and courses on front-end development.",
             "link": "https://frontendmasters.com",
-            "image": "https://frontendmasters.com/images/logo.svg"
+            "image": "https://btholt.github.io/intro-to-web-dev-v2/static/f72cae0c73fecbb6beecea606d8fabd3/ffe34/FrontendMastersLogo.png"
         },
         {
             "title": "Pluralsight Free Courses",
             "description": "Access to a selection of free courses on technology and development.",
             "link": "https://www.pluralsight.com/offer/2020/free",
-            "image": "https://www.pluralsight.com/content/dam/pluralsight2/marketing/graphics/ps-logo.png"
+            "image": "https://www.insightpartners.com/wp-content/uploads/2018/06/PLURALSIGHT.png"
         },
         {
             "title": "Treehouse",
             "description": "Interactive learning with a focus on web development and design.",
             "link": "https://teamtreehouse.com",
-            "image": "https://teamtreehouse.com/assets/images/logo.svg"
+            "image": "https://w7.pngwing.com/pngs/329/126/png-transparent-treehouse-tv-television-channel-ytv-sesame-television-text-logo.png"
         }
     ],
     "toolsLibraries": [
@@ -114,7 +108,7 @@
             "title": "Bootstrap",
             "description": "A popular framework for building responsive and mobile-first websites.",
             "link": "https://getbootstrap.com",
-            "image": "https://icons.getbootstrap.com/assets/img/icons-hero.png"
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png"
         },
         {
             "title": "Vue.js",
@@ -162,7 +156,7 @@
             "title": "Gulp",
             "description": "A toolkit for automating painful or time-consuming tasks in your development workflow.",
             "link": "https://gulpjs.com",
-            "image": "https://gulpjs.com/images/gulp-2x.png"
+            "image": "https://static-00.iconduck.com/assets.00/gulp-icon-2048x2048-ymy9jk5n.png"
         },
         {
             "title": "Webpack",
@@ -180,37 +174,37 @@
             "title": "Alpine.js",
             "description": "A minimal framework for composing JavaScript behavior in your HTML.",
             "link": "https://alpinejs.dev",
-            "image": "https://alpinejs.dev/img/logo.svg"
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqvNQyIyR6GOd1wFUk_UM5PScxQvwL0SSpsQ&s"
         },
         {
             "title": "Chart.js",
             "description": "A JavaScript library for creating beautiful charts.",
             "link": "https://www.chartjs.org",
-            "image": "https://www.chartjs.org/media/logo-title.png"
+            "image": "https://miro.medium.com/v2/resize:fit:1200/1*VkZw7N4w-wXurt8gtQoGkg.png"
         },
         {
             "title": "D3.js",
             "description": "A JavaScript library for producing dynamic, interactive data visualizations.",
             "link": "https://d3js.org",
-            "image": "https://d3js.org/logo.png"
+            "image": "https://dwglogo.com/wp-content/uploads/2017/10/D3_js_logo.png"
         },
         {
             "title": "PixiJS",
             "description": "A fast 2D rendering engine for web applications.",
             "link": "https://pixijs.com",
-            "image": "https://pixijs.com/assets/images/logo.png"
+            "image": "https://files.pixijs.download/branding/pixijs-banner.png"
         },
         {
             "title": "Moment.js",
             "description": "A library for parsing, validating, manipulating, and formatting dates.",
             "link": "https://momentjs.com",
-            "image": "https://momentjs.com/docs/images/moment-logo.svg"
+            "image": "https://sun9-74.userapi.com/impf/c858428/v858428969/17cbd/Hqk-AZk3VtM.jpg?size=807x245&quality=96&sign=04bcabcb461aa666a861b9d96a5364d7&type=album"
         },
         {
             "title": "Three.js",
             "description": "A JavaScript library for creating 3D graphics in the browser.",
             "link": "https://threejs.org",
-            "image": "https://threejs.org/examples/favicon.png"
+            "image": "https://miro.medium.com/v2/resize:fit:687/1*m0zrCLd2wY29-jiHaxYsgA.png"
         },
         {
             "title": "Axios",
@@ -222,25 +216,25 @@
             "title": "Eslint",
             "description": "A tool for identifying and fixing problems in JavaScript code.",
             "link": "https://eslint.org",
-            "image": "https://eslint.org/assets/img/logo.svg"
+            "image": "https://miro.medium.com/v2/resize:fit:1400/1*QlHjt8KztbbbjyIfyh2gAQ.jpeg"
         },
         {
             "title": "Jest",
             "description": "A JavaScript testing framework with a focus on simplicity.",
             "link": "https://jestjs.io",
-            "image": "https://jestjs.io/img/jest.svg"
+            "image": "https://docs.testit.software/images/integrations/jest.png"
         },
         {
             "title": "Prettier",
             "description": "An opinionated code formatter for consistent code style.",
             "link": "https://prettier.io",
-            "image": "https://prettier.io/favicon.ico"
+            "image": "https://miro.medium.com/v2/resize:fit:1200/1*ODJ3DFXcUs3P6UMNor0u6w.png"
         },
         {
             "title": "Cypress",
             "description": "A JavaScript end-to-end testing framework.",
             "link": "https://www.cypress.io",
-            "image": "https://www.cypress.io/images/brand/logo.svg"
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9wCeSRyMZFFrOZSXwoLSK6DUhU5SLqV3mTQ&s"
         }
     ],
     "careerRoadmaps": [
