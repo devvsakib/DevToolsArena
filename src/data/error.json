@@ -166,7 +166,7 @@
       "type": "branch",
       "title": "error: You have local changes to <branch_name>; cannot switch branches.",
       "description": "This error occurs when switching a branch without commiting the changes made to that branch",
-      "solutions": "[{'git stash':'stash your current changes'},{'git reset --hard HEAD':'if you dont' mind losing those minor changes'},{'git checkout -b <branch_name>':'When switching branches, proceed even if the index or the working tree differs from HEAD. This is used to throw away local changes.'},{'git switch -f <branch-name>':'-f is short for --force, which is an alias for --discard-changes , works for git 2.23'}]"
+      "solutions": "git stash :'stash your current changes' < git reset --hard HEAD :'if you dont' mind losing those minor changes' < git checkout -b branch_name :'When switching branches, proceed even if the index or the working tree differs from HEAD. This is used to throw away local changes.'<git switch -f branch-name :'-f is short for --force, which is an alias for --discard-changes , works for git 2.23'"
     },
     {
       "type": "push",
