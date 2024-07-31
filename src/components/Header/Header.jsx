@@ -4,6 +4,7 @@ import {
   MdClose,
   MdMenu,
   MdHome,
+  MdStore,
 } from "react-icons/md";
 import { AiFillGithub } from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -36,9 +37,9 @@ function Header({notice }) {
       icon: <MdInsertDriveFile size="1.2rem" />,
     },
     {
-      name: "Contributors",
-      link: "/Contributors",
-      icon: <MdPeople size="1.2rem" />,
+      name: "Resources",
+      link: "/resources",
+      icon: <MdStore size="1.2rem" />,
     },
     {
       name: "Github",

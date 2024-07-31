@@ -6,7 +6,11 @@
   margin: 0;
   padding: 0;
 }
-
+img{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
 @layer base {
   body {
     @apply bg-white text-dark dark:bg-[#02000e] dark:text-white;
