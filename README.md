@@ -1,14 +1,14 @@
-## GitHub Error Solve - A place to find Git related errors & there solutions
+# DevToolsArena - Your Ultimate Resource for Git Solutions, Web Tools, and More
 
-![GES](https://user-images.githubusercontent.com/88102392/226684787-087307ac-3c8b-45ca-a22d-ba42665ec481.png)
+![DevToolsArena](public/assets/devtoolareabanner.png)
 
-## Why GES?
+## Why DevToolsArena?
 
-GitHub Error Solve is a community-driven platform that serves as a hub for finding solutions to various Git-related errors. Git is a powerful and widely-used version control system, but it can sometimes be challenging to navigate its complexities, especially for beginners.
+DevToolsArena is your comprehensive platform for not only resolving Git-related issues but also exploring a variety of web development resources, tools, and insights. Whether you're troubleshooting Git errors, seeking valuable tools, or diving into web development topics, DevToolsArena is designed to be your go-to resource.
 
-This platform provides a space where users can ask questions about Git errors they encounter and receive responses from experienced developers who have faced and resolved similar issues before. It also offers a repository of knowledge where users can find previously answered questions and solutions, making it a valuable resource for anyone seeking to enhance their Git skills.
+Our platform provides a collaborative space where users can find solutions to common Git errors, discover essential web tools, and access a wealth of web development resources. It’s a valuable destination for both seasoned developers and newcomers looking to enhance their skills and streamline their workflows.
 
-## Tech stack used
+## Tech Stack
 
 | Language   | Badge                                                                                                             |
 | ---------- | ----------------------------------------------------------------------------------------------------------------- |
@@ -19,32 +19,28 @@ This platform provides a space where users can ask questions about Git errors th
 | React      | ![React](https://img.shields.io/badge/react-blue?style=for-the-badge&logo=react&logoColor=navyblue)               |
 | Vite       | ![Vite](https://img.shields.io/badge/vite-5BB4FF?style=for-the-badge&logo=vite&logoColor=FFC018)                  |
 
-## Where to contribute?
+## How to Contribute
 
-Getting involved in open-source software (OSS) projects can be a gratifying and enriching experience. It not only enables you to acquire new skills but also allows you to make a valuable impact on a project that serves the wider community.
+Contributing to DevToolsArena is a great way to get involved and make an impact. Here’s how you can contribute:
 
-> Here the some steps you can take to contribute to this project:
+- **Review the [Code of Conduct](/CODE_OF_CONDUCT.md)** to understand our community guidelines.
+- **Follow the [Contribution Guidelines](/contributing.md)** to get started.
+- **Report issues** or **suggest features** by creating an issue on GitHub.
 
-- Remember to read [Code Of Conduct](/CODE_OF_CONDUCT.md) before contributing.
-- Follow the [Contribution Documents](/contributing.md).
-- Create an issue to report bugs, and vulnerabilities or add a new feature.
+## Join Our Community
 
-## Join our community
+Connect with other developers and enthusiasts through our community channels. Joining a community can provide you with valuable insights, support, and networking opportunities.
 
-If you're looking to connect with like-minded individuals who share your interests, passions, and goals, joining a community can be an excellent option. Whether it's a local group that meets in person or an online forum where members from around the world come together virtually, communities provide a sense of belonging and the opportunity to learn and grow alongside others.
+[Join our Discord community](https://discord.gg/xwRbDwnbMr)
 
-By joining a community, you can gain access to a wealth of knowledge, resources, and support that can help you achieve your personal and professional aspirations. So if you're ready to connect with others who share your interests and build meaningful relationships, consider joining a community today!
+### Acknowledgments
 
-[Discord Link](https://discord.gg/xwRbDwnbMr)
+We extend our heartfelt thanks to everyone who has contributed to DevToolsArena. Your support and contributions are invaluable to the success of this project. ❤️
 
-### Contributors
-
-We would like to extend our heartfelt gratitude to all the individuals who have contributed to and supported this project. Your time, skills, and knowledge have been indispensable in ensuring the success of this endeavor. Whether you provided code, documentation, testing, or simply gave feedback and suggestions, we are truly grateful for your contributions. ❤️
-
-<a href = "https://github.com/devvsakib/github-error-solve/graphs/contributors">
-  <img src = "https://contrib.rocks/image?repo=devvsakib/github-error-solve"/>
+<a href="https://github.com/devvsakib/DevToolsArena/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=devvsakib/DevToolsArena" />
 </a>
 
 ## License
 
-ProjectsHut is licensed under the [GNU GENERAL PUBLIC LICENSE ](/LICENSE)
+DevToolsArena is licensed under the [GNU General Public License](/LICENSE).
