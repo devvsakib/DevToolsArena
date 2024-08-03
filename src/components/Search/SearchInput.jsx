@@ -48,17 +48,17 @@ function SearchInput({ search, setSearch, setType }) {
         className="flex items-center border border-primary gap-4 py-2 px-6 rounded-lg w-11/12 md:w-4/6"
       >
         <MdSearch className="text-gray text-2xl" />
-<input
-  type="text"
-  id="searchbox"
-  value={search}
-  className="w-full text-sm md:text-base focus:outline-none placeholder:font-semibold bg-transparent custom-input"
-  placeholder="Search for errors"
-  onChange={(e) => {
-    setSearch(e.target.value);
-    setType("");
-  }}
-/>
+        <input
+          type="text"
+          id="searchbox"
+          value={search}
+          className="w-full text-sm md:text-base focus:outline-none placeholder:font-semibold bg-transparent custom-input"
+          placeholder="Search for errors"
+          onChange={(e) => {
+            setSearch(e.target.value);
+            setType("");
+          }}
+        />
 
         <button
           className={`focus:outline-none ${!search ? "hidden" : "block"}`}

@@ -37,6 +37,11 @@ function Header({notice }) {
       icon: <MdInsertDriveFile size="1.2rem" />,
     },
     {
+      name: "DevArea",
+      link: "/devarea",
+      icon: <MdStore size="1.2rem" />,
+    },
+    {
       name: "Resources",
       link: "/resources",
       icon: <MdStore size="1.2rem" />,
