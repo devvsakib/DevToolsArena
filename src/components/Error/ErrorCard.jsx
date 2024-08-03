@@ -38,7 +38,7 @@ function ErrorCard({ error }) {
       </div>
 
       <button
-        className="flex mt-2 items-center gap-2 px-3 py-2 border border-black rounded-lg hover:border-primary hover:text-primary"
+        className="flex mt-2 items-center gap-2 px-3 py-2 border border-black dark:border-white rounded-lg hover:border-primary hover:text-primary"
         onClick={() => setOpenModal((prev) => !prev)}
       >
         <span className="text-xs">Solution</span>
