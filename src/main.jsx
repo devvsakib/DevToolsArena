@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
+import { Toaster } from 'sonner';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -11,6 +12,8 @@ import NotFound from "./pages/NotFound";
 import DocList from "./pages/Doc";
 import DocDetail from "./pages/Doc/single doc";
 import Resources from "./pages/Resources";
+import DevArea from "./pages/DevArea";
+import DevTools from "./pages/DevArea/DevTools";
 
 const router = createBrowserRouter(
   [
@@ -31,6 +34,14 @@ const router = createBrowserRouter(
       element: <Resources />
     },
     {
+      path: '/devarea',
+      element: <DevArea />
+    },
+    {
+      path: '/devarea/:tool',
+      element: <DevTools />
+    },
+    {
       path: '/contributors',
       element: <Contributors />
     },
@@ -45,6 +56,7 @@ const router = createBrowserRouter(
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BGShape />
+    <Toaster />
     <RouterProvider router={router} />
   </React.StrictMode>
 );
