@@ -1,25 +1,18 @@
 import React, { useState } from "react";
-import useColorBorderBox from "../../hooks/useColorBorderBox"
-import {
-  MdOutlineArrowRightAlt,
-} from "react-icons/md";
+import useColorBorderBox from "../../hooks/useColorBorderBox";
+import { MdOutlineArrowRightAlt } from "react-icons/md";
 import ErrorType from "./ErrorType";
 import "./css/style.css";
-
 import ModalSolutions from "./ModalSolutions";
 
 function ErrorCard({ error }) {
-
   const [readMore, setReadMore] = useState(false);
   const [isOpenModal, setOpenModal] = useState(false);
   const [solution, setSolution] = useState("");
-  const { borderColor } = useColorBorderBox(error)
+  const { borderColor } = useColorBorderBox(error);
 
   return (
-    <div
-      id="main-div"
-      className={borderColor + " relative"}
-    >
+    <div id="main-div" className={borderColor + " relative"}>
       <h3 className="title">{error.title}</h3>
       <div className="absolute h-full -right-2 -top-2">
         <ErrorType type={error.type} />
@@ -45,7 +38,7 @@ function ErrorCard({ error }) {
       </div>
 
       <button
-        className="flex mt-2 items-center gap-2 px-3 py-2 border border-white/40 rounded-lg hover:border-primary hover:text-primary"
+        className="flex mt-2 items-center gap-2 px-3 py-2 border border-black rounded-lg hover:border-primary hover:text-primary"
         onClick={() => setOpenModal((prev) => !prev)}
       >
         <span className="text-xs">Solution</span>
