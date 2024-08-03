@@ -49,6 +49,7 @@ img{
 @media (max-width: 768px) {
   .card {
     width: auto;
+    color: white;
   }
 }
 
