@@ -52,10 +52,10 @@ const JSONFormatter = () => {
                 <Button onClick={handleFormat} type="primary" className='mr-2'>
                     Format JSON
                 </Button>
-                <Button onClick={handleClear} type="default">
+                <Button onClick={handleClear} type="default" className='mr-1'>
                     Clear
                 </Button>
-                <Button onClick={handleCopy} type="default">
+                <Button onClick={handleCopy} type="default" className='ml-1'>
                     Copy to Clipboard
                 </Button>
             </div>
