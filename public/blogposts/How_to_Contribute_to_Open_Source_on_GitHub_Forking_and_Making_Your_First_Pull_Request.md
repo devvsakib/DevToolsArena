@@ -1,4 +1,11 @@
-# How to Contribute to Open Source on GitHub: Forking and Making Your First Pull Request
+---
+title: How to Contribute to Open Source on GitHub forking and Making Your First Pull Request
+tags: [GitHub, Open Source, Contribution]
+author: John Doe
+date: 2024-08-04
+---
+
+## Introduction
 
 Contributing to open-source projects is a great way to improve your coding skills, collaborate with others, and give back to the community. If you're new to this process, it might seem a bit daunting, but it's actually quite straightforward. In this guide, we'll walk you through the steps of forking a repository, making changes, and submitting a pull request.
 

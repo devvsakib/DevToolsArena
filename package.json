@@ -16,6 +16,7 @@
     "axios": "^1.2.2",
     "classnames": "^2.5.1",
     "framer-motion": "^10.8.3",
+    "frontmatter": "^0.0.3",
     "lodash": "^4.17.21",
     "prettier": "^3.3.3",
     "react": "^18.2.0",

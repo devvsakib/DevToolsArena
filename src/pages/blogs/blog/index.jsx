@@ -6,7 +6,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { Spin, Alert } from 'antd';
 import Layout from '../../../components/Layout/Layout';
-
+import * as matter from 'frontmatter'
 const Table = ({ children }) => {
     return <table className="min-w-full mt-4 border border-gray-300">{children}</table>;
 };
@@ -30,6 +30,7 @@ const BlogDetail = () => {
     const [error, setError] = useState(null);
     const [activeSection, setActiveSection] = useState(null);
     const [headings, setHeadings] = useState([]);
+    const [frontmatter, setFrontmatter] = useState({});
 
     useEffect(() => {
         const fetchContent = async () => {
@@ -39,7 +40,9 @@ const BlogDetail = () => {
                     throw new Error(`Failed to fetch content: ${response.statusText}`);
                 }
                 const text = await response.text(); // Ensure you're reading text
-                setContent(text);
+                const { content, data } = matter(text);
+                setContent(content);
+                setFrontmatter(data);
             } catch (error) {
                 setError(error.message);
             } finally {
@@ -86,9 +89,32 @@ const BlogDetail = () => {
     return (
         <Layout>
             <section className="container mx-auto p-4 min-h-screen">
-                <h3 className="text-2xl md:text-3xl capitalize text-center my-10 mb-20 font-semibold">
-                    {slug.replace(/_/g, ' ')}
-                </h3>
+                {/* Title Section */}
+                <div className="text-center my-10">
+                    <h3 className="text-2xl md:text-3xl font-semibold capitalize">{frontmatter.title || slug.replace(/_/g, ' ')}</h3>
+                    <p className="text-lg text-gray-500">   {frontmatter.date ? new Date(frontmatter.date).toLocaleDateString() : 'Date not available'}</p>
+                </div>
+                <div className="mb-6 text-center">
+                    <p className="text-md font-semibold">
+                        Author: <span className="font-normal">{frontmatter.author || 'Unknown'}</span>
+                    </p>
+                    <p className="text-md font-semibold">
+                        Tags:
+                        {frontmatter.tags && frontmatter.tags.length > 0 ? (
+
+                            <span className="font-normal">
+                                {frontmatter.tags.map((tag, index) => (
+                                    <span key={index} className="bg-blue-200 text-blue-800 py-1 px-2 rounded-md text-sm mr-2">
+                                        {tag}
+                                    </span>
+                                ))}
+                            </span>
+                        ) : (
+                            <span className="font-normal">None</span>
+                        )}
+                    </p>
+                </div>
+
                 <div className="flex">
                     <aside className="sticky top-20 w-1/4 p-4 h-0">
                         <h2 className="text-xl font-bold mb-2">Table of Contents</h2>
