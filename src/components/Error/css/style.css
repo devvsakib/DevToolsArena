@@ -30,6 +30,7 @@ h3{
 }
 
 .modal {
+  color: white;
   width: 400px;
   max-height: 450px; 
 }

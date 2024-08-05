@@ -74,7 +74,16 @@ const Resources = () => {
                     </div>
                 </div>
                 {Object.keys(filteredResources).map((key, index) => (
-                    <ResourceSection key={index} id={key} title={key.replace(/-/g, ' ')} resources={filteredResources[key]} />
+                    <ResourceSection 
+                        key={index} 
+                        id={key} 
+                        title={
+                            key
+                            .replace(/(^[a-z])/g,($1)=>{return $1.toUpperCase()})
+                            .replace(/([A-Z])/g," $1")
+                        }
+                        resources={filteredResources[key]} 
+                    />
                 ))}
             </div>
         </Layout>
