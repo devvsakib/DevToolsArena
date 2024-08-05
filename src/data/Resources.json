@@ -95,6 +95,18 @@
             "description": "Interactive learning with a focus on web development and design.",
             "link": "https://teamtreehouse.com",
             "image": "https://w7.pngwing.com/pngs/329/126/png-transparent-treehouse-tv-television-channel-ytv-sesame-television-text-logo.png"
+        },
+        {
+            "title": "GfG",
+            "description": "A collection of articles on various topics.It also has questions for practice.",
+            "link": "https://www.geeksforgeeks.org/",
+            "image": "https://www.geeksforgeeks.org/gfg-new-logo/"
+        },
+        {
+            "title": "code360",
+            "description": "A fun learning platform full of valuable articles on interview experiences,roadmaps,various tech stacks, etc.",
+            "link": "https://www.naukri.com/code360",
+            "image": "https://www.logoshape.com/naukri-vector-logo-1553.html"
         }
     ],
     "toolsLibraries": [
@@ -235,6 +247,12 @@
             "description": "A JavaScript end-to-end testing framework.",
             "link": "https://www.cypress.io",
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9wCeSRyMZFFrOZSXwoLSK6DUhU5SLqV3mTQ&s"
+        },
+        {
+            "title": "Mocha",
+            "description": "A JavaScript test framework that is used for testing test cases asynchronously.",
+            "link": "https://mochajs.org/",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/d/de/Mocha_logo.svg"
         }
     ],
     "careerRoadmaps": [
