@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Input, Button, Alert } from 'antd';
-import JSONPretty from 'react-json-pretty'; // You might need to install this library for pretty JSON output
-import 'react-json-pretty/themes/monikai.css'; // Optional: import a theme for JSONPretty
+import JSONPretty from 'react-json-pretty'; 
+import 'react-json-pretty/themes/monikai.css'; 
 import { toast } from 'sonner';
 
 const JSONFormatter = () => {
@@ -39,29 +39,29 @@ const JSONFormatter = () => {
     };
 
     return (
-        <div className='p-5'>
-            <h2 className='text-xl font-bold mb-4'>JSON Formatter</h2>
+        <div className="p-5">
+            <h2 className="text-xl font-bold mb-4">JSON Formatter</h2>
             <Input.TextArea
                 value={jsonInput}
                 onChange={(e) => setJsonInput(e.target.value)}
                 placeholder="Paste your JSON here"
                 autoSize={{ minRows: 10 }}
-                className='mb-4 dark:bg-dark dark:text-white'
+                className="mb-4 dark:bg-dark dark:text-white"
             />
-            <div className='mb-4'>
-                <Button onClick={handleFormat} type="primary" className='mr-2'>
+            <div className="flex gap-2 mb-4">
+                <Button onClick={handleFormat} type="primary" className="mb-2">
                     Format JSON
                 </Button>
-                <Button onClick={handleClear} type="default">
+                <Button onClick={handleClear} type="default" className="mb-2">
                     Clear
                 </Button>
-                <Button onClick={handleCopy} type="default">
+                <Button onClick={handleCopy} type="default" className="mb-2">
                     Copy to Clipboard
                 </Button>
             </div>
-            {error && <Alert message="Error" description={error} type="error" className='mb-4' />}
+            {error && <Alert message="Error" description={error} type="error" className="mb-4" />}
             {formattedJson && (
-                <div className='bg-dark p-4 rounded-md'>
+                <div className="bg-dark p-4 rounded-md">
                     <JSONPretty data={formattedJson} onCopy={(data) => navigator.clipboard.writeText(JSON.stringify(data, null, 2))} />
                 </div>
             )}

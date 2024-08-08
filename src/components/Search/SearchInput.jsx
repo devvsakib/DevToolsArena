@@ -59,7 +59,6 @@ function SearchInput({ search, setSearch, setType }) {
             setType("");
           }}
         />
-
         <button
           className={`focus:outline-none ${!search ? "hidden" : "block"}`}
           onClick={() => setSearch("")}
