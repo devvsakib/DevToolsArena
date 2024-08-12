@@ -7,6 +7,7 @@ import {
   MdStore,
 } from "react-icons/md";
 import { AiFillGithub } from "react-icons/ai";
+import { FaBlogger } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 import { HiMoon, HiSun } from "react-icons/hi";
@@ -30,6 +31,11 @@ function Header({notice }) {
       name: "Home",
       link: "/",
       icon: <MdHome size="1.2rem" />,
+    },
+    {
+      name: "Blogs",
+      link: "/blogs",
+      icon: <FaBlogger size="1.2em"/>
     },
     {
       name: "Doc",
