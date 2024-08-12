@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://www.devtoolsarena.xyz/</loc>
+      <lastmod>2024-08-12</lastmod>
+      <priority>1.00</priority>
+   </url>
+   <url>
+      <loc>https://www.devtoolsarena.xyz/about</loc>
+      <lastmod>2024-08-12</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://www.devtoolsarena.xyz/study-resources</loc>
+      <lastmod>2024-08-12</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://www.devtoolsarena.xyz/code-ides</loc>
+      <lastmod>2024-08-12</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://www.devtoolsarena.xyz/youtubers</loc>
+      <lastmod>2024-08-12</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://www.devtoolsarena.xyz/doc</loc>
+      <lastmod>2024-08-12</lastmod>
+      <priority>0.80</priority>
+   </url>
+</urlset>
