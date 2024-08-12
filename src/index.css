@@ -6,15 +6,27 @@
   margin: 0;
   padding: 0;
 }
-img{
+
+img {
   width: 100%;
   max-width: 100%;
   height: auto;
 }
+
 @layer base {
   body {
     @apply bg-white text-dark dark:bg-[#02000e] dark:text-white;
   }
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  /* Add your background pattern here */
+  background-color: #313131;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 2px, transparent 0);
+  background-size: 30px 30px;
+  background-position: -5px -5px
 }
 
 .card {
@@ -101,4 +113,343 @@ html {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+
+/* test */
+
+.white,
+.gradientBorder,
+.darkBorderBg,
+.glow {
+  max-height: 70px;
+  max-width: 314px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+  /* Border Radius */
+  border-radius: 12px;
+  filter: blur(3px);
+}
+
+.input {
+  background-color: #010201;
+  border: none;
+  width: 500px;
+  height: 56px;
+  border-radius: 10px;
+  border: 1px solid #ffffff40;
+  color: white;
+  padding-inline: 59px;
+  font-size: 18px;
+}
+
+#inputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input::placeholder {
+  color: #c0b9c0;
+}
+
+.input:focus {
+  outline: none;
+}
+
+#main:focus-within>#input-mask {
+  display: none;
+}
+
+#main:hover>#pink-mask {
+  animation: rotate 4s linear infinite;
+  opacity: 0;
+}
+
+.white {
+  max-height: 63px;
+  max-width: 307px;
+  border-radius: 10px;
+  filter: blur(2px);
+}
+
+.white::before {
+  content: "";
+  z-index: -2;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(83deg);
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  filter: brightness(1.4);
+  background-image: conic-gradient(rgba(0, 0, 0, 0) 0%,
+      #a099d8,
+      rgba(0, 0, 0, 0) 8%,
+      rgba(0, 0, 0, 0) 50%,
+      #dfa2da,
+      rgba(0, 0, 0, 0) 58%);
+  animation: rotate 4s linear infinite;
+  transition: all 2s;
+}
+
+.gradientBorder {
+  max-height: 59px;
+  max-width: 500px;
+  border-radius: 11px;
+  filter: blur(0.5px);
+}
+
+.gradientBorder::before {
+  content: "";
+  z-index: -2;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(70deg);
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  filter: brightness(1.3);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: conic-gradient(#1c191c,
+      #402fb5 5%,
+      #1c191c 14%,
+      #1c191c 50%,
+      #cf30aa 60%,
+      #1c191c 64%);
+  animation: rotate 4s 0.1s linear infinite;
+  transition: all 2s;
+}
+
+.darkBorderBg {
+  max-height: 65px;
+  max-width: 510px;
+}
+
+.darkBorderBg::before {
+  content: "";
+  z-index: -2;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(82deg);
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: conic-gradient(rgba(0, 0, 0, 0),
+      #18116a,
+      rgba(0, 0, 0, 0) 10%,
+      rgba(0, 0, 0, 0) 50%,
+      #6e1b60,
+      rgba(0, 0, 0, 0) 60%);
+  transition: all 2s;
+}
+
+#inputContainer:hover>.darkBorderBg::before {
+  transform: translate(-50%, -50%) rotate(262deg);
+}
+
+#inputContainer:hover>.glow::before {
+  transform: translate(-50%, -50%) rotate(240deg);
+}
+
+#inputContainer:hover>.white::before {
+  transform: translate(-50%, -50%) rotate(263deg);
+}
+
+#inputContainer:hover>.gradientBorder::before {
+  transform: translate(-50%, -50%) rotate(250deg);
+}
+
+#inputContainer:hover>.darkBorderBg::before {
+  transform: translate(-50%, -50%) rotate(-98deg);
+}
+
+#inputContainer:hover>.glow::before {
+  transform: translate(-50%, -50%) rotate(-120deg);
+}
+
+#inputContainer:hover>.white::before {
+  transform: translate(-50%, -50%) rotate(-97deg);
+}
+
+#inputContainer:hover>.gradientBorder::before {
+  transform: translate(-50%, -50%) rotate(-110deg);
+}
+
+#inputContainer:focus-within>.darkBorderBg::before {
+  transform: translate(-50%, -50%) rotate(442deg);
+  transition: all 4s;
+}
+
+#inputContainer:focus-within>.glow::before {
+  transform: translate(-50%, -50%) rotate(420deg);
+  transition: all 4s;
+}
+
+#inputContainer:focus-within>.white::before {
+  transform: translate(-50%, -50%) rotate(443deg);
+  transition: all 4s;
+}
+
+#inputContainer:focus-within>.gradientBorder::before {
+  transform: translate(-50%, -50%) rotate(430deg);
+  transition: all 4s;
+}
+
+.glow {
+  overflow: hidden;
+  filter: blur(30px);
+  opacity: 0.4;
+  max-height: 130px;
+  max-width: 550px;
+}
+
+.glow:before {
+  content: "";
+  z-index: -2;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(60deg);
+  position: absolute;
+  width: 999px;
+  height: 999px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  /*border color, change middle color*/
+  background-image: conic-gradient(#000,
+      #402fb5 5%,
+      #000 38%,
+      #000 50%,
+      #cf30aa 60%,
+      #000 87%);
+  /* change speed here */
+  /* animation: rotate 4s 0.3s linear infinite; */
+  transition: all 2s;
+}
+
+/* @keyframes rotate {
+  100% {
+    transform: translate(-50%, -50%) rotate(450deg);
+  }
+} */
+
+@keyframes leftright {
+  0% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+
+  49% {
+    transform: translate(250px, 0px);
+    opacity: 0;
+  }
+
+  80% {
+    transform: translate(-40px, 0px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+#filter-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  max-height: 40px;
+  max-width: 38px;
+  height: 100%;
+  width: 100%;
+
+  isolation: isolate;
+  overflow: hidden;
+  /* Border Radius */
+  border-radius: 10px;
+  background: linear-gradient(180deg, #161329, black, #1d1b4b);
+  border: 1px solid transparent;
+}
+
+.filterBorder {
+  height: 42px;
+  width: 40px;
+  position: absolute;
+  overflow: hidden;
+  top: 7px;
+  right: 7px;
+  border-radius: 10px;
+}
+
+.filterBorder::before {
+  content: "";
+
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  filter: brightness(1.35);
+  background-image: conic-gradient(rgba(0, 0, 0, 0),
+      #3d3a4f,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0) 50%,
+      #3d3a4f,
+      rgba(0, 0, 0, 0) 100%);
+  /* animation: rotate 4s linear infinite; */
+}
+
+#main {
+  position: relative;
+}
+
+#search-icon {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .input {
+    width: 300px;
+  }
+
+  .darkBorderBg {
+    max-height: 65px;
+    max-width: 310px;
+  }
+
+  .gradientBorder {
+    max-height: 59px;
+    max-width: 300px;
+  }
+
+  .white {
+    max-height: 63px;
+    max-width: 307px;
+  }
+
+  .glow {
+    max-height: 130px;
+    max-width: 340px;
+  }
+}
