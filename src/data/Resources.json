@@ -298,5 +298,36 @@
             "link": "https://roadmap.sh/game-developer",
             "image": "https://roadmap.sh/og/roadmap/game-developer"
         }
-    ]
-}
+    ],
+    "API": [
+        {
+            "title": "OpenWeatherMap",
+            "description": "Access weather data from around the world.",
+            "link": "https://openweathermap.org/api",
+            "image": "https://openweathermap.org/themes/openweathermap/assets/img/logo_white_cropped.png"
+        },
+        {
+            "title": "REST Countries",
+            "description": "Get information about countries, including names, capitals, and populations.",
+            "link": "https://restcountries.com",
+            "image": "https://restcountries.com/data/flags.svg"
+        },
+        {
+            "title": "JSONPlaceholder",
+            "description": "A free fake online REST API for testing and prototyping.",
+            "link": "https://jsonplaceholder.typicode.com",
+            "image": "https://jsonplaceholder.typicode.com/images/logo.png"
+        },
+        {
+            "title": "The Cat API",
+            "description": "Get random cat images and facts.",
+            "link": "https://thecatapi.com",
+            "image": "https://cdn2.thecatapi.com/images/MTY3ODIyMQ.jpg"
+        },
+        {
+            "title": "GIPHY",
+            "description": "Find and share GIFs with ease using the GIPHY API.",
+            "link": "https://developers.giphy.com",
+            "image": "https://developers.giphy.com/branch/master/static/header-logo-0fec0225d189bc0eae27dac3e3770582.gif"
+        }
+    ]}

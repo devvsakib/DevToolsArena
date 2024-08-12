@@ -52,7 +52,7 @@ function SearchInput({ search, setSearch, setType }) {
           type="text"
           id="searchbox"
           value={search}
-          className="w-full text-sm md:text-base focus:outline-none placholder:font-semibold text-dark bg-transparent"
+          className="w-full text-sm md:text-base focus:outline-none placeholder:font-semibold bg-transparent custom-input"
           placeholder="Search for errors"
           onChange={(e) => {
             setSearch(e.target.value);
