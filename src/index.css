@@ -169,9 +169,9 @@ html {
 
 .white {
   max-height: 63px;
-  max-width: 307px;
+  max-width: 507px;
   border-radius: 10px;
-  filter: blur(2px);
+  filter: blur(3px);
 }
 
 .white::before {
