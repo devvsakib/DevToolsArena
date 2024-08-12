@@ -24,18 +24,19 @@ const ModalSolutions = ({ isOpen, setOpenModal, error }) => {
         () => setOpenModal((prev) => !prev)
       }
       contentLabel="Modal solution"
-      className={borderColor + " modal !bg-black/80 max-h-[90vh] "}
+      className={borderColor + " modal !bg-black/80 max-h-[90vh] z-50"}
       id="main-div"
       style={{
         overlay: {
           backgroundColor: overlayBackgroundColor,
+          zIndex: 9999999
         },
         content: {
           position: "fixed",
           top: "50%",
           left: "50%",
           transform: "translate(-50%,-50%)",
-          padding: "30px",
+          padding: "30px"
         },
       }}
     >
