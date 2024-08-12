@@ -50,11 +50,11 @@ First Fork the repository
  
 Clone the repository.
 ```console
-git clone https://github.com/<Your-GitHub-Username>/github-error-solve.git
+git clone https://github.com/<Your-GitHub-Username>/DevToolsArena.git
 ```
 - Navigate to folder
 ```console
-cd github-error-solve
+cd DevToolsArena
 ```
 - Install node dependencies
 ```console
@@ -72,7 +72,7 @@ git checkout -b <name-of-your-branch>
 ```
 - Add upstream command 
 ```console
-git remote add upstream https://github.com/devvsakib/github-error-solve.git
+git remote add upstream https://github.com/devvsakib/DevToolsArena.git
 ```
 
 - Stage your changes
@@ -117,4 +117,4 @@ nothing to commit, working tree clean
 - Click on that button, this will load a new page, comparing the local branch in your forked repository against the main branch. Click the green `Create Pull Request` button.
 
 **Troubleshoot**
-Facing problem starting the server or any other problem? Please let us know by raising an <a href="https://github.com/devvsakib/github-error-solve/issues/new">Issue</a>
+Facing problem starting the server or any other problem? Please let us know by raising an <a href="https://github.com/devvsakib/DevToolsArena/issues/new">Issue</a>
