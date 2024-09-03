@@ -28,26 +28,29 @@ const DocList = () => {
         };
 
         fetchDocs();
-    }, []);
+    }, []); 
 
 
 
-    if (loading) return <div className="flex justify-center items-center h-screen"><Spin size="large" /></div>;
     if (error) return <Alert message="Error" description={error} type="error" />;
 
     return (
         <Layout>
             <div className="container mx-auto p-4 min-h-screen">
                 <MainTitle highlight={'Documentation'} />
-                <ul className='grid gap-5 mx-auto md:max-w-2xl'>
+                {loading ? (
+                    <div className='grid place-content-center mx-auto md:max-w-2xl aspect-video'>
+                        <Spin size="large" />
+                    </div>
+                ) : (<ul className='grid gap-5 mx-auto md:max-w-2xl'>
                     {
                         docs.map(item =>
-                            <Link to={item.title} className='capitalize group flex items-center justify-between bg-white/10 p-5 rounded-md'>{item.title.replace(/_/g, ' ')}
+                            <Link key={item.title} to={item.title} className='capitalize group flex items-center justify-between bg-white/10 p-5 rounded-md'>{item.title.replace(/_/g, ' ')}
                                 <FaArrowRight className="dark:text-white opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 transition duration-300" />
                             </Link>
                         )
                     }
-                </ul>
+                </ul>)}
             </div>
         </Layout>
     );
