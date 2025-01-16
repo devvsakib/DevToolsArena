@@ -323,6 +323,12 @@
       "title": "Git nothing to commit",
       "description": "The Git command line informs us that our local repository contains one more commit than our remote repository.",
       "solutions": "git push"
+    },
+     {
+      "type": "branch",
+      "title": "the branch [BRANCHNAME] is not fully merged",
+      "description": "The error message you're encountering indicates that Git is preventing you from deleting the [BRANCHNAME] branch because it is not fully merged into your current branch or any other branch that you've specified. Git is trying to prevent you from accidentally losing work that hasn't been merged yet.",
+      "solutions": "git branch -D [BRANCHNAME, multiple branchname can be use by using space]"
     }
   ]
 }
