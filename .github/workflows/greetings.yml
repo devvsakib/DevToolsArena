@@ -1,16 +1,16 @@
 name: Greetings
 
-on: [pull_request_target, issues]
+on:
+  pull_request_target:
+    types: [opened]
 
 jobs:
   greeting:
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
-      pull-requests: write
     steps:
-      - uses: actions/first-interaction@v3
+      - name: Greet contributor
+        uses: actions/first-interaction@v3
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          issue-message: "Congratulations, ${{ github.actor }}! 🎉 Thank you for creating your first issue in GES. Your contribution is greatly appreciated and we look forward to working with you to resolve the issue. Keep up the great work!"
-          pr-message: "Great job, ${{ github.actor }}! 🎉 Thank you for submitting your first pull request to GES. Your contribution is valuable and we appreciate your efforts to improve our project. We'll review your changes and provide feedback as soon as possible. Keep up the great work!"
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          pr_message: "Thank you for your pull request! 🎉 We’ll review it shortly."
+          issue_message: "Thanks for opening an issue! Our team will check it soon."
