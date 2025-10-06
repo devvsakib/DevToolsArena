@@ -16,7 +16,9 @@ const Layout = ({ stars, children }) => {
                     notice={"Under Construction"}
                 />
                 <div className='relative'>
-                    {children}
+                    <div className="container mx-auto p-4 min-h-screen">
+                        {children}
+                    </div>
                 </div>
                 <Footer />
             </ThemeProvider>
