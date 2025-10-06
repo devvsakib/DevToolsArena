@@ -1,0 +1,18 @@
+name: First Interaction
+
+on:
+  pull_request:
+    types: [opened]
+  issues:
+    types: [opened]
+
+jobs:
+  first_interaction:
+    runs-on: ubuntu-latest
+    steps:
+      - name: First Interaction
+        uses: actions/first-interaction@v3
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          pr_message: "Thank you for your pull request! 🎉 We’ll review it shortly."
+          issue_message: "Thanks for opening an issue! Our team will check it soon."
