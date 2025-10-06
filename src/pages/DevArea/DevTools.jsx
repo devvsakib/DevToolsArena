@@ -3,6 +3,7 @@ import Layout from "../../components/Layout/Layout";
 import MarkDownEditor from "../../components/DevAreaTools/MarkDownEditor";
 import JSONFormatter from "../../components/DevAreaTools/JSONFormatter";
 import JWTDecoder from "../../components/DevAreaTools/JwtDecoder";
+import URLEncoderDecoder from "../../components/DevAreaTools/URLEncoderDecoder";
 
 const DevTools = () => {
     const { tool } = useParams();
@@ -11,6 +12,7 @@ const DevTools = () => {
         markdown: <MarkDownEditor />,
         jwtdecoder: <JWTDecoder />,
         "json-formatter": <JSONFormatter />,
+        "url-encoder-decoder": <URLEncoderDecoder />,
     }
 
 

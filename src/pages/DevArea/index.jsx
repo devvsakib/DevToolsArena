@@ -26,10 +26,11 @@ const DevArea = () => {
             isAvailable: true
         },
         {
-            name: "URL Encoder/Decoder",
-            link: "/devarea/url",
-            isAvailable: false
+        name: "URL Encoder/Decoder",
+        link: "/devarea/url-encoder-decoder",
+        isAvailable: true
         },
+
         {
             name: "XML Formatter",
             link: "/devarea/xml-formatter",
