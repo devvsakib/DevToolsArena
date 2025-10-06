@@ -170,9 +170,9 @@ html {
 
 .white {
   max-height: 63px;
-  max-width: 307px;
+  max-width: 507px;
   border-radius: 10px;
-  filter: blur(2px);
+  filter: blur(3px);
 }
 
 .white::before {
@@ -453,4 +453,148 @@ html {
     max-height: 130px;
     max-width: 340px;
   }
+}
+
+
+
+/*# sourceMappingURL=index.css.map */
+.loader svg {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.loader {
+  display: flex;
+  margin: 0.25em 0;
+}
+
+.w-2 {
+  width: 0.5em;
+}
+
+.dash {
+  animation: dashArray 2s ease-in-out infinite,
+    dashOffset 2s linear infinite;
+}
+
+.spin {
+  animation: spinDashArray 2s ease-in-out infinite,
+    spin 8s ease-in-out infinite,
+    dashOffset 2s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes dashArray {
+  0% {
+    stroke-dasharray: 0 1 359 0;
+  }
+
+  50% {
+    stroke-dasharray: 0 359 1 0;
+  }
+
+  100% {
+    stroke-dasharray: 359 1 0 0;
+  }
+}
+
+@keyframes spinDashArray {
+  0% {
+    stroke-dasharray: 270 90;
+  }
+
+  50% {
+    stroke-dasharray: 0 360;
+  }
+
+  100% {
+    stroke-dasharray: 270 90;
+  }
+}
+
+@keyframes dashOffset {
+  0% {
+    stroke-dashoffset: 365;
+  }
+
+  100% {
+    stroke-dashoffset: 5;
+  }
+}
+
+@keyframes spin {
+  0% {
+    rotate: 0deg;
+  }
+
+  12.5%,
+  25% {
+    rotate: 270deg;
+  }
+
+  37.5%,
+  50% {
+    rotate: 540deg;
+  }
+
+  62.5%,
+  75% {
+    rotate: 810deg;
+  }
+
+  87.5%,
+  100% {
+    rotate: 1080deg;
+  }
+}
+
+/*  flow */
+.flow-designer {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.action-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #ddd;
+  cursor: move;
+}
+
+.canvas {
+  flex-grow: 1;
+  position: relative;
+  background-color: #fff;
+}
+
+.flow-node {
+  position: absolute;
+  padding: 10px;
+  border-radius: 5px;
+  user-select: none;
+}
+
+.action {
+  background-color: #66cc66;
+}
+
+.condition {
+  background-color: #ff9966;
+}
+
+.branch {
+  margin-top: 5px;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
 }

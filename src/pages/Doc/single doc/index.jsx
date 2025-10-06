@@ -30,7 +30,7 @@ const DocDetail = () => {
     const [error, setError] = useState(null);
     const [activeSection, setActiveSection] = useState(null);
     const [headings, setHeadings] = useState([]);
-
+console.log(content)
     useEffect(() => {
         const fetchContent = async () => {
             try {
@@ -80,8 +80,6 @@ const DocDetail = () => {
         }
     }, [content]);
 
-    if (loading) return <div className="flex justify-center items-center h-screen"><Spin size="large" /></div>;
-    if (error) return <Alert message="Error" description={error} type="error" />;
     const headingToId = (children) => String(children).toLowerCase().replace(/\s+/g, '-');
     return (
         <Layout>

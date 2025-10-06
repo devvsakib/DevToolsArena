@@ -20,6 +20,7 @@
     "prettier": "^3.3.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-flow-renderer": "^10.3.17",
     "react-hot-toast": "^2.4.0",
     "react-icons": "^4.7.1",
     "react-json-pretty": "^2.2.0",
@@ -29,7 +30,8 @@
     "react-syntax-highlighter": "^15.5.0",
     "react-transition-group": "^4.4.5",
     "remark-gfm": "^4.0.0",
-    "sonner": "^1.5.0"
+    "sonner": "^1.5.0",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

@@ -14,6 +14,7 @@ import DocDetail from "./pages/Doc/single doc";
 import Resources from "./pages/Resources";
 import DevArea from "./pages/DevArea";
 import DevTools from "./pages/DevArea/DevTools";
+import Flow from "./pages/Flow";
 
 const router = createBrowserRouter(
   [
@@ -44,6 +45,10 @@ const router = createBrowserRouter(
     {
       path: '/contributors',
       element: <Contributors />
+    },
+    {
+      path: '/flow',
+      element: <Flow />
     },
     {
       path: '*',
