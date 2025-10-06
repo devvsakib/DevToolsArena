@@ -2,13 +2,15 @@ import { useParams } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import MarkDownEditor from "../../components/DevAreaTools/MarkDownEditor";
 import JSONFormatter from "../../components/DevAreaTools/JSONFormatter";
+import JWTDecoder from "../../components/DevAreaTools/JwtDecoder";
 
 const DevTools = () => {
     const { tool } = useParams();
 
     const tools = {
         markdown: <MarkDownEditor />,
-        "json-formatter": <JSONFormatter />
+        jwtdecoder: <JWTDecoder />,
+        "json-formatter": <JSONFormatter />,
     }
 
 

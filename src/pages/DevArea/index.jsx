@@ -22,8 +22,8 @@ const DevArea = () => {
         },
         {
             name: "JWT Decoder",
-            link: "/devarea/jwt",
-            isAvailable: false
+            link: "/devarea/jwtdecoder",
+            isAvailable: true
         },
         {
             name: "URL Encoder/Decoder",
