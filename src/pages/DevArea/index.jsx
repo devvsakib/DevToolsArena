@@ -18,7 +18,7 @@ const DevArea = () => {
         {
             name: "Base64 Encoder/Decoder",
             link: "/devarea/base64",
-            isAvailable: false
+            isAvailable: true
         },
         {
             name: "JWT Decoder",
