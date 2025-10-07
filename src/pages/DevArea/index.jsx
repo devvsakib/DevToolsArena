@@ -34,7 +34,7 @@ const DevArea = () => {
         {
             name: "XML Formatter",
             link: "/devarea/xml-formatter",
-            isAvailable: false
+            isAvailable: true
         },
         {
             name: "YAML Formatter",

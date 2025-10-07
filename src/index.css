@@ -598,3 +598,18 @@ html {
   padding: 5px;
   background-color: rgba(255, 255, 255, 0.2);
 }
+
+textarea, input {
+  background: #010201;
+  border: none;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #ffffff40 !important;
+  color: white;
+  padding-inline: 20px;
+  padding-top: 10px;
+  font-size: 18px;
+}
+textarea:focus, input:focus {
+  outline: none;
+}
