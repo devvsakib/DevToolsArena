@@ -46,13 +46,14 @@ function Header({notice }) {
       link: "/resources",
       icon: <MdStore size="1.2rem" />,
     },
-    {
-      name: "Github",
-      link: "https://github.com/devvsakib/github-error-solve",
-      icon: <AiFillGithub size="1.2rem" />,
-      isExternalURL: true,
-    },
   ];
+
+  const githubLink = {
+    name: "Github",
+    link: "https://github.com/devvsakib/github-error-solve",
+    icon: <AiFillGithub size="1.2rem" />,
+    isExternalURL: true,
+  };
 
   return (
     <header className="p-4 shadow-lg backdrop-blur-sm  z-50">
@@ -66,12 +67,32 @@ function Header({notice }) {
           />
         </Link>
 
-        {/* Menu icon */}
-        <div
-          onClick={() => setOpen((val) => !val)}
-          className="cursor-pointer md:hidden"
-        >
-          {open ? <MdClose size="1.2rem" /> : <MdMenu size="1.2rem" />}
+        {/* GitHub, theme toggle and menu icon for mobile */}
+        <div className="flex items-center gap-3 md:hidden">
+          <a target="_blank" href={githubLink.link}>
+            <div className="bg-blue-600/50 shadow font-semibold flex gap-1 p-1 px-2 items-center rounded-full text-sm">
+              <span className="githubBtn">
+                {githubLink.icon}
+              </span>
+              {
+                countStar && (
+                  <div className="flex items-center gap-1">
+                    {countStar}
+                  </div>
+                )
+              }
+            </div>
+          </a>
+          <div className="text-lg cursor-pointer" onClick={toggleTheme}>
+            <HiMoon className="dark:hidden" />
+            <HiSun className="hidden dark:inline" />
+          </div>
+          <div
+            onClick={() => setOpen((val) => !val)}
+            className="cursor-pointer"
+          >
+            {open ? <MdClose size="1.2rem" /> : <MdMenu size="1.2rem" />}
+          </div>
         </div>
 
         {/* Nav link items */}
@@ -88,34 +109,33 @@ function Header({notice }) {
           ${open ? (theme === "dark" ? "bg-dark/90" : "bg-white/90") : ""}
           ${open ? "top-14" : "top-[-490px]"}`}
         >
-          {navLink.map((link, index) => {
-            return (
-              <div key={`${link.name}-${index}`}>
-                {link?.isExternalURL ? (
-                  <a target="_blank" href={link.link}>
-                    <div className="bg-blue-600/50 shadow font-semibold flex gap-1 p-1 px-2 items-center rounded-full">
-                      <span className="githubBtn">
-                        {link.icon}
-                      </span>
-                      {
-                        countStar && (
-                          <div className="flex items-center gap-1">
-                            {countStar}
-                          </div>
-                        )
-                      }
+          {navLink.map((link, index) => (
+            <div key={`${link.name}-${index}`}>
+              <Link className="flex items-center gap-1" to={link.link}>
+                {/* {link.icon} */}
+                {link.name}
+              </Link>
+            </div>
+          ))}
+          {/* GitHub link for desktop */}
+          <div className="hidden md:block">
+            <a target="_blank" href={githubLink.link}>
+              <div className="bg-blue-600/50 shadow font-semibold flex gap-1 p-1 px-2 items-center rounded-full">
+                <span className="githubBtn">
+                  {githubLink.icon}
+                </span>
+                {
+                  countStar && (
+                    <div className="flex items-center gap-1">
+                      {countStar}
                     </div>
-                  </a>
-                ) : (
-                  <Link className="flex items-center gap-1" to={link.link}>
-                    {/* {link.icon} */}
-                    {link.name}
-                  </Link>
-                )}
+                  )
+                }
               </div>
-            );
-          })}
-          <div className="text-lg cursor-pointer" onClick={toggleTheme}>
+            </a>
+          </div>
+          {/* Theme toggle for desktop */}
+          <div className="text-lg cursor-pointer hidden md:block" onClick={toggleTheme}>
             <HiMoon className="dark:hidden" />
             <HiSun className="hidden dark:inline" />
           </div>
