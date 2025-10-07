@@ -8,6 +8,7 @@ import XmlFormatter from "../../components/DevAreaTools/XmlFormatter";
 import Base64Tool from "../../components/DevAreaTools/Base64Tool";
 import YAMLFormatter from "../../components/DevAreaTools/YAMLFormatter";
 import PasswordGenerator from "../../components/DevAreaTools/PasswordGenerator";
+import IPLookup from "../../components/DevAreaTools/IPLookup";
 
 const DevTools = () => {
     const { tool } = useParams();
@@ -21,6 +22,7 @@ const DevTools = () => {
         "yaml-formatter": <YAMLFormatter />,
         "base64": <Base64Tool />,
         "password-generator": <PasswordGenerator />,
+        "ip-lookup": <IPLookup />,
     }
 
 
