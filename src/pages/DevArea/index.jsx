@@ -165,7 +165,7 @@ const DevArea = () => {
         {
             name: "IP Address Lookup",
             link: "/devarea/ip-lookup",
-            isAvailable: false
+            isAvailable: true
         },
         // Security
         {
