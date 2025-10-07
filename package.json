@@ -16,6 +16,7 @@
     "axios": "^1.2.2",
     "classnames": "^2.5.1",
     "framer-motion": "^10.8.3",
+    "js-yaml": "^4.1.0",
     "lodash": "^4.17.21",
     "lucide-react": "^0.544.0",
     "prettier": "^3.3.3",
