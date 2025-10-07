@@ -6,6 +6,8 @@ import JWTDecoder from "../../components/DevAreaTools/JwtDecoder";
 import URLEncoderDecoder from "../../components/DevAreaTools/URLEncoderDecoder";
 import XmlFormatter from "../../components/DevAreaTools/XmlFormatter";
 import Base64Tool from "../../components/DevAreaTools/Base64Tool";
+import YAMLFormatter from "../../components/DevAreaTools/YAMLFormatter";
+import PasswordGenerator from "../../components/DevAreaTools/PasswordGenerator";
 
 const DevTools = () => {
     const { tool } = useParams();
@@ -16,7 +18,9 @@ const DevTools = () => {
         "json-formatter": <JSONFormatter />,
         "url-encoder-decoder": <URLEncoderDecoder />,
         "xml-formatter": <XmlFormatter />,
+        "yaml-formatter": <YAMLFormatter />,
         "base64": <Base64Tool />,
+        "password-generator": <PasswordGenerator />,
     }
 
 
