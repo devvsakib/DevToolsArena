@@ -15,7 +15,7 @@ const Layout = ({ stars, children }) => {
                 <Header
                     notice={"Under Construction"}
                 />
-                <div className='relative'>
+                <div className='relative pt-16'>
                     <div className="container mx-auto p-4 min-h-screen">
                         {children}
                     </div>

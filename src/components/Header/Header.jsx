@@ -25,6 +25,18 @@ function Header({notice }) {
       .catch((error) => console.error("Error fetching GitHub stars:", error));
   }, []);
 
+  // Handle window resize to close mobile menu when switching to desktop
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768 && open) { // 768px is md breakpoint
+        setOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [open]);
+
   const navLink = [
     {
       name: "Home",
@@ -55,9 +67,30 @@ function Header({notice }) {
     isExternalURL: true,
   };
 
+  // Dynamic styles for cleaner code
+  const mobileMenuClasses = `
+    md:flex md:items-center md:gap-6 md:static md:opacity-100 md:visible md:bg-transparent md:flex-row md:justify-end md:h-auto md:w-auto
+    ${open ? 
+      'fixed inset-0 w-full h-screen flex flex-col items-center justify-center gap-8 z-40 backdrop-blur-md opacity-100 visible' : 
+      'fixed inset-0 w-full h-screen flex flex-col items-center justify-center gap-8 z-40 opacity-0 invisible pointer-events-none'
+    }
+    transition-opacity duration-500 ease-in-out
+    md:pointer-events-auto md:relative md:inset-auto
+  `;
+
+  const mobileMenuStyle = {
+    backgroundColor: open ? (theme === "dark" ? "rgba(2, 0, 14, 0.95)" : "rgba(209, 203, 244, 0.95)") : "transparent",
+    backgroundImage: open ? (theme === "dark" 
+      ? "radial-gradient(rgba(133, 138, 227, 0.1) 2px, transparent 0)" 
+      : "radial-gradient(rgba(25, 25, 31, 0.1) 2px, transparent 0)"
+    ) : "none",
+    backgroundSize: "30px 30px",
+    backgroundPosition: "-5px -5px"
+  };
+
   return (
-    <header className="p-4 shadow-lg backdrop-blur-sm  z-50">
-      <div className="w-full md:w-5/6 mx-auto flex flex-row md:flex-row justify-between items-center">
+    <header className="fixed top-0 left-0 right-0 w-full h-16 p-4 shadow-lg backdrop-blur-md dark:bg-gray-900/20 border-b border-white/20 dark:border-gray-800/30 z-50">
+      <div className="w-full md:w-5/6 mx-auto flex justify-between items-center h-full relative z-50">
         {/* Logo */}
         <Link to={"/"}>
           <img
@@ -68,7 +101,7 @@ function Header({notice }) {
         </Link>
 
         {/* GitHub, theme toggle and menu icon for mobile */}
-        <div className="flex items-center gap-3 md:hidden">
+        <div className="flex items-center gap-3 md:hidden relative z-50">
           <a target="_blank" href={githubLink.link}>
             <div className="bg-blue-600/50 shadow font-semibold flex gap-1 p-1 px-2 items-center rounded-full text-sm">
               <span className="githubBtn">
@@ -89,51 +122,42 @@ function Header({notice }) {
           </div>
           <div
             onClick={() => setOpen((val) => !val)}
-            className="cursor-pointer"
+            className="cursor-pointer relative z-50 p-2"
           >
             {open ? <MdClose size="1.2rem" /> : <MdMenu size="1.2rem" />}
           </div>
         </div>
 
         {/* Nav link items */}
-        <div
-          className={`
-          md:flex md:items-center 
-          md:pb-0 md:gap-6 
-          md:static md:z-auto 
-          md:w-auto md:pl-0 
-          md:bg-transparent
-          grid gap-2 absolute 
-          z-[-1] left-0 w-full py-2 pl-8
-          transition-all duration-500 ease-in 
-          ${open ? (theme === "dark" ? "bg-dark/90" : "bg-white/90") : ""}
-          ${open ? "top-14" : "top-[-490px]"}`}
-        >
+        <div className={mobileMenuClasses} style={mobileMenuStyle}>
           {navLink.map((link, index) => (
             <div key={`${link.name}-${index}`}>
-              <Link className="flex items-center gap-1" to={link.link}>
-                {/* {link.icon} */}
-                {link.name}
+              <Link 
+                className="flex items-center gap-1 text-3xl md:text-base font-medium 
+                          text-[#1E1E1F] dark:text-white hover:text-[#858AE3] 
+                          transition-all duration-300 md:transform-none transform hover:scale-110
+                          relative group" 
+                to={link.link}
+                onClick={() => setOpen(false)}
+              >
+                <span className="relative z-10">{link.name}</span>
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-[#9912d8] to-[#858AE3] opacity-0 group-hover:opacity-10 transition-opacity duration-300 -z-10 md:hidden"></div>
               </Link>
             </div>
           ))}
+          
           {/* GitHub link for desktop */}
           <div className="hidden md:block">
             <a target="_blank" href={githubLink.link}>
               <div className="bg-blue-600/50 shadow font-semibold flex gap-1 p-1 px-2 items-center rounded-full">
-                <span className="githubBtn">
-                  {githubLink.icon}
-                </span>
-                {
-                  countStar && (
-                    <div className="flex items-center gap-1">
-                      {countStar}
-                    </div>
-                  )
-                }
+                <span className="githubBtn">{githubLink.icon}</span>
+                {countStar && (
+                  <div className="flex items-center gap-1">{countStar}</div>
+                )}
               </div>
             </a>
           </div>
+          
           {/* Theme toggle for desktop */}
           <div className="text-lg cursor-pointer hidden md:block" onClick={toggleTheme}>
             <HiMoon className="dark:hidden" />
